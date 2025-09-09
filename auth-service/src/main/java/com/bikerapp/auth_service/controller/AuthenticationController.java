@@ -1,15 +1,21 @@
-package com.bikerapp.auth_service.service;
+package com.bikerapp.auth_service.controller;
 
 import com.bikerapp.auth_service.dao.UserRepository;
 import com.bikerapp.auth_service.entity.User;
+import com.bikerapp.auth_service.model.LoginCredentials;
+import com.bikerapp.auth_service.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collections;
 import java.util.Map;
 
 @RestController
@@ -28,15 +34,23 @@ public class AuthenticationController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @PostMapping("/register")
-    public Map<String, Object> registerHandler(
-            @RequestBody User user){
-        return null;
+    @PostMapping("/login")
+    public String loginHandler(@RequestBody User user){
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword())
+        );
+
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        return jwtUtil.generateToken(userDetails.getUsername());
     }
 
-    @PostMapping("/login")
-    public Map<String, Object> loginHandler(
-            @RequestBody User user){
-        return null;
+    @PostMapping("/register")
+    public String registerHandler(@RequestBody User user){
+        if (userRepository.existsByUsername(user.getUsername()))
+            return "User exists already!";
+
+        User newUser = new User(user.getUsername(), passwordEncoder.encode(user.getPassword()));
+        userRepository.save(newUser);
+        return "User registrated succesfully!";
     }
 }

@@ -1,3 +1,10 @@
 setup db
 CREATE DATABASE i_am_biker_db;
 USE i_am_biker_db;
+
+create user table
+CREATE TABLE user (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+) ENGINE=InnoDB, DEFAULT CHAR SET=LATIN1;

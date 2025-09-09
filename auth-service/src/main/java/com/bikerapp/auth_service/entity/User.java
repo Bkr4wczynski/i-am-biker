@@ -1,28 +1,17 @@
 package com.bikerapp.auth_service.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-
-@Table(name = "users")
+@Table(name = "user")
 @Entity
-public class User implements UserDetails {
+public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Integer id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String username;
-
-    @Column(unique = true, length = 100, nullable = false)
-    private String email;
 
     @Column(nullable = false)
     private String password;
@@ -30,16 +19,14 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String username, String email, String password) {
+    public User(String username, String password) {
         this.username = username;
-        this.email = email;
         this.password = password;
     }
 
-    public User(Integer id, String username, String email, String password) {
+    public User(Integer id, String username, String password) {
         this.id = id;
         this.username = username;
-        this.email = email;
         this.password = password;
     }
 
@@ -59,19 +46,6 @@ public class User implements UserDetails {
         this.username = username;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
-
     public String getPassword() {
         return password;
     }
@@ -85,7 +59,6 @@ public class User implements UserDetails {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
