@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Controller
 public class MainController {
-    @GetMapping("/")
+    @GetMapping("/main")
     public String mainPage() {
         return "index";
     }
