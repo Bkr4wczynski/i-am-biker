@@ -12,3 +12,8 @@ spring:
 jwt:
   secret: 9d5c3687c5dfa48ae9a7799eabf77d3c0de017797d75ed7d82e852ac358a6500
   expiration: 360000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

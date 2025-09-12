@@ -1,4 +1,4 @@
-package com.bikerapp.auth_service.security;
+package com.bikerapp.api_gateway.util;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -23,22 +23,6 @@ public class JwtUtil {
     @PostConstruct
     public void init() {
         this.secretKey = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
-    }
-
-    public String generateToken(String username) {
-        return Jwts.builder()
-                .subject(username)
-                .issuedAt(new Date())
-                .expiration(new Date(new Date().getTime() + expiration))
-                .signWith(secretKey)
-                .compact();
-    }
-
-    public String getUserFromToken(String token) {
-        return Jwts.parser().verifyWith(secretKey).build()
-                .parseSignedClaims(token)
-                .getPayload()
-                .getSubject();
     }
 
     public boolean validateToken(String token) {

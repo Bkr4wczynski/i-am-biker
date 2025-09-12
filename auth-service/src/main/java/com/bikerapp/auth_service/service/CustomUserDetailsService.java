@@ -1,6 +1,7 @@
 package com.bikerapp.auth_service.service;
 
-import com.bikerapp.auth_service.dao.UserRepository;
+import com.bikerapp.auth_service.model.CustomUserDetails;
+import com.bikerapp.auth_service.repository.UserRepository;
 import com.bikerapp.auth_service.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,13 +27,8 @@ public class CustomUserDetailsService implements UserDetailsService {
         Optional<User> userResult = userRepository.findByUsername(username);
 
         if (userResult.isEmpty())
-            throw new UsernameNotFoundException("No user found!");
+            throw new UsernameNotFoundException("No user found with username: "+ username+"!");
         User user = userResult.get();
-
-        return new org.springframework.security.core.userdetails.User(
-                username,
-                user.getPassword(),
-                Collections.emptyList()
-        );
+        return new CustomUserDetails(user.getUsername(), user.getPassword());
     }
 }

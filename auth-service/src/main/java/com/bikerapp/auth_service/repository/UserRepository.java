@@ -1,4 +1,4 @@
-package com.bikerapp.auth_service.dao;
+package com.bikerapp.auth_service.repository;
 
 import com.bikerapp.auth_service.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

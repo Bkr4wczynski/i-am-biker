@@ -1,56 +1,45 @@
 package com.bikerapp.auth_service.controller;
 
-import com.bikerapp.auth_service.dao.UserRepository;
+import com.bikerapp.auth_service.model.AuthRequest;
 import com.bikerapp.auth_service.entity.User;
-import com.bikerapp.auth_service.model.LoginCredentials;
-import com.bikerapp.auth_service.security.JwtUtil;
+import com.bikerapp.auth_service.service.AuthenticationService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Collections;
-import java.util.Map;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 public class AuthenticationController {
-    private UserRepository userRepository;
-    private JwtUtil jwtUtil;
+    private AuthenticationService service;
     private AuthenticationManager authenticationManager;
-    private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public AuthenticationController(UserRepository userRepository, JwtUtil jwtUtil, AuthenticationManager authenticationManager, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.jwtUtil = jwtUtil;
+    public AuthenticationController(AuthenticationService service, AuthenticationManager authenticationManager) {
+        this.service = service;
         this.authenticationManager = authenticationManager;
-        this.passwordEncoder = passwordEncoder;
     }
 
-    @PostMapping("/login")
-    public String loginHandler(@RequestBody User user){
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword())
-        );
-
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        return jwtUtil.generateToken(userDetails.getUsername());
+    @PostMapping("/sign-in")
+    public String signIn(@RequestBody User user) {
+        return service.saveUser(user);
     }
 
-    @PostMapping("/register")
-    public String registerHandler(@RequestBody User user){
-        if (userRepository.existsByUsername(user.getUsername()))
-            return "User exists already!";
+    @GetMapping("/token")
+    public String getToken(@RequestBody AuthRequest authRequest) {
+        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+                authRequest.getUsername(), authRequest.getPassword()));
+        if (authentication.isAuthenticated())
+            return service.generateToken(authRequest.getUsername());
+        throw new RuntimeException("Cannot access resource!");
+    }
 
-        User newUser = new User(user.getUsername(), passwordEncoder.encode(user.getPassword()));
-        userRepository.save(newUser);
-        return "User registrated succesfully!";
+    @GetMapping("/validate")
+    public String validateToken(@RequestParam("token") String token) {
+        if (!service.validateToken(token))
+            return "Token is not valid";
+        return "Token is valid";
     }
 }
