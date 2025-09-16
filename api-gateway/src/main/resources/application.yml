@@ -17,15 +17,10 @@ spring:
     name: api-gateway
   cloud:
     gateway:
-      routes:
-      - id: web-service
-        uri: lb://WEB-SERVICE
-        predicates:
-          - Path=/web/**
-        filters:
-          - AuthenticationFilter
-
-      - id: auth-service
-        uri: lb://AUTH-SERVICE
-        predicates:
-          - Path=/auth/**
+      server:
+        webflux:
+          routes:
+          - id: web-service
+            uri: lb://WEB-SERVICE
+            predicates:
+              - Path=/web/**
