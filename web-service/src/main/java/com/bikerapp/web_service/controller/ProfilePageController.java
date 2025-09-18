@@ -1,23 +1,34 @@
 package com.bikerapp.web_service.controller;
 
+import com.bikerapp.web_service.dao.BikesRepository;
 import com.bikerapp.web_service.model.Bike;
-import com.bikerapp.web_service.model.Engine;
+import jakarta.annotation.PostConstruct;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class ProfilePageController {
+    private BikesRepository bikesRepository;
+
+    @Autowired
+    public ProfilePageController(BikesRepository bikesRepository) {
+        this.bikesRepository = bikesRepository;
+    }
+
+    private List<Bike> getBikesData() {
+        return bikesRepository.getBikes();
+    }
+
     @GetMapping("/my-profile")
-    public String displayProfilePage(Model model) {
-        Bike bike = new Bike();
-        bike.setModel("Yamaha DT");
-        bike.setEngine(new Engine(125, 20, "2-Stroke"));
-        bike.setRegistry_date(LocalDate.of(2000, 5, 20));
-        bike.setMileage(35000);
-        model.addAttribute("bike", bike);
+    public String displayProfilePage(HttpServletRequest request, Model model) {
+        request.getSession().setAttribute("bikes", getBikesData());
         return "myProfile";
     }
 

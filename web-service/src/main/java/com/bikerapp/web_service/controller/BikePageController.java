@@ -1,23 +1,25 @@
 package com.bikerapp.web_service.controller;
 
 import com.bikerapp.web_service.model.Bike;
-import com.bikerapp.web_service.model.Engine;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class BikePageController {
     @GetMapping("/my-bike")
-    public String displayMyBikePage(Model model) {
-        Bike sampleBike = new Bike();
-        sampleBike.setModel("Kawasaki z650");
-        sampleBike.setMileage(30000);
-        sampleBike.setRegistry_date(LocalDate.of(2020, 4, 12));
-        sampleBike.setEngine(new Engine(650, 68, "4-Stroke"));
-        model.addAttribute("bike", sampleBike);
+    public String displayMyBikePage(@RequestParam int id, HttpServletRequest request, Model model) {
+        List<Bike> bikes = (List<Bike>) request.getSession().getAttribute("bikes");
+        if (bikes == null)
+            bikes = new ArrayList<>();
+        Bike bike = bikes.stream().filter(b -> b.getId() == id).findFirst().orElseThrow();
+        model.addAttribute("bike", bike);
         return "myBike";
     }
 }
