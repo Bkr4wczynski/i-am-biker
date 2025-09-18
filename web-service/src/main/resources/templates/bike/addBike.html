@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new bike</title>
+</head>
+<body>
+    <h2>Add new bike</h2>
+
+    <form method="post" th:object="${bike}" th:action="@{/add-bike}">
+        <label for="model">Model </label>
+        <input type="text" id="model" th:field="*{model}"/>
+        <br>
+
+        <label for="registry_date">Registry date </label>
+        <input type="date" id="registry_date" th:field="*{registry_date}"/>
+        <br>
+
+        <label for="mileage">Mileage </label>
+        <input type="number" id="mileage" th:field="*{mileage}"/>
+        <br>
+
+        <label for="capacity">Engine capacity </label>
+        <input type="number" id="capacity" th:field="*{engine.capacity}"/>
+        <br>
+
+        <label for="horsepower">Horsepower </label>
+        <input type="number" id="horsepower" th:field="*{engine.horsepower}"/>
+        <br>
+
+        <label>Type </label>
+        <select th:field="*{engine.type}">
+            <option value="4-stroke">4-stroke</option>
+            <option value="2-stroke">2-stroke</option>
+        </select>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
