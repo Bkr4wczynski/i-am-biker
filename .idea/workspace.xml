@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="you can now see your bikes using httpSession in different htmls">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/addBike.html" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="you can add bike now">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/dao/EngineRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/EngineType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/queries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/BikePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/BikePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/ProfilePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/dao/BikesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/dao/BikesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/Bike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myBike.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBike.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/addBike.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/addBike.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +30,7 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -208,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758215379134</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="you can add bike now">
+      <option name="closed" value="true" />
+      <created>1758219914753</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1758219914753</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -217,6 +233,7 @@
     <MESSAGE value="changed application.properties to application.yml and implemented working api gateway" />
     <MESSAGE value="application with temporary removed auth service for easier development" />
     <MESSAGE value="you can now see your bikes using httpSession in different htmls" />
-    <option name="LAST_COMMIT_MESSAGE" value="you can now see your bikes using httpSession in different htmls" />
+    <MESSAGE value="you can add bike now" />
+    <option name="LAST_COMMIT_MESSAGE" value="you can add bike now" />
   </component>
 </project>

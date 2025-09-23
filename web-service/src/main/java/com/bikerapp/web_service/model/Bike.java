@@ -1,20 +1,33 @@
 package com.bikerapp.web_service.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
+@Entity
+@Table(name = "bike")
 public class Bike {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String model;
+
     private LocalDate registry_date;
+
     private int mileage;
+
+    @ManyToOne
+    @JoinColumn(name = "engine_id")
     private Engine engine;
 
-
+    @Override
+    public String toString() {
+        return model + " registered at " + registry_date + ", mileage = " + mileage+", engine - " + engine;
+    }
 }

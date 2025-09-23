@@ -1,6 +1,7 @@
 package com.bikerapp.web_service.controller;
 
 import com.bikerapp.web_service.dao.BikesRepository;
+import com.bikerapp.web_service.dao.EngineRepository;
 import com.bikerapp.web_service.model.Bike;
 import com.bikerapp.web_service.model.Engine;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,10 +20,12 @@ import java.util.List;
 @Controller
 public class BikePageController {
     private BikesRepository bikesRepository;
+    private EngineRepository engineRepository;
 
     @Autowired
-    public BikePageController(BikesRepository bikesRepository) {
+    public BikePageController(BikesRepository bikesRepository, EngineRepository engineRepository) {
         this.bikesRepository = bikesRepository;
+        this.engineRepository = engineRepository;
     }
 
     @GetMapping("/my-bike")
@@ -36,7 +39,9 @@ public class BikePageController {
     }
 
     private List<Bike> getListOfBikes(HttpSession session) {
-        return (List<Bike>) session.getAttribute("bikes");
+        List<Bike> bikes = bikesRepository.findAll();
+        session.setAttribute("bikes", bikes);
+        return bikes;
     }
 
     @GetMapping("/add-bike")
@@ -49,9 +54,8 @@ public class BikePageController {
 
     @PostMapping("/add-bike")
     public String addBike(@ModelAttribute("bike") Bike bike, HttpServletRequest request) {
-        int id = getListOfBikes(request.getSession()).size()+1;
-        bike.setId(id);
-        bikesRepository.addBike(bike);
+        engineRepository.save(bike.getEngine());
+        bikesRepository.save(bike);
         return "redirect:/my-profile";
     }
 }

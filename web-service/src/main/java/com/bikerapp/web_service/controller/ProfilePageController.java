@@ -23,7 +23,7 @@ public class ProfilePageController {
     }
 
     private List<Bike> getBikesData() {
-        return bikesRepository.getBikes();
+        return bikesRepository.findAll();
     }
 
     @GetMapping("/my-profile")

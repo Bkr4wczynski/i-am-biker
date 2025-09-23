@@ -1,12 +1,10 @@
 package com.bikerapp.web_service.dao;
 
-
-import com.bikerapp.web_service.model.Bike;
+import com.bikerapp.web_service.model.Engine;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
-public interface BikesRepository extends JpaRepository<Bike, Integer> {
+public interface EngineRepository extends JpaRepository<Engine, Integer> {
 
 }

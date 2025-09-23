@@ -2,10 +2,35 @@ setup db
 CREATE DATABASE i_am_biker_db;
 USE i_am_biker_db;
 
-create user table
-CREATE TABLE user (
+create entities
+
+CREATE TABLE engine (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255) NOT NULL UNIQUE,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
-) ENGINE=InnoDB, DEFAULT CHAR SET=LATIN1;
+    capacity INT NOT NULL,
+    horsepower DECIMAL(4,1) NOT NULL,
+    engine_type VARCHAR(32) NOT NULL
+);
+
+CREATE TABLE bike (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    model VARCHAR(64) NOT NULL,
+    registry_date DATE,
+    mileage INT DEFAULT 0,
+    engine_id INT NOT NULL,
+
+    FOREIGN KEY (engine_id) REFERENCES engine(id)
+);
+
+sample data
+
+INSERT INTO engine (capacity, horsepower, engine_type) VALUES
+(125, 15, "FOUR_STROKE"),
+(1000, 218, "FOUR_STROKE"),
+(150, 30, "TWO_STROKE");
+
+INSERT INTO bike (model, registry_date, mileage, engine_id) VALUES
+("Kawasaki Z125", "2020-01-01", 10000, 1),
+("Honda CBR1000RR-R", "2020-01-01", 150000, 2),
+("KTM SXF 150", "2020-01-01", 10000, 3);
+
+
