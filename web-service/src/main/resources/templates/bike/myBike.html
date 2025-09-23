@@ -10,5 +10,13 @@
     <p>Mileage: <span th:text="${bike.mileage}"></span></p>
     <p>Engine: <span th:text="${bike.engine}"></span></p>
 
+    <br>
+    <form th:action="@{/delete-bike(id=${bike.id})}" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <button type="submit">Delete bike</button>
+    </form>
+
+
+
 </body>
 </html>

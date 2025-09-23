@@ -23,8 +23,8 @@ public class Engine {
     @Enumerated(EnumType.STRING)
     private EngineType engineType;
 
-    @OneToMany(mappedBy = "engine", fetch = FetchType.EAGER)
-    private List<Bike> bikes;
+    @OneToOne(mappedBy = "engine", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Bike bike;
 
     @Override
     public String toString() {

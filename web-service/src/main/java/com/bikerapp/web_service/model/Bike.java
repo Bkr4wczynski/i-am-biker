@@ -22,7 +22,7 @@ public class Bike {
 
     private int mileage;
 
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "engine_id")
     private Engine engine;
 
