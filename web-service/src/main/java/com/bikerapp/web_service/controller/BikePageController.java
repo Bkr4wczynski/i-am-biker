@@ -1,42 +1,24 @@
 package com.bikerapp.web_service.controller;
 
-import com.bikerapp.web_service.dao.BikesRepository;
-import com.bikerapp.web_service.dao.EngineRepository;
 import com.bikerapp.web_service.model.Bike;
 import com.bikerapp.web_service.model.Engine;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.bikerapp.web_service.service.BikesService;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
+@AllArgsConstructor
 public class BikePageController {
-    private BikesRepository bikesRepository;
-    private EngineRepository engineRepository;
-
-    @Autowired
-    public BikePageController(BikesRepository bikesRepository, EngineRepository engineRepository) {
-        this.bikesRepository = bikesRepository;
-        this.engineRepository = engineRepository;
-    }
+    private BikesService bikesService;
 
     @GetMapping("/my-bike")
-    public String displayMyBikePage(@RequestParam int id, HttpServletRequest request, Model model) {
-        List<Bike> bikes = getListOfBikes(request.getSession());
-        if (bikes == null)
-            bikes = new ArrayList<>();
-        Bike bike = bikes.stream().filter(b -> b.getId() == id).findFirst().orElseThrow();
+    public String displayMyBikePage(@RequestParam int id, Model model) {
+        Bike bike = bikesService.findBike(id).get();
         model.addAttribute("bike", bike);
         return "bike/myBike";
-    }
-
-    private List<Bike> getListOfBikes(HttpSession session) {
-        return (List<Bike>) session.getAttribute("bikes");
     }
 
     @GetMapping("/add-bike")
@@ -48,15 +30,14 @@ public class BikePageController {
     }
 
     @PostMapping("/add-bike")
-    public String addBike(@ModelAttribute("bike") Bike bike, HttpServletRequest request) {
-        engineRepository.save(bike.getEngine());
-        bikesRepository.save(bike);
+    public String addBike(@ModelAttribute("bike") Bike bike) {
+        bikesService.saveBike(bike);
         return "redirect:/my-profile";
     }
 
     @DeleteMapping("/delete-bike")
     public String deleteBike(@RequestParam int id) {
-        bikesRepository.deleteById(id);
+        bikesService.deleteBike(id);
         return "redirect:/my-profile";
     }
 

@@ -9,7 +9,7 @@ spring:
   config:
     import: optional:configserver:http://localhost:8888
   datasource:
-    url: jdbc:mysql://localhost:3306/i_am_biker_db?useSSL=false&serverTimezone=Europe/Warsaw
+    url: jdbc:mysql://localhost:3306/i_am_biker_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Europe/Warsaw
     username: biker
     password: vDmpgfi68FTefb2d
   jpa:

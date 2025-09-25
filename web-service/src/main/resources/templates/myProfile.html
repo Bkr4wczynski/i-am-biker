@@ -8,7 +8,7 @@
   <h1>your profile</h1>
   <h2>your bikes</h2>
     <ul>
-        <li th:each="bike: ${session.bikes}">
+        <li th:each="bike: ${bikes}">
             <a th:text="${bike.model}"
                 th:href="@{/my-bike(id=${bike.id})}"></a>
         </li>
