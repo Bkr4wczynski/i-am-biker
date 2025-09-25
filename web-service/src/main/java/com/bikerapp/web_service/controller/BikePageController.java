@@ -29,6 +29,13 @@ public class BikePageController {
         return "bike/addBike";
     }
 
+    @GetMapping("/update-bike")
+    public String showUpdateBikeForm(@RequestParam int id, Model model) {
+        Bike bike = bikesService.findBike(id).get();
+        model.addAttribute("bike", bike);
+        return "bike/updateBike";
+    }
+
     @PostMapping("/add-bike")
     public String addBike(@ModelAttribute("bike") Bike bike) {
         bikesService.saveBike(bike);
@@ -38,6 +45,12 @@ public class BikePageController {
     @DeleteMapping("/delete-bike")
     public String deleteBike(@RequestParam int id) {
         bikesService.deleteBike(id);
+        return "redirect:/my-profile";
+    }
+
+    @PutMapping("/update-bike")
+    public String updateBike(@ModelAttribute("bike") Bike bike) {
+        bikesService.updateBike(bike);
         return "redirect:/my-profile";
     }
 

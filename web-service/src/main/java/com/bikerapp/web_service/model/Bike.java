@@ -2,6 +2,7 @@ package com.bikerapp.web_service.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -18,6 +19,7 @@ public class Bike {
 
     private String model;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate registry_date;
 
     private int mileage;
@@ -28,6 +30,6 @@ public class Bike {
 
     @Override
     public String toString() {
-        return model + " registered at " + registry_date + ", mileage = " + mileage+", engine - " + engine;
+        return "id:" + id + " " + model + " registered at " + registry_date + ", mileage = " + mileage+", engine - " + engine;
     }
 }
