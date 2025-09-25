@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Maintain your bike</title>
+</head>
+<body>
+    <h2>Motorcycle maintenance</h2>
+
+    <p>Your bike model: <span th:text="${bike.model}"></span></p>
+    <p>Your mileage: <span th:text="${bike.mileage}"></span></p>
+
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Interval (km)</th>
+        </tr>
+        <tr th:each="entry : ${maintenance}">
+            <td th:text="${entry.key}">Task Name</td>
+            <td th:text="${entry.value}">Interval</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

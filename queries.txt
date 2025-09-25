@@ -17,7 +17,6 @@ CREATE TABLE bike (
     registry_date DATE,
     mileage INT DEFAULT 0,
     engine_id INT NOT NULL,
-
     FOREIGN KEY (engine_id) REFERENCES engine(id)
 );
 

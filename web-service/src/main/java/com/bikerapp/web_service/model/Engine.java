@@ -28,6 +28,6 @@ public class Engine {
 
     @Override
     public String toString() {
-        return "id: " + id + " " + capacity + " ccm, " + horsepower + " horsepower " + engineType + " engine";
+        return "id: [" + id + "] " + capacity + "ccm, " + horsepower + " horsepower " + engineType + " engine";
     }
 }
