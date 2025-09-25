@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="fully working crud!">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/MaintenancePageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/MaintenanceElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/MaintenanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/maintenance.html" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="simple maintenance added">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/queries.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBike.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBike.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/maintenance.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/maintenance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758804223440</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="simple maintenance added">
+      <option name="closed" value="true" />
+      <created>1758809959586</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1758809959586</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -255,6 +261,7 @@
     <MESSAGE value="working database connection" />
     <MESSAGE value="simplified structure with usage of service" />
     <MESSAGE value="fully working crud!" />
-    <option name="LAST_COMMIT_MESSAGE" value="fully working crud!" />
+    <MESSAGE value="simple maintenance added" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple maintenance added" />
   </component>
 </project>

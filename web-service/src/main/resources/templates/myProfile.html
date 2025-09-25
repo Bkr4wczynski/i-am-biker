@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>My profile</title>
+    <link rel="stylesheet" th:href="@{/style/style.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>your profile</h1>
-  <h2>your bikes</h2>
-    <ul>
-        <li th:each="bike: ${bikes}">
-            <a th:text="${bike.model}"
-                th:href="@{/my-bike(id=${bike.id})}"></a>
-        </li>
-    </ul>
-    <br>
-    <a th:href="@{/add-bike}">Add new bike</a>
+    <div id="container">
+
+        <div id="logo">
+            <img th:src="@{/images/logo.png}" alt="I am biker"/>
+        </div>
+
+        <div id="menu">
+            <div class="option">Your profile</div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <div id="header">
+            <h1>Your profile</h1>
+        </div>
+
+        <div id="content">
+            <h2>Your bikes</h2>
+            <ul>
+                <li th:each="bike: ${bikes}">
+                    <a th:text="${bike.model}"
+                       th:href="@{/my-bike(id=${bike.id})}"></a>
+                </li>
+            </ul>
+            <br>
+            <a th:href="@{/add-bike}">Add new bike</a>
+        </div>
+
+        <div id="footer">
+            footer
+        </div>
+    </div>
 
 </body>
 </html>

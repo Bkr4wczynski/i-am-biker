@@ -1,0 +1,52 @@
+body {
+    background-color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+#container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    color: #000000;
+    margin-top: 20px;
+    font-size: 44px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+#menu {
+    background-color: #263142;
+    color: #FEFEFE;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#header {
+    padding: 10px;
+    margin-top : 10px;
+}
+
+#content {
+
+}
+
+#footer {
+
+}
+
+.option {
+    min-width: 50px;
+    float: left;
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    border-right: 2px solid #FEFEFE
+}
+
+.option:hover {
+    background-color: #1A222E;
+    cursor: pointer;
+}
