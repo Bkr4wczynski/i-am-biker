@@ -79,3 +79,24 @@ button:hover {
     cursor: pointer;
     background-color: #1A222E;
 }
+
+input {
+    width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #E7E7E7;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+select {
+    width: 400px;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid #E7E7E7;
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #FFFFFF;
+}
