@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
+import java.util.List;
 
 @Controller
 @AllArgsConstructor
@@ -23,6 +24,13 @@ public class MaintenancePageController {
         HashMap<String, Integer> maintenanceKm = maintenanceService.generateMaintenanceByMileage(bike.getMileage());
         model.addAttribute("bike", bike);
         model.addAttribute("maintenance", maintenanceKm);
-        return "bike/maintenance";
+        return "maintenance/maintenance";
+    }
+
+    @GetMapping("/bikes-list")
+    public String showBikes(Model model) {
+        List<Bike> bikes = bikesService.getBikes();
+        model.addAttribute("bikes", bikes);
+        return "maintenance/bikesList";
     }
 }
