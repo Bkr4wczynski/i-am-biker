@@ -19,15 +19,24 @@ public class MaintenanceService {
         if (mileage <= 1000) {
             for (MaintenanceElements element: MaintenanceElements.values()) {
                 if (FIRST_INSPECTION_ELEMENTS.contains(element))
-                    maintenanceMileage.put(element.name(), 1000 - mileage);
-                maintenanceMileage.put(element.getDisplayName(), mileage % element.getIntervalKm());
+                    maintenanceMileage.put(element.getDisplayName(), 1000 - mileage);
+                else
+                    maintenanceMileage.put(element.getDisplayName(), calculateInterval(mileage, element.getIntervalKm()));
             }
             return maintenanceMileage;
         }
 
         for (MaintenanceElements element: MaintenanceElements.values()) {
-            maintenanceMileage.put(element.getDisplayName(), mileage % element.getIntervalKm());
+            maintenanceMileage.put(element.getDisplayName(), calculateInterval(mileage, element.getIntervalKm()));
         }
         return maintenanceMileage;
+    }
+
+    private int calculateInterval(int mil, int interval) {
+        if (mil == 0)
+            return interval;
+        if (mil % interval == 0)
+            return 0;
+        return interval - (mil % interval);
     }
 }
