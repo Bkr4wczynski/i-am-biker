@@ -3,44 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <title>Update your bike</title>
+  <link rel="stylesheet" th:href="@{/style/side.css}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<h2>Update your bike</h2>
+<div id="container">
+  <div id="menu">
+    <div class="title">Update your bike</div>
+    <div class="option"><a th:href="@{/my-bike(id=${bike.id})}">Cancel</a></div>
+    <div style="clear:both;"></div>
+  </div>
 
-<form method="post" th:object="${bike}" th:action="@{/update-bike}">
-  <input type="hidden" name="_method" value="put" />
-  <input type="hidden" th:field="*{id}" />
-  <input type="hidden" th:field="*{engine.id}"/>
+  <div id="content">
+    <form method="post" th:object="${bike}" th:action="@{/update-bike}">
+      <input type="hidden" name="_method" value="put" />
+      <input type="hidden" th:field="*{id}" />
+      <input type="hidden" th:field="*{engine.id}"/>
 
-  <label for="model">Model </label>
-  <input type="text" id="model" th:field="*{model}"/>
-  <br>
+      <label for="model">Model </label>
+      <br>
+      <input type="text" id="model" th:field="*{model}"/>
+      <br>
 
-  <label for="registry_date">Registry date </label>
-  <input type="date" id="registry_date" th:field="*{registry_date}"/>
-  <br>
+      <label for="registry_date">Registry date </label>
+      <br>
+      <input type="date" id="registry_date" th:field="*{registry_date}"/>
+      <br>
 
-  <label for="mileage">Mileage </label>
-  <input type="number" id="mileage" th:field="*{mileage}"/>
-  <br>
+      <label for="mileage">Mileage </label>
+      <br>
+      <input type="number" id="mileage" th:field="*{mileage}"/>
+      <br>
 
-  <label for="capacity">Engine capacity </label>
-  <input type="number" id="capacity" th:field="*{engine.capacity}"/>
-  <br>
+      <label for="capacity">Engine capacity </label>
+      <br>
+      <input type="number" id="capacity" th:field="*{engine.capacity}"/>
+      <br>
 
-  <label for="horsepower">Horsepower </label>
-  <input type="number" id="horsepower" th:field="*{engine.horsepower}"/>
-  <br>
+      <label for="horsepower">Horsepower </label>
+      <br>
+      <input type="number" id="horsepower" th:field="*{engine.horsepower}"/>
+      <br>
 
-  <label>Type </label>
-  <select th:field="*{engine.engineType}">
-    <option value="FOUR_STROKE">4-stroke</option>
-    <option value="TWO_STROKE">2-stroke</option>
-    <option value="ELECTRIC">electric</option>
-  </select>
-  <br>
+      <label>Type </label>
+      <br>
+      <select th:field="*{engine.engineType}">
+        <option value="FOUR_STROKE">4-stroke</option>
+        <option value="TWO_STROKE">2-stroke</option>
+        <option value="ELECTRIC">electric</option>
+      </select>
+      <br><br>
 
-  <button type="submit">Update</button>
-</form>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>
