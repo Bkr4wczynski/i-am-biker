@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>My bike</title>
+    <link rel="stylesheet" th:href="@{/style/side.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <p>Your bike: <span th:text="${bike.model}"></span></p>
-    <p>Registry date: <span th:text="${bike.registry_date}"></span></p>
-    <p>Mileage: <span th:text="${bike.mileage}"></span></p>
-    <p>Engine: <span th:text="${bike.engine}"></span></p>
+<div id="container">
+    <div id="menu">
+        <div class="title"><span th:text="${bike.model}"></span></div>
+        <div class="option"><a th:href="@{/my-profile}">Profile</a></div>
+        <div class="option"><a th:href="@{/maintenance(id=${bike.id})}">Maintenance</a></div>
+        <div class="option"><a th:href="@{/update-bike(id=${bike.id})}">Update</a></div>
 
-    <br>
-    <form th:action="@{/delete-bike(id=${bike.id})}" method="post">
-        <input type="hidden" name="_method" value="delete" />
-        <button type="submit">Delete bike</button>
-    </form>
+        <div style="clear:both;"></div>
+    </div>
+    <div id="content">
+        <p>Registry date: <span th:text="${bike.registry_date}"></span></p>
+        <p>Mileage: <span th:text="${bike.mileage}"></span></p>
+        <p>Capacity: <span th:text="${bike.engine.capacity}"></span></p>
+        <p>Horsepower: <span th:text="${bike.engine.horsepower}"></span></p>
+        <p><span th:text="${#strings.capitalize(#strings.replace(bike.engine.engineType, '_', ' ').toLowerCase())}"></span> engine</p>
 
-    <br>
-    <a th:href="@{/update-bike(id=${bike.id})}">
-        <button type="button">Update bike</button>
-    </a>
-
-    <br>
-    <a th:href="@{/maintenance(id=${bike.id})}">
-        <button type="button">Manage maintenance</button>
-    </a>
+        <br>
+        <form th:action="@{/delete-bike(id=${bike.id})}" method="post">
+            <input type="hidden" name="_method" value="delete"/>
+            <button type="submit" class="button">Delete bike</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

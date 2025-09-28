@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Maintain your bike</title>
+    <link rel="stylesheet" th:href="@{/style/side.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>Motorcycle maintenance</h2>
+    <div id="container">
+        <div id="menu">
+            <div class="title">Motorcycle maintenance</div>
+            <div class="option"><a th:href="@{/my-profile}">Profile</a></div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="content">
+            <p>Your bike model: <span th:text="${bike.model}"></span></p>
+            <p>Your mileage: <span th:text="${bike.mileage}"></span> km</p>
 
-    <p>Your bike model: <span th:text="${bike.model}"></span></p>
-    <p>Your mileage: <span th:text="${bike.mileage}"></span> km</p>
-
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Interval (km)</th>
-        </tr>
-        <tr th:each="entry : ${maintenance}">
-            <td th:text="${entry.key}">Task Name</td>
-            <td th:text="${entry.value}">Interval</td>
-        </tr>
-    </table>
-
+            <table>
+                <tr>
+                    <th>Task</th>
+                    <th>Interval (km)</th>
+                </tr>
+                <tr th:each="entry : ${maintenance}">
+                    <td th:text="${entry.key}">Task Name</td>
+                    <td th:text="${entry.value}">Interval</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
 </body>
 </html>

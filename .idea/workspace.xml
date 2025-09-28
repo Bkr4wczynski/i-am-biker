@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="separate maintenance page">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="main pages styled">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/side.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/MaintenancePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/MaintenancePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBike.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBike.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/maintenance/bikesList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/maintenance/maintenance.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/maintenance/maintenance.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759077361030</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="main pages styled">
+      <option name="closed" value="true" />
+      <created>1759079148755</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1759079148755</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -298,6 +306,7 @@
     <MESSAGE value="maintenance debugging" />
     <MESSAGE value="style for profile page" />
     <MESSAGE value="separate maintenance page" />
-    <option name="LAST_COMMIT_MESSAGE" value="separate maintenance page" />
+    <MESSAGE value="main pages styled" />
+    <option name="LAST_COMMIT_MESSAGE" value="main pages styled" />
   </component>
 </project>
