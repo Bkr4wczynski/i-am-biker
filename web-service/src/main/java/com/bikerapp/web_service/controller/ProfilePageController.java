@@ -1,24 +1,16 @@
 package com.bikerapp.web_service.controller;
 
-import com.bikerapp.web_service.model.Bike;
-import com.bikerapp.web_service.service.BikesService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.List;
-
-
 @Controller
 @AllArgsConstructor
 public class ProfilePageController {
-    private final BikesService bikesService;
 
     @GetMapping("/my-profile")
     public String displayProfilePage(Model model) {
-        List<Bike> bikes = bikesService.getBikes();
-        model.addAttribute("bikes", bikes);
         return "myProfile";
     }
 

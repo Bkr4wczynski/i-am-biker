@@ -16,8 +16,8 @@
         </div>
 
         <div id="menu">
-            <div class="option">Your profile</div>
-            <div class="option">Your bikes</div>
+            <div class="option"><a th:href="@{/my-profile}">Your profile</a></div>
+            <div class="option"><a th:href="@{my-bikes}">Your bikes</a></div>
             <div class="option">Maintenance</div>
             <div style="clear:both;"></div>
         </div>
@@ -27,19 +27,11 @@
         </div>
 
         <div id="content">
-            <h2>Your bikes</h2>
-            <ul>
-                <li th:each="bike: ${bikes}">
-                    <a th:text="${bike.model}"
-                       th:href="@{/my-bike(id=${bike.id})}"></a>
-                </li>
-            </ul>
-            <br>
-            <a th:href="@{/add-bike}">Add new bike</a>
+            here should be content
         </div>
 
         <div id="footer">
-            footer
+            I am biker website. For all motorcyclists from a motorcyclist.
         </div>
     </div>
 
