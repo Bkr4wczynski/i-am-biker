@@ -26,11 +26,4 @@ public class MaintenancePageController {
         model.addAttribute("maintenance", maintenanceKm);
         return "maintenance/maintenance";
     }
-
-    @GetMapping("/bikes-list")
-    public String showBikes(Model model) {
-        List<Bike> bikes = bikesService.getBikes();
-        model.addAttribute("bikes", bikes);
-        return "maintenance/bikesList";
-    }
 }
