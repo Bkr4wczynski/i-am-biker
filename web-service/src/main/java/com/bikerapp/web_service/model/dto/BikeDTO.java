@@ -44,4 +44,14 @@ public class BikeDTO {
         dto.setRegistry_date(bike.getRegistry_date());
         return dto;
     }
+
+    public static Bike toEntity(BikeDTO dto) {
+        Bike bike = new Bike();
+        bike.setId(dto.getId());
+        bike.setMileage(dto.getMileage());
+        bike.setEngine(dto.getEngine());
+        bike.setModel(dto.getModel());
+        bike.setRegistry_date(dto.getRegistry_date());
+        return bike;
+    }
 }

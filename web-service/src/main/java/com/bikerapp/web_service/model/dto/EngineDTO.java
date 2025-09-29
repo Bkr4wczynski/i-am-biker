@@ -33,4 +33,13 @@ public class EngineDTO {
         dto.setEngineType(engine.getEngineType());
         return dto;
     }
+
+    public static Engine toEntity(EngineDTO dto) {
+        Engine engine = new Engine();
+        engine.setId(dto.getId());
+        engine.setCapacity(dto.getCapacity());
+        engine.setHorsepower(dto.getHorsepower());
+        engine.setEngineType(dto.getEngineType());
+        return engine;
+    }
 }

@@ -1,6 +1,7 @@
 package com.bikerapp.web_service.controller;
 
 import com.bikerapp.web_service.dao.entity.Bike;
+import com.bikerapp.web_service.model.dto.BikeDTO;
 import com.bikerapp.web_service.service.BikesService;
 import com.bikerapp.web_service.service.MaintenanceService;
 import lombok.AllArgsConstructor;
@@ -19,7 +20,7 @@ public class MaintenancePageController {
 
     @GetMapping("/maintenance")
     public String showMaintenancePage(@RequestParam int id, Model model) {
-        Bike bike = bikesService.findBike(id).get();
+        BikeDTO bike = bikesService.findBike(id).get();
         HashMap<String, Integer> maintenanceKm = maintenanceService.generateMaintenanceByMileage(bike.getMileage());
         model.addAttribute("bike", bike);
         model.addAttribute("maintenance", maintenanceKm);

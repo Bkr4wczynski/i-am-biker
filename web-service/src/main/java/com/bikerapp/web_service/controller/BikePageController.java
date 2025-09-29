@@ -2,6 +2,7 @@ package com.bikerapp.web_service.controller;
 
 import com.bikerapp.web_service.dao.entity.Bike;
 import com.bikerapp.web_service.dao.entity.Engine;
+import com.bikerapp.web_service.model.dto.BikeDTO;
 import com.bikerapp.web_service.service.BikesService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -16,14 +17,14 @@ public class BikePageController {
 
     @GetMapping("/my-bike")
     public String displayMyBikePage(@RequestParam int id, Model model) {
-        Bike bike = bikesService.findBike(id).get();
+        BikeDTO bike = bikesService.findBike(id).get();
         model.addAttribute("bike", bike);
         return "bike/myBike";
     }
 
     @GetMapping("/add-bike")
     public String showAddBikeForm(Model model) {
-        Bike bike = new Bike();
+        BikeDTO bike = new BikeDTO();
         bike.setEngine(new Engine());
         model.addAttribute("bike", bike);
         return "bike/addBike";
@@ -31,13 +32,13 @@ public class BikePageController {
 
     @GetMapping("/update-bike")
     public String showUpdateBikeForm(@RequestParam int id, Model model) {
-        Bike bike = bikesService.findBike(id).get();
+        BikeDTO bike = bikesService.findBike(id).get();
         model.addAttribute("bike", bike);
         return "bike/updateBike";
     }
 
     @PostMapping("/add-bike")
-    public String addBike(@ModelAttribute("bike") Bike bike) {
+    public String addBike(@ModelAttribute("bike") BikeDTO bike) {
         bikesService.saveBike(bike);
         return "redirect:/my-profile";
     }
@@ -49,7 +50,7 @@ public class BikePageController {
     }
 
     @PutMapping("/update-bike")
-    public String updateBike(@ModelAttribute("bike") Bike bike) {
+    public String updateBike(@ModelAttribute("bike") BikeDTO bike) {
         bikesService.updateBike(bike);
         return "redirect:/my-profile";
     }

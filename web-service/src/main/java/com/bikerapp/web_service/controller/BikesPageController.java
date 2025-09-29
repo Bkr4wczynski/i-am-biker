@@ -1,6 +1,7 @@
 package com.bikerapp.web_service.controller;
 
 import com.bikerapp.web_service.dao.entity.Bike;
+import com.bikerapp.web_service.model.dto.BikeDTO;
 import com.bikerapp.web_service.service.BikesService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -16,7 +17,7 @@ public class BikesPageController {
 
     @GetMapping("/my-bikes")
     public String displayBikes(Model model) {
-        List<Bike> bikes = bikesService.getBikes();
+        List<BikeDTO> bikes = bikesService.getBikes();
         model.addAttribute("bikes", bikes);
         return "bike/myBikes";
     }
