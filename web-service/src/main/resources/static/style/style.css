@@ -63,3 +63,22 @@ body {
     color: #FEFEFE;
     text-decoration: none;
 }
+
+#content a {
+    color: #263142;
+    text-decoration: none;
+}
+
+.bikesList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bikesList li {
+  border: 2px solid #263142;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}

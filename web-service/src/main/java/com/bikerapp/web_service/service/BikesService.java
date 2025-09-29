@@ -1,9 +1,9 @@
 package com.bikerapp.web_service.service;
 
-import com.bikerapp.web_service.dao.BikesRepository;
-import com.bikerapp.web_service.dao.EngineRepository;
-import com.bikerapp.web_service.model.Bike;
-import com.bikerapp.web_service.model.Engine;
+import com.bikerapp.web_service.dao.repository.BikesRepository;
+import com.bikerapp.web_service.dao.repository.EngineRepository;
+import com.bikerapp.web_service.dao.entity.Bike;
+import com.bikerapp.web_service.dao.entity.Engine;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

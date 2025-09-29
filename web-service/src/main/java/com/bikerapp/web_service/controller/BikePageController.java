@@ -1,7 +1,7 @@
 package com.bikerapp.web_service.controller;
 
-import com.bikerapp.web_service.model.Bike;
-import com.bikerapp.web_service.model.Engine;
+import com.bikerapp.web_service.dao.entity.Bike;
+import com.bikerapp.web_service.dao.entity.Engine;
 import com.bikerapp.web_service.service.BikesService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;

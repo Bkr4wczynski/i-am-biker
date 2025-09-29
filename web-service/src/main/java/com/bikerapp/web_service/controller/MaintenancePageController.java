@@ -1,6 +1,6 @@
 package com.bikerapp.web_service.controller;
 
-import com.bikerapp.web_service.model.Bike;
+import com.bikerapp.web_service.dao.entity.Bike;
 import com.bikerapp.web_service.service.BikesService;
 import com.bikerapp.web_service.service.MaintenanceService;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
-import java.util.List;
 
 @Controller
 @AllArgsConstructor

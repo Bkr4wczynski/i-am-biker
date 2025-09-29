@@ -1,22 +1,21 @@
-package com.bikerapp.web_service.model;
+package com.bikerapp.web_service.model.dto;
 
-import jakarta.persistence.*;
+import com.bikerapp.web_service.dao.entity.Engine;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.PastOrPresent;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@Entity
-@Table(name = "bike")
-public class Bike {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BikeDTO {
     private int id;
 
     private String model;
@@ -28,8 +27,6 @@ public class Bike {
     @Min(0)
     private int mileage;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "engine_id")
     private Engine engine;
 
     @Override

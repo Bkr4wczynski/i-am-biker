@@ -14,7 +14,6 @@
     <div id="logo">
         <img th:src="@{/images/logo.png}" alt="I am biker"/>
     </div>
-
     <div id="menu">
         <div class="option"><a th:href="@{/my-profile}">Your profile</a></div>
         <div class="option"><a th:href="@{my-bikes}">Your bikes</a></div>
@@ -25,7 +24,7 @@
         <h1>Your bikes</h1>
     </div>
     <div id="content">
-        <ul>
+        <ul class="bikesList">
             <li th:each="bike: ${bikes}">
                 <a th:text="${bike.model}"
                    th:href="@{/my-bike(id=${bike.id})}"></a>
