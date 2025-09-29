@@ -1,5 +1,6 @@
 package com.bikerapp.web_service.model.dto;
 
+import com.bikerapp.web_service.dao.entity.Bike;
 import com.bikerapp.web_service.dao.entity.Engine;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.PastOrPresent;
@@ -32,5 +33,15 @@ public class BikeDTO {
     @Override
     public String toString() {
         return "id:" + id + " " + model + " registered at " + registry_date + ", mileage = " + mileage+", engine - " + engine;
+    }
+
+    public static BikeDTO toDTO(Bike bike) {
+        BikeDTO dto = new BikeDTO();
+        dto.setId(bike.getId());
+        dto.setMileage(bike.getMileage());
+        dto.setEngine(bike.getEngine());
+        dto.setModel(bike.getModel());
+        dto.setRegistry_date(bike.getRegistry_date());
+        return dto;
     }
 }
