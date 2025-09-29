@@ -1,6 +1,7 @@
 package com.bikerapp.web_service.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
 import lombok.*;
 
 import java.util.List;
@@ -16,8 +17,10 @@ public class Engine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Min(0)
     private int capacity;
 
+    @Min(0)
     private double horsepower;
 
     @Enumerated(EnumType.STRING)
