@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="successful transfer to dto">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="login and register page">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/queries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759164998725</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="login and register page">
+      <option name="closed" value="true" />
+      <created>1759424998719</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1759424998719</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -373,6 +381,7 @@
     <MESSAGE value="added dto and styled bikes display still have to use dto" />
     <MESSAGE value="added dto mapping methods" />
     <MESSAGE value="successful transfer to dto" />
-    <option name="LAST_COMMIT_MESSAGE" value="successful transfer to dto" />
+    <MESSAGE value="login and register page" />
+    <option name="LAST_COMMIT_MESSAGE" value="login and register page" />
   </component>
 </project>

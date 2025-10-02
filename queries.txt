@@ -32,4 +32,12 @@ INSERT INTO bike (model, registry_date, mileage, engine_id) VALUES
 ("Honda CBR1000RR-R", "2020-01-01", 150000, 2),
 ("KTM SXF 150", "2020-01-01", 10000, 3);
 
+Create authentication table
+
+CREATE TABLE user (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(128) UNIQUE NOT NULL,
+    email VARCHAR(128) UNIQUE NOT NULL,
+    password VARCHAR(128) NOT NULL
+) Engine=InnoDB;
 
