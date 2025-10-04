@@ -34,8 +34,7 @@ public class SecurityConfiguration {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/sign-in", "/auth/token", "/auth/validate",
-                                "/auth/login", "/auth/register").permitAll()
+                        .requestMatchers("/generate-token", "/validate-token", "/register-user").permitAll()
                         .anyRequest().authenticated())
                 .exceptionHandling(exc -> exc.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(sessionManagement -> sessionManagement
