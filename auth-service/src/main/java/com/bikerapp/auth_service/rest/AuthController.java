@@ -14,12 +14,13 @@ public class AuthController {
 
     @GetMapping("/validate-token")
     public String validateToken(@RequestParam String token) {
+        System.out.println(token);
         if (authenticationService.validateToken(token))
             return "Token is valid";
         return "Token is not valid!";
     }
 
-    @GetMapping("/generate-token")
+    @PostMapping("/generate-token")
     public String generateToken(@RequestBody AuthRequest authRequest) {
         String username = authRequest.getUsername();
         return authenticationService.generateToken(username);

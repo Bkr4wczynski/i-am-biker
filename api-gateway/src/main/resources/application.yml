@@ -24,3 +24,8 @@ spring:
             uri: lb://WEB-SERVICE
             predicates:
               - Path=/web/**
+
+          - id: auth-service
+            uri: lb://AUTH-SERVICE
+            predicates:
+                - Path=/auth/**
