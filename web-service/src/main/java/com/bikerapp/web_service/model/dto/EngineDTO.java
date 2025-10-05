@@ -1,7 +1,7 @@
 package com.bikerapp.web_service.model.dto;
 
 import com.bikerapp.web_service.dao.entity.Engine;
-import com.bikerapp.web_service.model.EngineType;
+import com.bikerapp.web_service.model.enums.EngineType;
 import jakarta.validation.constraints.Min;
 import lombok.*;
 

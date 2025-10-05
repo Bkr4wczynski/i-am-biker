@@ -1,8 +1,7 @@
 package com.bikerapp.web_service.dao.entity;
 
-import com.bikerapp.web_service.model.EngineType;
+import com.bikerapp.web_service.model.enums.EngineType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import lombok.*;
 
 @NoArgsConstructor

@@ -1,6 +1,5 @@
-package com.bikerapp.web_service.controller;
+package com.bikerapp.web_service.controller.maintenance;
 
-import com.bikerapp.web_service.dao.entity.Bike;
 import com.bikerapp.web_service.model.dto.BikeDTO;
 import com.bikerapp.web_service.service.BikesService;
 import com.bikerapp.web_service.service.MaintenanceService;

@@ -1,4 +1,4 @@
-package com.bikerapp.web_service.controller;
+package com.bikerapp.web_service.controller.profile;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
