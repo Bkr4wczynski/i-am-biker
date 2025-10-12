@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="you can get your token in web service">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/AuthConnectionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/BikePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/bike/BikePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/BikesPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/bike/BikesPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/MaintenancePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/maintenance/MaintenancePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/profile/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/dao/entity/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/dao/entity/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/EngineType.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/enums/EngineType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/MaintenanceElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/enums/MaintenanceElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/dto/EngineDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/dto/EngineDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/MaintenanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/MaintenanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.AuthServiceApplication.executor": "Run",
-    "Application.NamingServerApplication.executor": "Run",
-    "Application.WebServiceApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Maven.api-gateway [clean].executor": "Run",
-    "Maven.auth-service [clean].executor": "Run",
-    "Maven.naming-server [clean].executor": "Run",
-    "Maven.web-service [clean].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NamingServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WebServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.auth-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.naming-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.web-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.bikerapp.api_gateway.filter" />
