@@ -1,6 +1,7 @@
 package com.bikerapp.web_service.controller.auth;
 
 import com.bikerapp.web_service.model.dto.auth.LoginDTO;
+import com.bikerapp.web_service.model.dto.auth.UserDTO;
 import com.bikerapp.web_service.service.AuthConnectionService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +23,8 @@ public class AuthController {
     private final AuthConnectionService authConnectionService;
 
     @GetMapping("/register")
-    public String displayRegisterPage() {
+    public String displayRegisterPage(Model model) {
+        model.addAttribute("userDTO", new UserDTO());
         return "auth/register";
     }
 
@@ -42,5 +44,11 @@ public class AuthController {
         cookie.setMaxAge(15*60);
         response.addCookie(cookie);
         return "redirect:http://localhost:8765/web/my-profile";
+    }
+
+    @PostMapping("/sign-up")
+    public String signUp(@ModelAttribute UserDTO userDTO) {
+        authConnectionService.registerUser(userDTO);
+        return "redirect:http://localhost:8765/web/auth/login";
     }
 }

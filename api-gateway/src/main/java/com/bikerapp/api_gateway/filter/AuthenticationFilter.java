@@ -21,6 +21,7 @@ public class AuthenticationFilter implements GlobalFilter {
     private final JwtUtils jwtUtils;
     private List<String> publicPaths = List.of(
             "/web/auth/**",
+            "/auth/**",
             "/web/style/**",
             "/web/images/**",
             "/web/script/**"
@@ -29,8 +30,10 @@ public class AuthenticationFilter implements GlobalFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        String path = String.valueOf(exchange.getRequest().getPath());
+        String path = exchange.getRequest().getPath().value();
+        System.out.println(path);
         if (isPathPublic(path)) {
+            System.out.println("Public path: "+path);
             return chain.filter(exchange);
         }
         HttpCookie cookie = exchange.getRequest().getCookies().getFirst("token");
@@ -68,7 +71,7 @@ public class AuthenticationFilter implements GlobalFilter {
 
     private boolean isPathPublic(String path) {
         for (String publicPath: publicPaths) {
-            if (pathMatcher.match(publicPath, path))
+            if (pathMatcher.matchStart(publicPath, path))
                 return true;
         }
         return false;

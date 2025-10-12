@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="public paths are accessible without token">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="redirecting to login page after failure to authenticate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/utils/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -425,11 +426,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760267286018</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="redirecting to login page after failure to authenticate">
+      <option name="closed" value="true" />
+      <created>1760268668285</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1760268668285</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="you can add bike now" />
     <MESSAGE value="working database connection" />
     <MESSAGE value="simplified structure with usage of service" />
     <MESSAGE value="fully working crud!" />
@@ -454,6 +462,7 @@
     <MESSAGE value="gateway receives token" />
     <MESSAGE value="token can be parsed correctly" />
     <MESSAGE value="public paths are accessible without token" />
-    <option name="LAST_COMMIT_MESSAGE" value="public paths are accessible without token" />
+    <MESSAGE value="redirecting to login page after failure to authenticate" />
+    <option name="LAST_COMMIT_MESSAGE" value="redirecting to login page after failure to authenticate" />
   </component>
 </project>
