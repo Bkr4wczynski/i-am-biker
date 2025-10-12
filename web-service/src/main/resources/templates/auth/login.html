@@ -19,7 +19,7 @@
         </div>
 
         <div id="content">
-            <form id="loginForm" th:object="${loginDTO}" th:action="@{/sign-in}" method="post">
+            <form id="loginForm" th:object="${loginDTO}" th:action="@{/auth/sign-in}" method="post">
                 <label for="username">Username </label>
                 <br>
                 <input type="text" id="username" th:field="*{username}"/>

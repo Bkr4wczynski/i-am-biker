@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="you can get your token in web service">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="intercepting requests in gateway">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,11 +394,18 @@
       <option name="project" value="LOCAL" />
       <updated>1759674363049</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="intercepting requests in gateway">
+      <option name="closed" value="true" />
+      <created>1760261748499</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1760261748499</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uncompleted security configuration" />
     <MESSAGE value="changed application.properties to application.yml and implemented working api gateway" />
     <MESSAGE value="application with temporary removed auth service for easier development" />
     <MESSAGE value="you can now see your bikes using httpSession in different htmls" />
@@ -425,6 +430,7 @@
     <MESSAGE value="added auth service but not connected to web service" />
     <MESSAGE value="working auth-service rest api" />
     <MESSAGE value="you can get your token in web service" />
-    <option name="LAST_COMMIT_MESSAGE" value="you can get your token in web service" />
+    <MESSAGE value="intercepting requests in gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="intercepting requests in gateway" />
   </component>
 </project>
