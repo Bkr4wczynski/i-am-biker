@@ -35,7 +35,6 @@ public class AuthController {
     @PostMapping("/sign-in")
     public String signIn(@ModelAttribute LoginDTO loginDTO, HttpServletResponse response) {
         String token = authConnectionService.getToken(loginDTO);
-        System.out.println(token);
         Cookie cookie = new Cookie("token", token);
         cookie.setHttpOnly(true);
         cookie.setSecure(false);
