@@ -32,13 +32,8 @@
 
       <label for="password">Password </label>
       <br>
-      <input type="password" id="password"/>
+      <input type="password" id="password" th:field="*{password}"/>
       <br>
-
-      <label for="confirm">Confirm password </label>
-      <br>
-      <input type="password" id="confirm" th:field="*{password}"/>
-
       <br>
       <a th:href="@{/auth/login}">Already have an account? Login now.</a>
 

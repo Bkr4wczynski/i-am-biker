@@ -11,8 +11,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.util.UriUtils;
 import reactor.core.publisher.Mono;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Component
@@ -40,9 +42,10 @@ public class AuthenticationFilter implements GlobalFilter {
         String jwtToken;
         try{
             jwtToken = cookie.getValue();
+            System.out.println(jwtToken);
         }
         catch (NullPointerException e) {
-            return redirectToLoginPage(exchange, "Wrong credentials!");
+            return redirectToLoginPage(exchange, "Authorization required!");
         }
         try {
             if (isTokenValid(jwtToken)) {
@@ -59,9 +62,9 @@ public class AuthenticationFilter implements GlobalFilter {
     }
 
     private Mono<Void> redirectToLoginPage(ServerWebExchange exchange, String reason) {
-        System.out.println(reason);
+        String redirectUrl = "/web/auth/login?error=" + UriUtils.encode(reason, StandardCharsets.UTF_8);
         exchange.getResponse().setStatusCode(HttpStatus.FOUND);
-        exchange.getResponse().getHeaders().set(HttpHeaders.LOCATION, "/web/auth/login");
+        exchange.getResponse().getHeaders().set(HttpHeaders.LOCATION, redirectUrl);
         return exchange.getResponse().setComplete();
     }
 

@@ -11,10 +11,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @AllArgsConstructor
@@ -29,14 +26,22 @@ public class AuthController {
     }
 
     @GetMapping("/login")
-    public String displayLoginPage(Model model) {
+    public String displayLoginPage(@RequestParam(value = "error", required = false) String error, Model model) {
+        if (error != null) {
+            model.addAttribute("errorMessage", error);
+        }
         model.addAttribute("loginDTO", new LoginDTO());
         return "auth/login";
     }
 
     @PostMapping("/sign-in")
     public String signIn(@ModelAttribute LoginDTO loginDTO, HttpServletResponse response) {
-        String token = authConnectionService.getToken(loginDTO);
+        String token;
+        try {
+            token = authConnectionService.getToken(loginDTO);
+        } catch (RuntimeException e) {
+            return "redirect:http://localhost:8765/web/auth/login?error=Bad Credentials!";
+        }
         Cookie cookie = new Cookie("token", token);
         cookie.setHttpOnly(true);
         cookie.setSecure(false);
