@@ -1,5 +1,6 @@
 package com.bikerapp.api_gateway.utils;
 
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
@@ -28,7 +29,7 @@ public class JwtUtils {
                 .getSubject();
     }
 
-    public boolean validateToken(String token) {
+    public boolean validateToken(String token) throws ExpiredJwtException {
         try {
             Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token);
             return true;
