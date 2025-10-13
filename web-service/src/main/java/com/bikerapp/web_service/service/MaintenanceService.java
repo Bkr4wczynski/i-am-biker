@@ -32,7 +32,7 @@ public class MaintenanceService {
         return maintenanceMileage;
     }
 
-    private int calculateInterval(int mil, int interval) {
+    public int calculateInterval(int mil, int interval) {
         if (mil == 0)
             return interval;
         if (mil % interval == 0)
