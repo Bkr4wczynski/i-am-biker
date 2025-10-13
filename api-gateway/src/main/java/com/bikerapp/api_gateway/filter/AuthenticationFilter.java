@@ -3,6 +3,7 @@ package com.bikerapp.api_gateway.filter;
 import com.bikerapp.api_gateway.utils.JwtUtils;
 import io.jsonwebtoken.ExpiredJwtException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHeaders;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -17,6 +18,7 @@ import reactor.core.publisher.Mono;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class AuthenticationFilter implements GlobalFilter {
@@ -33,30 +35,33 @@ public class AuthenticationFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String path = exchange.getRequest().getPath().value();
-        System.out.println(path);
+        log.info("Entering path: {}", path);
         if (isPathPublic(path)) {
-            System.out.println("Public path: "+path);
+            log.info("Path: {} is public", path);
             return chain.filter(exchange);
         }
         HttpCookie cookie = exchange.getRequest().getCookies().getFirst("token");
         String jwtToken;
         try{
             jwtToken = cookie.getValue();
-            System.out.println(jwtToken);
         }
         catch (NullPointerException e) {
+            log.info("Unauthorized request!");
             return redirectToLoginPage(exchange, "Authorization required!");
         }
         try {
             if (isTokenValid(jwtToken)) {
+                log.info("Token is valid");
                 return chain.filter(exchange);
             }
         } catch (ExpiredJwtException e) {
+            log.info("Received expired token!");
             return redirectToLoginPage(exchange, "Token has expired!");
         } catch (IllegalArgumentException e) {
+            log.warn("Unexpected error for path: {}", path);
             throw new RuntimeException(e);
         }
-
+        log.info("User asked to login again");
         return redirectToLoginPage(exchange, "Please login again");
 
     }
@@ -65,6 +70,7 @@ public class AuthenticationFilter implements GlobalFilter {
         String redirectUrl = "/web/auth/login?error=" + UriUtils.encode(reason, StandardCharsets.UTF_8);
         exchange.getResponse().setStatusCode(HttpStatus.FOUND);
         exchange.getResponse().getHeaders().set(HttpHeaders.LOCATION, redirectUrl);
+        log.info("Redirected to path: {}", redirectUrl);
         return exchange.getResponse().setComplete();
     }
 

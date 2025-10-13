@@ -22,7 +22,6 @@ public class AuthController {
 
     @GetMapping("/validate-token")
     public String validateToken(@RequestParam String token) {
-        log.info("This is logging message");
         if (authenticationService.validateToken(token))
             return "Token is valid";
         return "Token is not valid!";
