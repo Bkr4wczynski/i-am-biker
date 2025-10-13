@@ -4,6 +4,7 @@ import com.bikerapp.web_service.model.dto.BikeDTO;
 import com.bikerapp.web_service.service.BikesService;
 import com.bikerapp.web_service.service.MaintenanceService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
 
+@Slf4j
 @Controller
 @AllArgsConstructor
 public class MaintenancePageController {
@@ -23,6 +25,7 @@ public class MaintenancePageController {
         HashMap<String, Integer> maintenanceKm = maintenanceService.generateMaintenanceByMileage(bike.getMileage());
         model.addAttribute("bike", bike);
         model.addAttribute("maintenance", maintenanceKm);
+        log.info("Generated maintenance data for bike: {} ", bike.getModel());
         return "maintenance/maintenance";
     }
 }

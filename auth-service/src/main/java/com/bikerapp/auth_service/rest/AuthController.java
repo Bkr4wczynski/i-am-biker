@@ -8,9 +8,7 @@ import com.bikerapp.auth_service.service.AuthenticationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpClientErrorException;
 
-import java.util.Objects;
 import java.util.Optional;
 
 @Slf4j

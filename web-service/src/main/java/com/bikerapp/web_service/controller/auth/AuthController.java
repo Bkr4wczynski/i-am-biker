@@ -8,11 +8,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @Controller
 @AllArgsConstructor
 @RequestMapping("/auth")
@@ -36,6 +38,7 @@ public class AuthController {
 
     @PostMapping("/sign-in")
     public String signIn(@ModelAttribute LoginDTO loginDTO, HttpServletResponse response) {
+        log.info("User: {} asked to login", loginDTO.getUsername());
         String token;
         try {
             token = authConnectionService.getToken(loginDTO);
@@ -54,6 +57,7 @@ public class AuthController {
     @PostMapping("/sign-up")
     public String signUp(@ModelAttribute UserDTO userDTO) {
         authConnectionService.registerUser(userDTO);
+        log.info("User: {} asked to register", userDTO.getUsername());
         return "redirect:http://localhost:8765/web/auth/login";
     }
 }
