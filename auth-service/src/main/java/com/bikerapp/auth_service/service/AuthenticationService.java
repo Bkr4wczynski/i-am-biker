@@ -27,6 +27,10 @@ public class AuthenticationService {
         return "User registered";
     }
 
+    public boolean matchPasswords(String given, String expected) {
+        return passwordEncoder.matches(given, expected);
+    }
+
     public String generateToken(String username) {
         return jwtUtil.generateToken(username);
     }

@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="authentication fully working but without some features like alerting user">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="working authentication FINALLY!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/auth/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +90,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebServiceApplication">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bikerapp.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -149,9 +145,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebServiceApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.WebServiceApplication" />
         <item itemvalue="Application.NamingServerApplication" />
       </list>
     </recent_temporary>
@@ -444,11 +440,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760269834634</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="working authentication FINALLY!">
+      <option name="closed" value="true" />
+      <created>1760272477048</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1760272477048</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="simplified structure with usage of service" />
     <MESSAGE value="fully working crud!" />
     <MESSAGE value="simple maintenance added" />
     <MESSAGE value="simple css unfinished" />
@@ -473,6 +476,7 @@
     <MESSAGE value="public paths are accessible without token" />
     <MESSAGE value="redirecting to login page after failure to authenticate" />
     <MESSAGE value="authentication fully working but without some features like alerting user" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication fully working but without some features like alerting user" />
+    <MESSAGE value="working authentication FINALLY!" />
+    <option name="LAST_COMMIT_MESSAGE" value="working authentication FINALLY!" />
   </component>
 </project>

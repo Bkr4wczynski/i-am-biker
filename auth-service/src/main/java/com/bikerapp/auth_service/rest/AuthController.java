@@ -31,10 +31,12 @@ public class AuthController {
         String username = authRequest.getUsername();
         String password = authRequest.getPassword();
         Optional<User> user = userRepository.findByUsername(username);
+        System.out.println(password);
         if (user.isEmpty()) {
             throw new RuntimeException("Bad credentials!");
         }
-        if (!Objects.equals(user.get().getPassword(), password)) {
+        if (!authenticationService.matchPasswords(password, user.get().getPassword())) {
+            System.out.println("Correct: "+ user.get().getUsername() + " " + user.get().getPassword());
             throw new RuntimeException("Bad credentials!");
         }
 
