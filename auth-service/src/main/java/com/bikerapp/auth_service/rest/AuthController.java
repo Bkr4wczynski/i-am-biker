@@ -6,12 +6,14 @@ import com.bikerapp.auth_service.model.AuthRequest;
 import com.bikerapp.auth_service.repository.UserRepository;
 import com.bikerapp.auth_service.service.AuthenticationService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.Objects;
 import java.util.Optional;
 
+@Slf4j
 @RestController
 @AllArgsConstructor
 public class AuthController {
@@ -20,7 +22,7 @@ public class AuthController {
 
     @GetMapping("/validate-token")
     public String validateToken(@RequestParam String token) {
-        System.out.println(token);
+        log.info("This is logging message");
         if (authenticationService.validateToken(token))
             return "Token is valid";
         return "Token is not valid!";
@@ -31,24 +33,22 @@ public class AuthController {
         String username = authRequest.getUsername();
         String password = authRequest.getPassword();
         Optional<User> user = userRepository.findByUsername(username);
-        System.out.println(password);
-        if (user.isEmpty()) {
-            throw new RuntimeException("Bad credentials!");
-        }
-        if (!authenticationService.matchPasswords(password, user.get().getPassword())) {
-            System.out.println("Correct: "+ user.get().getUsername() + " " + user.get().getPassword());
+        if (user.isEmpty() || !authenticationService.matchPasswords(password, user.get().getPassword())) {
+            log.info("Failed to login reason: Bad Credentials!");
             throw new RuntimeException("Bad credentials!");
         }
 
+        log.info("Token successfully generated!");
         return authenticationService.generateToken(username);
     }
 
     @PostMapping("/register-user")
-    public String registerUser(@RequestBody UserDTO userDTO) {
+    public String registerUser(@RequestBody UserDTO userDTO) { // test for wrong input like duplicate username/email
         User user = new User();
         user.setUsername(userDTO.getUsername());
         user.setEmail(userDTO.getEmail());
         user.setPassword(userDTO.getPassword());
+        log.info("User successfully registered!");
         return authenticationService.saveUser(user);
     }
 }

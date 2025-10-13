@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="working authentication FINALLY!">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="password matching bug patched">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -448,11 +450,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760272477048</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="password matching bug patched">
+      <option name="closed" value="true" />
+      <created>1760355143483</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1760355143483</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fully working crud!" />
     <MESSAGE value="simple maintenance added" />
     <MESSAGE value="simple css unfinished" />
     <MESSAGE value="maintenance debugging" />
@@ -477,6 +486,7 @@
     <MESSAGE value="redirecting to login page after failure to authenticate" />
     <MESSAGE value="authentication fully working but without some features like alerting user" />
     <MESSAGE value="working authentication FINALLY!" />
-    <option name="LAST_COMMIT_MESSAGE" value="working authentication FINALLY!" />
+    <MESSAGE value="password matching bug patched" />
+    <option name="LAST_COMMIT_MESSAGE" value="password matching bug patched" />
   </component>
 </project>
