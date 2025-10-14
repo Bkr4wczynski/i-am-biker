@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="controller tests" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/AuthConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/AuthConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -540,11 +545,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760448142190</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1760448541505</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1760448541505</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="my bike styled" />
     <MESSAGE value="add bike styled" />
     <MESSAGE value="Styling complete" />
     <MESSAGE value="Form validation" />
@@ -569,6 +581,7 @@
     <MESSAGE value="first test written" />
     <MESSAGE value="auth controller test written" />
     <MESSAGE value="controller tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="controller tests" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>

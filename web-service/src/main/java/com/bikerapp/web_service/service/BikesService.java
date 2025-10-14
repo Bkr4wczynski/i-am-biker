@@ -5,6 +5,9 @@ import com.bikerapp.web_service.dao.repository.EngineRepository;
 import com.bikerapp.web_service.dao.entity.Bike;
 import com.bikerapp.web_service.dao.entity.Engine;
 import com.bikerapp.web_service.model.dto.BikeDTO;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -21,6 +24,9 @@ public class BikesService {
     private final BikesRepository bikesRepository;
     private final EngineRepository engineRepository;
 
+    @RateLimiter(name = "generalLimiter")
+    @TimeLimiter(name = "generalLimiter")
+    @Retry(name = "generalRetry")
     public List<BikeDTO> getBikes() {
         log.info("List of bikes displayed");
         return bikesRepository.findAll().stream()
@@ -28,6 +34,8 @@ public class BikesService {
                 .collect(Collectors.toList());
     }
 
+    @RateLimiter(name = "generalLimiter")
+    @TimeLimiter(name = "generalLimiter")
     public void saveBike(BikeDTO dto) {
         log.info("User saved bike: {}", dto.getModel());
         Bike bike = BikeDTO.toEntity(dto);
@@ -35,17 +43,24 @@ public class BikesService {
     }
 
     @Transactional
+    @RateLimiter(name = "generalLimiter")
+    @TimeLimiter(name = "generalLimiter")
     public void deleteBike(int id) {
         log.info("User deleted bike with id: {}", id);
         bikesRepository.deleteById(id);
     }
 
+    @RateLimiter(name = "generalLimiter")
+    @TimeLimiter(name = "generalLimiter")
+    @Retry(name = "generalRetry")
     public Optional<BikeDTO> findBike(int id) {
         log.info("Searching for bike with id: {}", id);
         return bikesRepository.findById(id).map(BikeDTO::toDTO);
     }
 
     @Transactional
+    @RateLimiter(name = "generalLimiter")
+    @TimeLimiter(name = "generalLimiter")
     public void updateBike(BikeDTO bikeDTO) {
         log.info("User requests for updating his {}", bikeDTO.getModel());
         Bike updated = BikeDTO.toEntity(bikeDTO);
