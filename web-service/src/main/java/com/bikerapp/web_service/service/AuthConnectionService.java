@@ -20,17 +20,8 @@ public class AuthConnectionService {
                 .block();
     }
 
-    public boolean validateToken(String token) {
-        String result = webClient.get()
-                .uri("/auth/validate-token?token="+token)
-                .retrieve()
-                .bodyToMono(String.class)
-                .block();
-        return result != null && result.equals("Token is valid");
-    }
-
-    public String registerUser(UserDTO userDTO) {
-        return webClient.post()
+    public void registerUser(UserDTO userDTO) {
+        webClient.post()
                 .uri("/auth/register-user")
                 .bodyValue(userDTO)
                 .retrieve()
