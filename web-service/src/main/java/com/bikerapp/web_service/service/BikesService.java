@@ -5,6 +5,7 @@ import com.bikerapp.web_service.dao.repository.EngineRepository;
 import com.bikerapp.web_service.dao.entity.Bike;
 import com.bikerapp.web_service.dao.entity.Engine;
 import com.bikerapp.web_service.model.dto.BikeDTO;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,6 @@ public class BikesService {
     }
 
     @Transactional
-
     public void deleteBike(int id) {
         log.info("User deleted bike with id: {}", id);
         bikesRepository.deleteById(id);
