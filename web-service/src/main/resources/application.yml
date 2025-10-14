@@ -26,22 +26,3 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
-resilience4j:
-  ratelimiter:
-    instances:
-      generalLimiter:
-        limitForPeriod: 5s
-        limitRefreshPeriod: 10s
-        timeoutDuration: 1s
-
-  timelimiter:
-    instances:
-      generalLimiter:
-        timeoutDuration: 5s
-
-  retry:
-    instances:
-      generalRetry:
-        maxAttempts: 3
-        waitDuration: 500ms
-
