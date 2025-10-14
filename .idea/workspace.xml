@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="first test written">
-      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/bikerapp/web_service/web_service/controller/AuthControllerTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="auth controller test written">
+      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/bikerapp/web_service/web_service/controller/MaintenancePageControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,9 +59,13 @@
     "Application.NamingServerApplication.executor": "Run",
     "Application.WebServiceApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
     "JUnit.AuthControllerTests.shouldRenderLoginPage.executor": "Run",
     "JUnit.AuthControllerTests.shouldRenderRegisterPage.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered.executor": "Run",
     "JUnit.MaintenanceServiceTests.testCalculateInterval.executor": "Run",
     "JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
@@ -97,7 +101,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration">
+  <component name="RunManager" selected="JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered">
     <configuration name="AuthControllerTests.shouldRedirectToLoginAfterRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <extension name="coverage">
@@ -146,7 +150,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthControllerTests.shouldRenderLoginPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaintenancePageControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <extension name="coverage">
         <pattern>
@@ -155,14 +159,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.bikerapp.web_service.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.AuthControllerTests" />
-      <option name="METHOD_NAME" value="shouldRenderLoginPage" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.MaintenancePageControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthControllerTests.shouldRenderRegisterPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaintenancePageControllerTests.testIfMaintenancePageIsRendered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <extension name="coverage">
         <pattern>
@@ -171,8 +174,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.bikerapp.web_service.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.AuthControllerTests" />
-      <option name="METHOD_NAME" value="shouldRenderRegisterPage" />
+      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.MaintenancePageControllerTests" />
+      <option name="METHOD_NAME" value="testIfMaintenancePageIsRendered" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered" />
+        <item itemvalue="JUnit.MaintenancePageControllerTests" />
         <item itemvalue="JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration" />
         <item itemvalue="JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed" />
         <item itemvalue="JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess" />
-        <item itemvalue="JUnit.AuthControllerTests.shouldRenderRegisterPage" />
-        <item itemvalue="JUnit.AuthControllerTests.shouldRenderLoginPage" />
       </list>
     </recent_temporary>
   </component>
@@ -524,11 +527,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760362250675</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="auth controller test written">
+      <option name="closed" value="true" />
+      <created>1760447342304</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1760447342305</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="separate maintenance page" />
     <MESSAGE value="main pages styled" />
     <MESSAGE value="my bike styled" />
     <MESSAGE value="add bike styled" />
@@ -553,6 +563,7 @@
     <MESSAGE value="api gateway logging" />
     <MESSAGE value="complete logging added" />
     <MESSAGE value="first test written" />
-    <option name="LAST_COMMIT_MESSAGE" value="first test written" />
+    <MESSAGE value="auth controller test written" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth controller test written" />
   </component>
 </project>
