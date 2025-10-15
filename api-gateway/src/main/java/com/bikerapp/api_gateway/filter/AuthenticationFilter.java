@@ -28,7 +28,8 @@ public class AuthenticationFilter implements GlobalFilter {
             "/auth/**",
             "/web/style/**",
             "/web/images/**",
-            "/web/script/**"
+            "/web/script/**",
+            "/maintenance/**"
     );
     private AntPathMatcher pathMatcher = new AntPathMatcher();
 

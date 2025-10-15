@@ -1,8 +1,7 @@
-package com.bikerapp.web_service.web_service;
+package com.bikerapp.maintenance_service;
 
-import com.bikerapp.web_service.model.enums.MaintenanceElements;
-import com.bikerapp.web_service.service.MaintenanceService;
-import org.junit.jupiter.api.Test;
+import com.bikerapp.maintenance_service.service.MaintenanceService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +22,7 @@ public class MaintenanceServiceTests {
             "11000, 12000, 1000"
     })
     void testCalculateInterval(int mileage, int interval, int expected) {
-        assertEquals(expected, maintenanceService.calculateInterval(mileage, interval));
+        Assertions.assertEquals(expected, maintenanceService.calculateInterval(mileage, interval));
 
     }
 

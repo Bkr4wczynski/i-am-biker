@@ -2,14 +2,11 @@ package com.bikerapp.web_service.controller.auth;
 
 import com.bikerapp.web_service.model.dto.auth.LoginDTO;
 import com.bikerapp.web_service.model.dto.auth.UserDTO;
-import com.bikerapp.web_service.service.AuthConnectionService;
+import com.bikerapp.web_service.service.connectionService.AuthConnectionService;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

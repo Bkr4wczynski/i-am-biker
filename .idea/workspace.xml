@@ -4,12 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="spring actuator added">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="resilience4j connected">
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/bikerapp/maintenance_service/model/MaintenanceElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/bikerapp/maintenance_service/rest/MaintenanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/bikerapp/maintenance_service/service/MaintenanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/connectionService/MaintenanceConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/bike/BikesPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/bike/BikesPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/BikesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/BikesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/bikerapp/api_gateway/filter/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/maintenance/MaintenancePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/maintenance/MaintenancePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/enums/MaintenanceElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/AuthConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/connectionService/AuthConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/MaintenanceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/bikerapp/web_service/web_service/MaintenanceServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/test/java/com/bikerapp/maintenance_service/MaintenanceServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/bikerapp/web_service/web_service/controller/AuthControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/bikerapp/web_service/web_service/controller/AuthControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="HTML File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -55,38 +70,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.NamingServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WebServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRenderLoginPage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRenderRegisterPage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenancePageControllerTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenanceServiceTests.testCalculateInterval.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.naming-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [validate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.AuthServiceApplication.executor": "Run",
+    "Application.MaintenanceServiceApplication.executor": "Run",
+    "Application.NamingServerApplication.executor": "Run",
+    "Application.WebServiceApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRenderLoginPage.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRenderRegisterPage.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered.executor": "Run",
+    "JUnit.MaintenanceServiceTests.executor": "Run",
+    "JUnit.MaintenanceServiceTests.testCalculateInterval.executor": "Run",
+    "JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor": "Run",
+    "Maven.api-gateway [clean].executor": "Run",
+    "Maven.auth-service [clean].executor": "Run",
+    "Maven.maintenance-service [clean].executor": "Run",
+    "Maven.naming-server [clean].executor": "Run",
+    "Maven.web-service [clean].executor": "Run",
+    "Maven.web-service [compile].executor": "Run",
+    "Maven.web-service [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.bikerapp.api_gateway.filter" />
@@ -99,98 +117,87 @@
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\auth-service\src\main\resources\templates" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\resources\templates\authorization" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.bikerapp.maintenance_service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bikerapp.web_service.model.dto" />
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered">
-    <configuration name="AuthControllerTests.shouldRedirectToLoginAfterRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bikerapp.api_gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bikerapp.web_service.web_service.controller.*" />
+          <option name="PATTERN" value="com.bikerapp.api_gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bikerapp.web_service.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.AuthControllerTests" />
-      <option name="METHOD_NAME" value="shouldRedirectToLoginAfterRegistration" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthControllerTests.shouldRedirectToLoginWhenFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bikerapp.auth_service.AuthServiceApplication" />
+      <module name="auth-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bikerapp.web_service.web_service.controller.*" />
+          <option name="PATTERN" value="com.bikerapp.auth_service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bikerapp.web_service.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.AuthControllerTests" />
-      <option name="METHOD_NAME" value="shouldRedirectToLoginWhenFailed" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthControllerTests.shouldRedirectToProfileWhenSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="MaintenanceServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bikerapp.maintenance_service.MaintenanceServiceApplication" />
+      <module name="maintenance-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bikerapp.web_service.web_service.controller.*" />
+          <option name="PATTERN" value="com.bikerapp.maintenance_service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bikerapp.web_service.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.AuthControllerTests" />
-      <option name="METHOD_NAME" value="shouldRedirectToProfileWhenSuccess" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaintenancePageControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="NamingServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bikerapp.naming_server.NamingServerApplication" />
+      <module name="naming-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bikerapp.web_service.web_service.controller.*" />
+          <option name="PATTERN" value="com.bikerapp.naming_server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bikerapp.web_service.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.MaintenancePageControllerTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaintenancePageControllerTests.testIfMaintenancePageIsRendered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.WebServiceApplication" />
       <module name="web-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bikerapp.web_service.web_service.controller.*" />
+          <option name="PATTERN" value="com.bikerapp.web_service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bikerapp.web_service.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.bikerapp.web_service.web_service.controller.MaintenancePageControllerTests" />
-      <option name="METHOD_NAME" value="testIfMaintenancePageIsRendered" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered" />
-        <item itemvalue="JUnit.MaintenancePageControllerTests" />
-        <item itemvalue="JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration" />
-        <item itemvalue="JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed" />
-        <item itemvalue="JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.WebServiceApplication" />
+        <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.MaintenanceServiceApplication" />
+        <item itemvalue="Application.NamingServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -562,11 +569,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760451298275</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="resilience4j connected">
+      <option name="closed" value="true" />
+      <created>1760453611856</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1760453611856</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add bike styled" />
     <MESSAGE value="Styling complete" />
     <MESSAGE value="Form validation" />
     <MESSAGE value="added dto and styled bikes display still have to use dto" />
@@ -591,6 +605,7 @@
     <MESSAGE value="auth controller test written" />
     <MESSAGE value="controller tests" />
     <MESSAGE value="spring actuator added" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring actuator added" />
+    <MESSAGE value="resilience4j connected" />
+    <option name="LAST_COMMIT_MESSAGE" value="resilience4j connected" />
   </component>
 </project>

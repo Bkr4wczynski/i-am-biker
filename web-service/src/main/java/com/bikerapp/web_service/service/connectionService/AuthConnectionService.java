@@ -1,13 +1,11 @@
-package com.bikerapp.web_service.service;
+package com.bikerapp.web_service.service.connectionService;
 
 import com.bikerapp.web_service.model.dto.auth.LoginDTO;
 import com.bikerapp.web_service.model.dto.auth.UserDTO;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
-@AllArgsConstructor
 public class AuthConnectionService {
     private final WebClient webClient = WebClient.create("http://localhost:8765");
 

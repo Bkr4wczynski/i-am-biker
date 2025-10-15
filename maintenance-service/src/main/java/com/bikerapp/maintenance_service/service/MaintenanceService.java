@@ -1,12 +1,12 @@
-package com.bikerapp.web_service.service;
+package com.bikerapp.maintenance_service.service;
 
-import com.bikerapp.web_service.model.enums.MaintenanceElements;
+import com.bikerapp.maintenance_service.model.MaintenanceElements;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
 
-import static com.bikerapp.web_service.model.enums.MaintenanceElements.*;
+import static com.bikerapp.maintenance_service.model.MaintenanceElements.OIL_CHANGE;
 
 @Service
 public class MaintenanceService {

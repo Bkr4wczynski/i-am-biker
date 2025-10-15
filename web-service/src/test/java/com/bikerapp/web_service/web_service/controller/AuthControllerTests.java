@@ -2,7 +2,7 @@ package com.bikerapp.web_service.web_service.controller;
 
 import com.bikerapp.web_service.controller.auth.AuthController;
 import com.bikerapp.web_service.model.dto.auth.LoginDTO;
-import com.bikerapp.web_service.service.AuthConnectionService;
+import com.bikerapp.web_service.service.connectionService.AuthConnectionService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;

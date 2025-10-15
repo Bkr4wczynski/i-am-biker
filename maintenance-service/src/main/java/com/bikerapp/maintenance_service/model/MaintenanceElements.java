@@ -1,4 +1,4 @@
-package com.bikerapp.web_service.model.enums;
+package com.bikerapp.maintenance_service.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
