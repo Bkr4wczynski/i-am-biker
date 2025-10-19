@@ -36,7 +36,7 @@ public class AuthController {
         }
 
         log.info("Token successfully generated!");
-        return authenticationService.generateToken(username);
+        return authenticationService.generateToken(username, user.get().getId());
     }
 
     @PostMapping("/register-user")

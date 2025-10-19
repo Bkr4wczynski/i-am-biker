@@ -19,6 +19,8 @@ import java.time.LocalDate;
 public class BikeDTO {
     private int id;
 
+    private int user_id;
+
     private String model;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -37,6 +39,7 @@ public class BikeDTO {
 
     public static BikeDTO toDTO(Bike bike) {
         BikeDTO dto = new BikeDTO();
+        dto.setUser_id(bike.getUserId());
         dto.setId(bike.getId());
         dto.setMileage(bike.getMileage());
         dto.setEngine(bike.getEngine());
@@ -47,6 +50,7 @@ public class BikeDTO {
 
     public static Bike toEntity(BikeDTO dto) {
         Bike bike = new Bike();
+        bike.setUserId(dto.getUser_id());
         bike.setId(dto.getId());
         bike.setMileage(dto.getMileage());
         bike.setEngine(dto.getEngine());

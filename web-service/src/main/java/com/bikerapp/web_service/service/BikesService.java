@@ -5,6 +5,7 @@ import com.bikerapp.web_service.dao.repository.EngineRepository;
 import com.bikerapp.web_service.dao.entity.Bike;
 import com.bikerapp.web_service.dao.entity.Engine;
 import com.bikerapp.web_service.model.dto.BikeDTO;
+import com.bikerapp.web_service.utils.JwtUtils;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,13 +23,12 @@ public class BikesService {
     private final BikesRepository bikesRepository;
     private final EngineRepository engineRepository;
 
-    public List<BikeDTO> getBikes() {
+    public List<BikeDTO> getBikes(int userId) {
         log.info("List of bikes displayed");
-        return bikesRepository.findAll().stream()
+        return bikesRepository.findByUserId(userId).stream()
                 .map(BikeDTO::toDTO)
                 .collect(Collectors.toList());
     }
-
 
     public void saveBike(BikeDTO dto) {
         log.info("User saved bike: {}", dto.getModel());

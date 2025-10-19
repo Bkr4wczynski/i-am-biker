@@ -31,4 +31,7 @@ public class Bike {
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "engine_id")
     private Engine engine;
+
+    @Column(name = "user_id")
+    private int userId;
 }

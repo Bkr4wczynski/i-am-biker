@@ -31,8 +31,8 @@ public class AuthenticationService {
         return passwordEncoder.matches(given, expected);
     }
 
-    public String generateToken(String username) {
-        return jwtUtil.generateToken(username);
+    public String generateToken(String username, int id) {
+        return jwtUtil.generateToken(username, id);
     }
 
     public boolean validateToken(String token) {
