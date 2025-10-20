@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Safety tips</title>
+    <link rel="stylesheet" th:href="@{/style/content.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+
+    <div id="logo">
+        <img th:src="@{/images/logo.png}" alt="I am biker"/>
+    </div>
+
+    <div id="menu">
+        <div class="option"><a th:href="@{/my-profile}">Your profile</a></div>
+        <div class="option"><a th:href="@{/my-bikes}">Your bikes</a></div>
+        <div class="option"><a th:href="@{/safety-tips}">Safety tips</a></div>
+        <div id="logout">
+            <form th:action="@{/auth/logout}" method="post">
+                <button type="submit" id="logoutBtn">Logout</button>
+            </form>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div id="content">
+        <h2>Safety tips</h2>
+        <section class="tip">
+            <h3>Protective gear is essential for every ride</h3>
+            <p>Wear helmet, jacket, gloves, pants and boots.</p>
+        </section>
+        <section class="tip">
+            <h3>Always check your motorcycle before ride.</h3>
+            <p>Before every ride mandatory inspect brakes, tires, lights and all fluid levels.</p>
+        </section>
+        <section class="tip">
+            <h3>Ride defensively</h3>
+            <p>On motorcycle, you are worse visible than cars.</p>
+            <p>Always try to predict other drivers behavior and avoid risky maneuvers.</p>
+        </section>
+        <section class="tip">
+            <h3>Regular maintenance</h3>
+            <p>You should do regular maintenance work such as fe. oil change. You can use our website for managing maintenance</p>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>
