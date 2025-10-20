@@ -7,6 +7,8 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -56,5 +58,17 @@ public class AuthController {
         authConnectionService.registerUser(userDTO);
         log.info("User: {} asked to register", userDTO.getUsername());
         return "redirect:http://localhost:8765/web/auth/login";
+    }
+
+    @PostMapping("/logout")
+    public String logout(HttpServletResponse response) {
+        ResponseCookie cookie = ResponseCookie.from("token", "")
+                .httpOnly(true)
+                .secure(false)
+                .path("/")
+                .maxAge(0)
+                .build();
+        response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
+        return "redirect:http://localhost:8765/web/auth/login?error=Logout successful";
     }
 }
