@@ -85,3 +85,55 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background-color: #FEFEFE;
 }
+
+#footer {
+    width: 980px;
+    position:absolute;
+    bottom:0;
+    padding: 10px;
+    margin-top:10px;
+    font-size: 18px;
+    color: #FEFEFE;
+    background-color: #263142;
+}
+
+#quiz {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #FEFEFE;
+}
+
+.answer {
+    background-color: #263142;
+    color: #FEFEFE;
+    border-radius: 10px;
+    height: 45px;
+    border: none;
+    margin-bottom: 30px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+}
+
+.answer:hover {
+    background-color: #1A222E;
+    cursor: pointer;
+}
+
+#submit {
+    background-color: #263142;
+    color: #FEFEFE;
+    height: 45px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    margin: 20px auto 0;
+    width: 80px;
+    display: none;
+}
+
+#submit:hover {
+    background-color: #1A222E;
+    cursor: pointer;
+}

@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="user can now logout successfully">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/SafetyTipsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/safetyTips.html" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="safety tips content">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/QuizController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/profile/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/profile/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/SafetyTipsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/SafetyTipsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/style/content.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/safetyTips.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/safetyTips.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,8 +185,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.WebServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.MaintenanceServiceApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.NamingServerApplication" />
@@ -572,11 +577,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760979269075</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="safety tips content">
+      <option name="closed" value="true" />
+      <created>1760980916016</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1760980916016</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Form validation" />
     <MESSAGE value="added dto and styled bikes display still have to use dto" />
     <MESSAGE value="added dto mapping methods" />
     <MESSAGE value="successful transfer to dto" />
@@ -601,6 +613,7 @@
     <MESSAGE value="spring actuator added" />
     <MESSAGE value="resilience4j connected" />
     <MESSAGE value="user can now logout successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="user can now logout successfully" />
+    <MESSAGE value="safety tips content" />
+    <option name="LAST_COMMIT_MESSAGE" value="safety tips content" />
   </component>
 </project>

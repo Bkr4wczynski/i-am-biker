@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Safety tips</title>
+    <title>Motorcycle quiz</title>
     <link rel="stylesheet" th:href="@{/style/content.css}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,30 +28,24 @@
         <div style="clear:both;"></div>
     </div>
     <div id="content">
-        <h2>Safety tips</h2>
-        <section class="tip">
-            <h3>Protective gear is essential for every ride</h3>
-            <p>Wear helmet, jacket, gloves, pants and boots.</p>
-        </section>
-        <section class="tip">
-            <h3>Always check your motorcycle before ride.</h3>
-            <p>Before every ride mandatory inspect brakes, tires, lights and all fluid levels.</p>
-        </section>
-        <section class="tip">
-            <h3>Ride defensively</h3>
-            <p>On motorcycle, you are worse visible than cars.</p>
-            <p>Always try to predict other drivers behavior and avoid risky maneuvers.</p>
-        </section>
-        <section class="tip">
-            <h3>Regular maintenance</h3>
-            <p>You should do regular maintenance work such as fe. oil change. You can use our website for managing maintenance</p>
-        </section>
-    </div>
+        <h2>Which motorcycle is for you?</h2>
+        <div id="quiz" th:object="${question}">
 
+            <h3 th:text="*{title}"></h3>
+            <button class="answer" th:text="*{answers[0].title}"></button>
+            <button class="answer" th:text="*{answers[1].title}"></button>
+            <button class="answer" th:text="*{answers[2].title}"></button>
+            <button class="answer" th:text="*{answers[3].title}"></button>
+
+            <button id="submit">Next</button>
+
+        </div>
+    </div>
     <div id="footer">
         I am biker website. For all motorcyclists from a motorcyclist.
     </div>
 </div>
 
+<script type="text/javascript" th:src="@{/script/QuizScript.js}"></script>
 </body>
 </html>
