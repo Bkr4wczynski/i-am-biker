@@ -40,6 +40,7 @@ let currentQuestionIndex = 0;
 
 function startQuiz() {
     scores = [0, 0, 0];
+    selectedOption = null;
     currentQuestionIndex = 0;
     showQuestion();
 }
@@ -53,6 +54,7 @@ function showQuestion() {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("answer");
+        button.dataset.value = answer.score;
         answerButtons.appendChild(button);
         button.addEventListener("click", () => handleButtonClick(button));
     });
@@ -68,11 +70,55 @@ function resetState() {
 
 function showScore() {
     resetState();
+    let result = calculateResult();
+    questionTitle.innerHTML = "You are... " + result;
     nextButton.innerHTML = "Restart";
     nextButton.style.display = "block";
 }
 
+function calculateResult() {
+    const max = Math.max(...scores);
+    if (max == 3) {
+        return "A balanced rider";
+    }
+    const indexMax = scores.indexOf(max);
+    switch (indexMax) {
+        case 0:
+            return "A sports rider";
+            break;
+        case 1:
+            return "An Adventure rider";
+            break;
+        case 2:
+            return "An Off-road biker";
+            break;
+    }
+    return "Error";
+}
+
+function actualiseScores() {
+    switch(selectedOption) {
+        case 0:
+            scores[0] += 3;
+            break;
+        case 1:
+            scores[1] += 3;
+            break;
+        case 2:
+            scores[2] += 3;
+            break;
+        case -1:
+            scores[0] += 1;
+            scores[1] += 1;
+            scores[2] += 1;
+            break;
+        default:
+            alert("unexpected javascript error!");
+    }
+}
+
 function handleNextButton() {
+    actualiseScores();
     currentQuestionIndex ++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
@@ -80,6 +126,7 @@ function handleNextButton() {
     else {
         showScore();
     }
+    selectedOption = null;
 }
 
 nextButton.addEventListener("click", () => {
@@ -107,6 +154,7 @@ function handleButtonClick(btn) {
         selectedOption = value;
         btn.style.background = "#090909";
     }
+
     nextButton.style.display="block";
 
 }
