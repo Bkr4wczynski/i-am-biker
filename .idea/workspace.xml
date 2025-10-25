@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="basic quiz static form">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="basic js quiz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Answer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Question.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/style/content.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/content.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,14 +190,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00001" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1757166704185</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1757166704185</updated>
     </task>
     <task id="LOCAL-00002" summary="refactor">
       <option name="closed" value="true" />
@@ -588,11 +575,18 @@
       <option name="project" value="LOCAL" />
       <updated>1761159488380</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="basic js quiz">
+      <option name="closed" value="true" />
+      <created>1761388652170</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1761388652171</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added dto mapping methods" />
     <MESSAGE value="successful transfer to dto" />
     <MESSAGE value="login and register page" />
     <MESSAGE value="added auth service but not connected to web service" />
@@ -617,6 +611,7 @@
     <MESSAGE value="user can now logout successfully" />
     <MESSAGE value="safety tips content" />
     <MESSAGE value="basic quiz static form" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic quiz static form" />
+    <MESSAGE value="basic js quiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic js quiz" />
   </component>
 </project>

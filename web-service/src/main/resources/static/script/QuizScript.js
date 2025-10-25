@@ -1,4 +1,5 @@
 const nextButton = document.getElementById("nextButton");
+let selectedOption = null;
 
 let scores = [0, 0, 0];
 const questions = [
@@ -53,36 +54,61 @@ function showQuestion() {
         button.innerHTML = answer.text;
         button.classList.add("answer");
         answerButtons.appendChild(button);
+        button.addEventListener("click", () => handleButtonClick(button));
     });
 }
 
 function resetState() {
     nextButton.style.display = "none";
+    nextButton.innerHTML = "Next";
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
-startQuiz();
+function showScore() {
+    resetState();
+    nextButton.innerHTML = "Restart";
+    nextButton.style.display = "block";
+}
 
-let selectedOption = null;
-const buttons = document.querySelectorAll(".answer");
+function handleNextButton() {
+    currentQuestionIndex ++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    }
+    else {
+        showScore();
+    }
+}
 
-buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        if(selectedOption === btn.dataset.value){
-            btn.classList.remove("active");
-            selectedOption = null;
-            btn.style.background = "#263142";
-        } else {
-            buttons.forEach (b =>{
-                b.classList.remove("active");
-                b.style.background = "#263142";
-            })
-            btn.classList.add("active");
-            selectedOption = btn.dataset.value;
-            btn.style.background = "#090909";
-        }
-        nextButton.style.display="block";
-    });
+nextButton.addEventListener("click", () => {
+    if(currentQuestionIndex < questions.length) {
+        handleNextButton();
+    }
+    else {
+        startQuiz();
+    }
 });
+
+function handleButtonClick(btn) {
+    const value = Number(btn.dataset.value);
+    if(selectedOption === value){
+        btn.classList.remove("active");
+        selectedOption = null;
+        btn.style.background = "#263142";
+    }
+    else {
+        answerButtons.querySelectorAll("button").forEach (b =>{
+            b.classList.remove("active");
+            b.style.background = "#263142";
+        })
+        btn.classList.add("active");
+        selectedOption = value;
+        btn.style.background = "#090909";
+    }
+    nextButton.style.display="block";
+
+}
+
+startQuiz();
