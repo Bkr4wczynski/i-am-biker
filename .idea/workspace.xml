@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="safety tips content">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/QuizController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="basic quiz static form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/SafetyTipsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/SafetyTipsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/content/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Answer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/content/Question.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/style/content.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/content.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/safetyTips.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/safetyTips.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +112,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApiGatewayApplication">
+  <component name="RunManager" selected="Application.WebServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bikerapp.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -185,10 +180,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.MaintenanceServiceApplication" />
+        <item itemvalue="Application.WebServiceApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.MaintenanceServiceApplication" />
         <item itemvalue="Application.NamingServerApplication" />
       </list>
     </recent_temporary>
@@ -585,11 +580,18 @@
       <option name="project" value="LOCAL" />
       <updated>1760980916016</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="basic quiz static form">
+      <option name="closed" value="true" />
+      <created>1761159488380</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1761159488380</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added dto and styled bikes display still have to use dto" />
     <MESSAGE value="added dto mapping methods" />
     <MESSAGE value="successful transfer to dto" />
     <MESSAGE value="login and register page" />
@@ -614,6 +616,7 @@
     <MESSAGE value="resilience4j connected" />
     <MESSAGE value="user can now logout successfully" />
     <MESSAGE value="safety tips content" />
-    <option name="LAST_COMMIT_MESSAGE" value="safety tips content" />
+    <MESSAGE value="basic quiz static form" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic quiz static form" />
   </component>
 </project>

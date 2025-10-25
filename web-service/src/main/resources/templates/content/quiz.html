@@ -28,16 +28,16 @@
         <div style="clear:both;"></div>
     </div>
     <div id="content">
-        <h2>Which motorcycle is for you?</h2>
-        <div id="quiz" th:object="${question}">
-
-            <h3 th:text="*{title}"></h3>
-            <button class="answer" th:text="*{answers[0].title}"></button>
-            <button class="answer" th:text="*{answers[1].title}"></button>
-            <button class="answer" th:text="*{answers[2].title}"></button>
-            <button class="answer" th:text="*{answers[3].title}"></button>
-
-            <button id="submit">Next</button>
+        <h2>What type of motorcyclist are you?</h2>
+        <div id="quiz">
+            <h3 id="questionTitle">Question</h3>
+            <div id="answerButtons">
+                <button class="answer">answer 1</button>
+                <button class="answer">answer 2</button>
+                <button class="answer">answer 3</button>
+                <button class="answer">answer 4</button>
+            </div>
+            <button id="nextButton">Next</button>
 
         </div>
     </div>

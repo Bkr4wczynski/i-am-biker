@@ -120,7 +120,7 @@ body {
     cursor: pointer;
 }
 
-#submit {
+#nextButton {
     background-color: #263142;
     color: #FEFEFE;
     height: 45px;
@@ -133,7 +133,7 @@ body {
     display: none;
 }
 
-#submit:hover {
+#nextButton:hover {
     background-color: #1A222E;
     cursor: pointer;
 }
