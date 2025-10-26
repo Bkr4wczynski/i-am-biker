@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="js quiz working but need to implement scoring">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="simple quiz version working">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/UserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/repository/UserDetailsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/script/QuizScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/auth/AuthController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -107,7 +109,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebServiceApplication">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bikerapp.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -176,9 +178,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.WebServiceApplication" />
-        <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.MaintenanceServiceApplication" />
+        <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.WebServiceApplication" />
         <item itemvalue="Application.NamingServerApplication" />
       </list>
     </recent_temporary>
@@ -190,14 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00003" summary="refactor">
-      <option name="closed" value="true" />
-      <created>1757166968895</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1757166968895</updated>
     </task>
     <task id="LOCAL-00004" summary="uncompleted security configuration">
       <option name="closed" value="true" />
@@ -583,11 +577,18 @@
       <option name="project" value="LOCAL" />
       <updated>1761389629841</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="simple quiz version working">
+      <option name="closed" value="true" />
+      <created>1761392476156</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1761392476156</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login and register page" />
     <MESSAGE value="added auth service but not connected to web service" />
     <MESSAGE value="working auth-service rest api" />
     <MESSAGE value="you can get your token in web service" />
@@ -612,6 +613,7 @@
     <MESSAGE value="basic quiz static form" />
     <MESSAGE value="basic js quiz" />
     <MESSAGE value="js quiz working but need to implement scoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="js quiz working but need to implement scoring" />
+    <MESSAGE value="simple quiz version working" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple quiz version working" />
   </component>
 </project>

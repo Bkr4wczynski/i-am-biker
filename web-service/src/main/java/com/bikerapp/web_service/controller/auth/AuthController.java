@@ -48,7 +48,7 @@ public class AuthController {
         cookie.setHttpOnly(true);
         cookie.setSecure(false);
         cookie.setPath("/");
-        cookie.setMaxAge(15*60);
+        cookie.setMaxAge(60*60);
         response.addCookie(cookie);
         return "redirect:http://localhost:8765/web/my-profile";
     }
