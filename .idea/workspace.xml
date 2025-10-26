@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="controllers updated for user details">
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/dto/UserDetailsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/UserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/UserDetails.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/model/dto/auth/UserDetailsDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/connectionService/AuthConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/connectionService/AuthConnectionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +104,7 @@
       <recent name="com.bikerapp.maintenance_service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bikerapp.web_service.model.dto.auth" />
       <recent name="com.bikerapp.web_service.model.dto" />
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
@@ -195,14 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00006" summary="application with temporary removed auth service for easier development">
-      <option name="closed" value="true" />
-      <created>1758038286240</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1758038286240</updated>
     </task>
     <task id="LOCAL-00007" summary="application with temporary removed auth service for easier development">
       <option name="closed" value="true" />
@@ -588,11 +577,18 @@
       <option name="project" value="LOCAL" />
       <updated>1761492467903</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1761494786947</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1761494786947</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="you can get your token in web service" />
     <MESSAGE value="intercepting requests in gateway" />
     <MESSAGE value="gateway receives token" />
     <MESSAGE value="token can be parsed correctly" />
@@ -617,6 +613,7 @@
     <MESSAGE value="simple quiz version working" />
     <MESSAGE value="user details entity" />
     <MESSAGE value="controllers updated for user details" />
-    <option name="LAST_COMMIT_MESSAGE" value="controllers updated for user details" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>

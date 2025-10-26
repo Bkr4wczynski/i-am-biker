@@ -29,10 +29,8 @@ public class AuthController {
 
     @GetMapping("/user-details")
     public UserDetailsDTO getUserDetails(@RequestParam String token) {
-        log.info(token);
         if (!authenticationService.validateToken(token))
             return null;
-        log.info("success");
         UserDetails userDetails = authenticationService.getUserDetailsFromToken(token);
         return new UserDetailsDTO(userDetails.getUser_id(), userDetails.getRegistry_date(), userDetails.getBirthday());
     }
