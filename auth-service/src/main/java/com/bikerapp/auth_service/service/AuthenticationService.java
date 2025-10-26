@@ -36,7 +36,7 @@ public class AuthenticationService {
         Optional<User> user = userRepository.findById(userId);
         if (user.isEmpty())
             throw new NotFoundException("Could not find user details for user");
-        return user.get().getUserDetails();
+        return user.get().getUser_details();
     }
 
     public boolean matchPasswords(String given, String expected) {

@@ -1,6 +1,7 @@
 package com.bikerapp.auth_service.rest;
 
 import com.bikerapp.auth_service.dto.UserDTO;
+import com.bikerapp.auth_service.dto.UserDetailsDTO;
 import com.bikerapp.auth_service.entity.User;
 import com.bikerapp.auth_service.entity.UserDetails;
 import com.bikerapp.auth_service.model.AuthRequest;
@@ -27,10 +28,13 @@ public class AuthController {
     }
 
     @GetMapping("/user-details")
-    public UserDetails getUserDetails(@RequestParam String token) {
+    public UserDetailsDTO getUserDetails(@RequestParam String token) {
+        log.info(token);
         if (!authenticationService.validateToken(token))
             return null;
-        return authenticationService.getUserDetailsFromToken(token);
+        log.info("success");
+        UserDetails userDetails = authenticationService.getUserDetailsFromToken(token);
+        return new UserDetailsDTO(userDetails.getUser_id(), userDetails.getRegistry_date(), userDetails.getBirthday());
     }
 
     @PostMapping("/generate-token")

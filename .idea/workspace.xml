@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="user details entity">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="controllers updated for user details">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/dto/UserDetailsDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/UserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/UserDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/rest/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/security/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/service/AuthenticationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,9 +180,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.MaintenanceServiceApplication" />
-        <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.WebServiceApplication" />
         <item itemvalue="Application.NamingServerApplication" />
       </list>
@@ -192,14 +195,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00005" summary="changed application.properties to application.yml and implemented working api gateway">
-      <option name="closed" value="true" />
-      <created>1757690651110</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1757690651110</updated>
     </task>
     <task id="LOCAL-00006" summary="application with temporary removed auth service for easier development">
       <option name="closed" value="true" />
@@ -585,11 +580,18 @@
       <option name="project" value="LOCAL" />
       <updated>1761491808721</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="controllers updated for user details">
+      <option name="closed" value="true" />
+      <created>1761492467902</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1761492467903</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="working auth-service rest api" />
     <MESSAGE value="you can get your token in web service" />
     <MESSAGE value="intercepting requests in gateway" />
     <MESSAGE value="gateway receives token" />
@@ -614,6 +616,7 @@
     <MESSAGE value="js quiz working but need to implement scoring" />
     <MESSAGE value="simple quiz version working" />
     <MESSAGE value="user details entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="user details entity" />
+    <MESSAGE value="controllers updated for user details" />
+    <option name="LAST_COMMIT_MESSAGE" value="controllers updated for user details" />
   </component>
 </project>

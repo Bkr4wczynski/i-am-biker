@@ -1,5 +1,6 @@
 package com.bikerapp.auth_service.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.PastOrPresent;
@@ -19,7 +20,7 @@ public class UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private Integer id;
+    private Integer user_id;
 
     @Column(nullable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
