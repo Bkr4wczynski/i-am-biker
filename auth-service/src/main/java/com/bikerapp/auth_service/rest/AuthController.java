@@ -2,6 +2,7 @@ package com.bikerapp.auth_service.rest;
 
 import com.bikerapp.auth_service.dto.UserDTO;
 import com.bikerapp.auth_service.entity.User;
+import com.bikerapp.auth_service.entity.UserDetails;
 import com.bikerapp.auth_service.model.AuthRequest;
 import com.bikerapp.auth_service.repository.UserRepository;
 import com.bikerapp.auth_service.service.AuthenticationService;
@@ -23,6 +24,13 @@ public class AuthController {
         if (authenticationService.validateToken(token))
             return "Token is valid";
         return "Token is not valid!";
+    }
+
+    @GetMapping("/user-details")
+    public UserDetails getUserDetails(@RequestParam String token) {
+        if (!authenticationService.validateToken(token))
+            return null;
+        return authenticationService.getUserDetailsFromToken(token);
     }
 
     @PostMapping("/generate-token")

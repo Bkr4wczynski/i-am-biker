@@ -35,11 +35,11 @@ public class JwtUtil {
                 .compact();
     }
 
-    public String getUserFromToken(String token) {
+    public Integer getUserIdFromToken(String token) {
         return Jwts.parser().verifyWith(secretKey).build()
                 .parseSignedClaims(token)
                 .getPayload()
-                .getSubject();
+                .get("id", Integer.class);
     }
 
     public boolean validateToken(String token) {
