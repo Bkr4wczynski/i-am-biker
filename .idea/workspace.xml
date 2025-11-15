@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="passwords secured">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/bikerapp/auth_service/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/queries.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/profile/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/controller/profile/ProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/BikesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/bikerapp/web_service/service/BikesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +129,7 @@
     </configuration>
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="JWT_SECRET" value="JWT_SECRET=1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
+        <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
         <env name="DB_PASSWORD" value="61ix4fellkejiApR" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.bikerapp.auth_service.AuthServiceApplication" />
@@ -200,10 +196,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.WebServiceApplication" />
         <item itemvalue="Application.MaintenanceServiceApplication" />
         <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.NamingServerApplication" />
       </list>
     </recent_temporary>
@@ -215,14 +211,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00008" summary="you can now see your bikes using httpSession in different htmls">
-      <option name="closed" value="true" />
-      <created>1758215379134</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1758215379134</updated>
     </task>
     <task id="LOCAL-00009" summary="you can add bike now">
       <option name="closed" value="true" />
@@ -608,7 +596,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761495558208</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="passwords secured">
+      <option name="closed" value="true" />
+      <created>1763211177228</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1763211177229</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
