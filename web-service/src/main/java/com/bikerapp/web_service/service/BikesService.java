@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class BikesService {
     private final BikesRepository bikesRepository;
-    private final EngineRepository engineRepository;
 
     public List<BikeDTO> getBikes(int userId) {
         log.info("List of bikes displayed");

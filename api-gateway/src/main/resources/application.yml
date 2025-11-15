@@ -2,7 +2,7 @@ server:
   port: 8765
 
 jwt:
-  secret: 9d5c3687c5dfa48ae9a7799eabf77d3c0de017797d75ed7d82e852ac358a6500
+  secret: ${JWT_SECRET}
   expiration: 360000
 
 eureka:

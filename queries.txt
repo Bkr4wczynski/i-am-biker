@@ -1,43 +1,59 @@
-setup db
+------------------------------------------------------------------------------------------------------------------------
+1.setup database
 CREATE DATABASE i_am_biker_db;
 USE i_am_biker_db;
-
-create entities
+------------------------------------------------------------------------------------------------------------------------
+2.create essential tables
 
 CREATE TABLE engine (
 	id INT PRIMARY KEY AUTO_INCREMENT,
     capacity INT NOT NULL,
     horsepower DECIMAL(4,1) NOT NULL,
     engine_type VARCHAR(32) NOT NULL
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE bike (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-    model VARCHAR(64) NOT NULL,
+    model VARCHAR(255) NOT NULL,
     registry_date DATE,
     mileage INT DEFAULT 0,
     engine_id INT NOT NULL,
+    user_id INT NOT NULL,
     FOREIGN KEY (engine_id) REFERENCES engine(id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-sample data
+CREATE TABLE user (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(128) NOT NULL,
+    email VARCHAR(128) NOT NULL,
+    password VARCHAR(128)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE user_details(
+	user_id INT NOT NULL,
+    registry_date DATE,
+    birthday DATE,
+
+    PRIMARY KEY (user_id),
+    FOREIGN KEY(user_id) REFERENCES user(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+------------------------------------------------------------------------------------------------------------------------
+3.insert some sample data
+
+INSERT INTO user (username, email, password) VALUES
+("test01", "test@example.com", "$2a$12$quYv7hbXV.nlV0WMdhrFYebB35f9TWTJ4hIHj.r/Z7PyAicnnL.tu") # password is: Password123
+
+INSERT INTO user_details VALUES (1, "2025-10-25", "2001-04-01");
 
 INSERT INTO engine (capacity, horsepower, engine_type) VALUES
 (125, 15, "FOUR_STROKE"),
 (1000, 218, "FOUR_STROKE"),
 (150, 30, "TWO_STROKE");
 
-INSERT INTO bike (model, registry_date, mileage, engine_id) VALUES
-("Kawasaki Z125", "2020-01-01", 10000, 1),
-("Honda CBR1000RR-R", "2020-01-01", 150000, 2),
-("KTM SXF 150", "2020-01-01", 10000, 3);
-
-Create authentication table
-
-CREATE TABLE user (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(128) UNIQUE NOT NULL,
-    email VARCHAR(128) UNIQUE NOT NULL,
-    password VARCHAR(128) NOT NULL
-) Engine=InnoDB;
+INSERT INTO bike (model, registry_date, mileage, engine_id, user_id) VALUES
+("Kawasaki Z125", "2020-01-01", 10000, 1, 1),
+("Honda CBR1000RR-R", "2020-01-01", 150000, 2, 1),
+("KTM SXF 150", "2020-01-01", 10000, 3, 1);
+------------------------------------------------------------------------------------------------------------------------
 

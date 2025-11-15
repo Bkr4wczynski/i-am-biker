@@ -4,7 +4,7 @@ server:
     context-path: /web
 
 jwt:
-  secret: 9d5c3687c5dfa48ae9a7799eabf77d3c0de017797d75ed7d82e852ac358a6500
+  secret: ${JWT_SECRET}
   expiration: 360000
 
 spring:
@@ -15,7 +15,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/i_am_biker_db?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Europe/Warsaw
     username: biker
-    password: vDmpgfi68FTefb2d
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
