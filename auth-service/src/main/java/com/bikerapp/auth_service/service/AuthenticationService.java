@@ -1,10 +1,13 @@
 package com.bikerapp.auth_service.service;
 
+import com.bikerapp.auth_service.dto.UserDetailsDTO;
 import com.bikerapp.auth_service.entity.User;
 import com.bikerapp.auth_service.entity.UserDetails;
+import com.bikerapp.auth_service.repository.UserDetailsRepository;
 import com.bikerapp.auth_service.repository.UserRepository;
 import com.bikerapp.auth_service.security.JwtUtil;
 import jakarta.ws.rs.NotFoundException;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -13,17 +16,11 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class AuthenticationService {
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
     private JwtUtil jwtUtil;
-
-    @Autowired
-    public AuthenticationService(UserRepository userRepository, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
-        this.jwtUtil = jwtUtil;
-    }
 
     public String saveUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -31,12 +28,13 @@ public class AuthenticationService {
         return "User registered";
     }
 
-    public UserDetails getUserDetailsFromToken(String token) {
+    public UserDetailsDTO getUserDetailsFromToken(String token) {
         Integer userId = jwtUtil.getUserIdFromToken(token);
         Optional<User> user = userRepository.findById(userId);
         if (user.isEmpty())
             throw new NotFoundException("Could not find user details for user");
-        return user.get().getUser_details();
+        UserDetails userDetails =user.get().getUser_details();
+        return new UserDetailsDTO(userDetails.getUser_id(), userDetails.getRegistry_date(), userDetails.getBirthday());
     }
 
     public boolean matchPasswords(String given, String expected) {
@@ -50,5 +48,6 @@ public class AuthenticationService {
     public boolean validateToken(String token) {
         return jwtUtil.validateToken(token);
     }
+
 
 }

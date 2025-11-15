@@ -11,6 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @Slf4j
@@ -31,8 +32,7 @@ public class AuthController {
     public UserDetailsDTO getUserDetails(@RequestParam String token) {
         if (!authenticationService.validateToken(token))
             return null;
-        UserDetails userDetails = authenticationService.getUserDetailsFromToken(token);
-        return new UserDetailsDTO(userDetails.getUser_id(), userDetails.getRegistry_date(), userDetails.getBirthday());
+        return authenticationService.getUserDetailsFromToken(token);
     }
 
     @PostMapping("/generate-token")
@@ -55,6 +55,11 @@ public class AuthController {
         user.setUsername(userDTO.getUsername());
         user.setEmail(userDTO.getEmail());
         user.setPassword(userDTO.getPassword());
+        UserDetails userDetails = new UserDetails();
+        userDetails.setUser(user);
+        userDetails.setRegistry_date(LocalDate.now());
+        userDetails.setBirthday(userDTO.getUserDetailsDTO().getBirthday());
+        user.setUser_details(userDetails);
         log.info("User successfully registered!");
         return authenticationService.saveUser(user);
     }

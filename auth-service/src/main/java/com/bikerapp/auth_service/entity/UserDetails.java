@@ -18,8 +18,6 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Integer user_id;
 
     @Column(nullable = false)
@@ -31,8 +29,9 @@ public class UserDetails {
     @Past(message="date of birth must be less than today")
     private LocalDate birthday;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "user_id")
     private User user;
 
 }

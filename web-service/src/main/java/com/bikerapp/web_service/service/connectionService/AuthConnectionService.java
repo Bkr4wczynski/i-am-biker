@@ -29,7 +29,7 @@ public class AuthConnectionService {
     public UserDetailsDTO getUserDetails(HttpServletRequest request) throws AuthenticationException {
         String token = getToken(request);
         if (token == null || token.isBlank()) {
-            throw new AuthenticationException("Unauticated request!");
+            throw new AuthenticationException("Unauthenticated request!");
         }
         return webClient.get()
                 .uri("/auth/user-details?token="+token)

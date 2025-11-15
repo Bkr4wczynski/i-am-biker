@@ -2,6 +2,7 @@ package com.bikerapp.web_service.controller.auth;
 
 import com.bikerapp.web_service.model.dto.auth.LoginDTO;
 import com.bikerapp.web_service.model.dto.auth.UserDTO;
+import com.bikerapp.web_service.model.dto.auth.UserDetailsDTO;
 import com.bikerapp.web_service.service.connectionService.AuthConnectionService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+
 @Slf4j
 @Controller
 @AllArgsConstructor
@@ -23,6 +26,7 @@ public class AuthController {
     @GetMapping("/register")
     public String displayRegisterPage(Model model) {
         model.addAttribute("userDTO", new UserDTO());
+        model.addAttribute("userDetailsDTO", new UserDetailsDTO());
         return "auth/register";
     }
 
@@ -54,7 +58,9 @@ public class AuthController {
     }
 
     @PostMapping("/sign-up")
-    public String signUp(@ModelAttribute UserDTO userDTO) {
+    public String signUp(@ModelAttribute UserDTO userDTO, @ModelAttribute UserDetailsDTO userDetailsDTO) {
+        userDetailsDTO.setRegistry_date(LocalDate.now());
+        userDTO.setUserDetailsDTO(userDetailsDTO);
         authConnectionService.registerUser(userDTO);
         log.info("User: {} asked to register", userDTO.getUsername());
         return "redirect:http://localhost:8765/web/auth/login";
