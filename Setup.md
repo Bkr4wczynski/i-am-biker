@@ -16,3 +16,4 @@ Second one is **JWT_SECRET** which is 64 characters long secret. It is recommend
 ## 4. Run code in proper order
 Note that naming server and api gateway are server apps and rest is client side. Simply you should run naming server, then api gateway and where those are build
 run the rest of services. To access app type in your browser : http://localhost:8765/web/my-profile and if you are not logged in, the app will redirect you to login page.
+If you come to encounter 503 error you should wait around 10 seconds and refresh the page.
