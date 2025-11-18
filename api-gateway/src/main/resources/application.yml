@@ -25,10 +25,10 @@ spring:
             predicates:
               - Path=/web/**
 
-          - id: auth-service
-            uri: lb://AUTH-SERVICE
+          - id: authentication-service
+            uri: lb://AUTHENTICATION-SERVICE
             predicates:
-              - Path=/auth/**
+              - Path=/authentication/**
 
           - id: maintenance-service
             uri: lb://MAINTENANCE-SERVICE
