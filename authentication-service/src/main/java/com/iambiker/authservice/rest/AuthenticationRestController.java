@@ -10,6 +10,7 @@ import com.iambiker.authservice.userdata.repository.UserRepository;
 import com.iambiker.authservice.userdata.service.UserAuthenticationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -17,6 +18,7 @@ import java.util.Optional;
 
 @Slf4j
 @RestController
+@RequestMapping("/api/public")
 @AllArgsConstructor
 public class AuthenticationRestController {
     private final UserAuthenticationService userAuthenticationService;
@@ -24,21 +26,21 @@ public class AuthenticationRestController {
     private final UserRepository userRepository;
 
     @GetMapping("/validate-token")
-    public String validateToken(@RequestParam String token) {
+    public ResponseEntity<Boolean> validateToken(@RequestParam String token) {
         if (jwtService.validateToken(token))
-            return "Token is valid";
-        return "Token is not valid!";
+            return ResponseEntity.ok(Boolean.TRUE);
+        return ResponseEntity.ok(Boolean.FALSE);
     }
 
     @GetMapping("/user-details")
-    public UserDetailsDTO getUserDetails(@RequestParam String token) {
+    public ResponseEntity<UserDetailsDTO> getUserDetails(@RequestParam String token) {
         if (!jwtService.validateToken(token))
-            return null;
-        return userAuthenticationService.getUserDetailsFromToken(token);
+            return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(userAuthenticationService.getUserDetailsFromToken(token));
     }
 
     @PostMapping("/generate-token")
-    public String generateToken(@RequestBody AuthRequest authRequest) throws RuntimeException {
+    public ResponseEntity<String> generateToken(@RequestBody AuthRequest authRequest) throws RuntimeException {
         String username = authRequest.getUsername();
         String password = authRequest.getPassword();
         Optional<User> user = userRepository.findByUsername(username);
@@ -48,11 +50,11 @@ public class AuthenticationRestController {
         }
 
         log.info("Token successfully generated!");
-        return jwtService.generateToken(username, user.get().getId());
+        return ResponseEntity.ok(jwtService.generateToken(username, user.get().getId()));
     }
 
     @PostMapping("/register-user")
-    public String registerUser(@RequestBody UserDTO userDTO) { // test for wrong input like duplicate username/email
+    public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) { // test for wrong input like duplicate username/email
         User user = new User();
         user.setUsername(userDTO.getUsername());
         user.setEmail(userDTO.getEmail());
@@ -63,6 +65,6 @@ public class AuthenticationRestController {
         userDetails.setBirthday(userDTO.getUserDetailsDTO().getBirthday());
         user.setUser_details(userDetails);
         log.info("User successfully registered!");
-        return userAuthenticationService.saveUser(user);
+        return ResponseEntity.ok(userAuthenticationService.saveUser(user));
     }
 }

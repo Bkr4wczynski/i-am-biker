@@ -5,6 +5,7 @@ import com.iambiker.webservice.model.dto.authentication.RegisterDTO;
 import com.iambiker.webservice.model.dto.authentication.UserDetailsDTO;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -12,11 +13,11 @@ import javax.naming.AuthenticationException;
 
 @Service
 public class AuthConnectionService {
-    private final WebClient webClient = WebClient.create("http://localhost:8765");
+    private final WebClient webClient = WebClient.create("http://localhost:8765/authentication/api/public");
 
     public String getToken(LoginDTO loginDTO) {
         return webClient.post()
-                .uri("/authentication/generate-token")
+                .uri("/generate-token")
                 .bodyValue(loginDTO)
                 .retrieve()
                 .bodyToMono(String.class)
@@ -28,11 +29,15 @@ public class AuthConnectionService {
         if (token == null || token.isBlank()) {
             throw new AuthenticationException("Unauthenticated request!");
         }
-        return webClient.get()
-                .uri("/authentication/user-details?token="+token)
+        ResponseEntity<UserDetailsDTO> response = webClient.get()
+                .uri("/user-details?token="+token)
                 .retrieve()
-                .bodyToMono(UserDetailsDTO.class)
+                .toEntity(UserDetailsDTO.class)
                 .block();
+        if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null)
+            return response.getBody();
+        else
+            throw new AuthenticationException("Unauthenticated request!");
     }
 
     private String getToken(HttpServletRequest request) {
@@ -49,7 +54,7 @@ public class AuthConnectionService {
 
     public void registerUser(RegisterDTO registerDTO) {
         webClient.post()
-                .uri("/authentication/register-user")
+                .uri("/register-user")
                 .bodyValue(registerDTO)
                 .retrieve()
                 .bodyToMono(String.class)

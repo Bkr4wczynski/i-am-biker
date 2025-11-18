@@ -24,7 +24,7 @@ public class AuthMvcController {
 
     @GetMapping("/register")
     public String displayRegisterPage(Model model) {
-        model.addAttribute("userDTO", new RegisterDTO());
+        model.addAttribute("registerDTO", new RegisterDTO());
         model.addAttribute("userDetailsDTO", new UserDetailsDTO());
         return "authentication/register";
     }
