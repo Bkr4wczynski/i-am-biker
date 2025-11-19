@@ -23,16 +23,20 @@ public class ProfilePageController {
         try {
             UserDetailsDTO userDetails = authConnectionService.getUserDetails(request);
             model.addAttribute("user_details", userDetails);
-            LocalDate today = LocalDate.now();
-            boolean isBirthday = userDetails.getBirthday() != null &&
-                    userDetails.getBirthday().getMonth() == today.getMonth() &&
-                    userDetails.getBirthday().getDayOfMonth() == today.getDayOfMonth();
+            boolean isBirthday = isBirthday(userDetails);
             model.addAttribute("isBirthday", isBirthday);
         } catch (AuthenticationException e) {
             log.warn("Could not get user details!");
             throw new RuntimeException(e);
         }
         return "myProfile";
+    }
+
+    private boolean isBirthday(UserDetailsDTO userDetails) {
+        LocalDate today = LocalDate.now();
+        return userDetails.getBirthday() != null &&
+                userDetails.getBirthday().getMonth() == today.getMonth() &&
+                userDetails.getBirthday().getDayOfMonth() == today.getDayOfMonth();
     }
 
 }

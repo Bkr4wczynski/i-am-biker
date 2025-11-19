@@ -3,6 +3,7 @@ package com.iambiker.webservice.security;
 import com.iambiker.webservice.model.dto.authentication.LoginDTO;
 import com.iambiker.webservice.model.dto.authentication.RegisterDTO;
 import com.iambiker.webservice.model.dto.authentication.UserDetailsDTO;
+import com.iambiker.webservice.util.RedirectManager;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,7 @@ import java.time.LocalDate;
 @RequestMapping("/authentication")
 public class AuthMvcController {
     private final AuthConnectionService authConnectionService;
+    private final RedirectManager redirectManager;
 
     @GetMapping("/register")
     public String displayRegisterPage(Model model) {
@@ -45,15 +47,11 @@ public class AuthMvcController {
         try {
             token = authConnectionService.getToken(loginDTO);
         } catch (RuntimeException e) {
-            return "redirect:http://localhost:8765/web/authentication/login?error=Bad Credentials!";
+            return redirectManager.redirect("/web/authentication/login?error=Bad Credentials!");
         }
-        Cookie cookie = new Cookie("token", token);
-        cookie.setHttpOnly(true);
-        cookie.setSecure(false);
-        cookie.setPath("/");
-        cookie.setMaxAge(60*60);
+        Cookie cookie = authConnectionService.createTokenCookie(token, 60*60);
         response.addCookie(cookie);
-        return "redirect:http://localhost:8765/web/my-profile";
+        return redirectManager.redirect("/web/my-profile");
     }
 
     @PostMapping("/sign-up")
@@ -62,18 +60,13 @@ public class AuthMvcController {
         registerDTO.setUserDetailsDTO(userDetailsDTO);
         authConnectionService.registerUser(registerDTO);
         log.info("User: {} asked to register", registerDTO.getUsername());
-        return "redirect:http://localhost:8765/web/authentication/login";
+        return redirectManager.redirect("/web/authentication/login");
     }
 
     @PostMapping("/logout")
     public String logout(HttpServletResponse response) {
-        ResponseCookie cookie = ResponseCookie.from("token", "")
-                .httpOnly(true)
-                .secure(false)
-                .path("/")
-                .maxAge(0)
-                .build();
-        response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
-        return "redirect:http://localhost:8765/web/authentication/login?error=Logout successful";
+        Cookie cookie = authConnectionService.createTokenCookie("", 0);
+        response.addCookie(cookie);
+        return redirectManager.redirect("/web/authentication/login?error=Logout successful");
     }
 }

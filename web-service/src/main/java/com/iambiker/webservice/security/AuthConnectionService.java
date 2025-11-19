@@ -52,6 +52,15 @@ public class AuthConnectionService {
         return null;
     }
 
+    public Cookie createTokenCookie(String token, int age) {
+        Cookie cookie = new Cookie("token", token);
+        cookie.setHttpOnly(true);
+        cookie.setSecure(false);
+        cookie.setPath("/");
+        cookie.setMaxAge(age);
+        return cookie;
+    }
+
     public void registerUser(RegisterDTO registerDTO) {
         webClient.post()
                 .uri("/register-user")
