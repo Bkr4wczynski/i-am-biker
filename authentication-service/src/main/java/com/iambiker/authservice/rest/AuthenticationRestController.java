@@ -54,16 +54,8 @@ public class AuthenticationRestController {
     }
 
     @PostMapping("/register-user")
-    public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) { // test for wrong input like duplicate username/email
-        User user = new User();
-        user.setUsername(userDTO.getUsername());
-        user.setEmail(userDTO.getEmail());
-        user.setPassword(userDTO.getPassword());
-        UserDetails userDetails = new UserDetails();
-        userDetails.setUser(user);
-        userDetails.setRegistry_date(LocalDate.now());
-        userDetails.setBirthday(userDTO.getUserDetailsDTO().getBirthday());
-        user.setUser_details(userDetails);
+    public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) {
+        User user = userDTO.convertToUser();
         log.info("User successfully registered!");
         return ResponseEntity.ok(userAuthenticationService.saveUser(user));
     }
