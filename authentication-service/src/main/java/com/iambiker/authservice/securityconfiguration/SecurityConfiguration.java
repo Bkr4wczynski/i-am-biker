@@ -37,7 +37,8 @@ public class SecurityConfiguration {
                         .anyRequest().authenticated())
                 .exceptionHandling(exc -> exc.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(sessionManagement -> sessionManagement
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .httpBasic(AbstractHttpConfigurer::disable);
         return http.build();
     }
 

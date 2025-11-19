@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="STARTED WORKING ON BETA 1.1&#10;REFACTORING PROJECT COMPLETED">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/util/PathManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/securityconfiguration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/securityconfiguration/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/rest/MaintenanceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/rest/MaintenanceRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/maintenance/MaintenanceConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/maintenance/MaintenanceConnectionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

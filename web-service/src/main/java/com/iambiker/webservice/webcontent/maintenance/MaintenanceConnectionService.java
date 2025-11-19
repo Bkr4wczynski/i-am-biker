@@ -11,8 +11,8 @@ public class MaintenanceConnectionService {
     private final WebClient webClient = WebClient.create("http://localhost:8765");
 
     public HashMap<String, Integer> generateMaintenanceData(int mileage) {
-        return webClient.post()
-                .uri("/maintenance/generate?mileage="+mileage)
+        return webClient.get()
+                .uri("/maintenance/get-maintenance?mileage="+mileage)
                 .retrieve()
                 .bodyToMono(new ParameterizedTypeReference<HashMap<String, Integer>>() {})
                 .block();
