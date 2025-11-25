@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="web service refactored">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2025_11_41_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2025_11_41__Changes_.xml" beforeDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="VERSION 1.1.0 BETA UPLOAD">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/dto/UserDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/dto/UserDetailsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/service/UserAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/service/UserAuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/authentication/UserDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/authentication/UserDetailsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/securityconfiguration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/securityconfiguration/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebServiceApplication">
+  <component name="RunManager" selected="Application.AuthenticationServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
@@ -208,10 +207,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.WebServiceApplication" />
-        <item itemvalue="Application.AuthenticationServiceApplication" />
         <item itemvalue="Application.MaintenanceServiceApplication" />
+        <item itemvalue="Application.AuthenticationServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.NamingServerApplication" />
       </list>
     </recent_temporary>
@@ -223,22 +222,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00016" summary="style for profile page">
-      <option name="closed" value="true" />
-      <created>1759076926210</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1759076926210</updated>
-    </task>
-    <task id="LOCAL-00017" summary="separate maintenance page">
-      <option name="closed" value="true" />
-      <created>1759077361030</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1759077361030</updated>
     </task>
     <task id="LOCAL-00018" summary="main pages styled">
       <option name="closed" value="true" />
@@ -616,7 +599,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763570575547</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="username displayed on profile page">
+      <option name="closed" value="true" />
+      <created>1764092034235</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1764092034236</updated>
+    </task>
+    <task id="LOCAL-00066" summary="VERSION 1.1.0 BETA UPLOAD">
+      <option name="closed" value="true" />
+      <created>1764092783077</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1764092783077</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -631,8 +630,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="password matching bug patched" />
-    <MESSAGE value="auth service logging" />
     <MESSAGE value="api gateway logging" />
     <MESSAGE value="complete logging added" />
     <MESSAGE value="first test written" />
@@ -656,6 +653,8 @@
     <MESSAGE value="refactoring api gateway and maintenance service" />
     <MESSAGE value="authentication service refactored" />
     <MESSAGE value="web service refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="web service refactored" />
+    <MESSAGE value="username displayed on profile page" />
+    <MESSAGE value="VERSION 1.1.0 BETA UPLOAD" />
+    <option name="LAST_COMMIT_MESSAGE" value="VERSION 1.1.0 BETA UPLOAD" />
   </component>
 </project>
