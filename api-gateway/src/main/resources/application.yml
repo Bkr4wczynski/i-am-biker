@@ -16,6 +16,9 @@ spring:
   application:
     name: api-gateway
   cloud:
+    loadbalancer:
+      cache:
+        enabled: false
     gateway:
       server:
         webflux:

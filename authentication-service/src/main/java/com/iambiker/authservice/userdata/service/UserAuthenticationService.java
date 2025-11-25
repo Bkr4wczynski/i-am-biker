@@ -31,7 +31,7 @@ public class UserAuthenticationService {
         if (user.isEmpty())
             throw new NotFoundException("Could not find user details for user");
         UserDetails userDetails =user.get().getUser_details();
-        return new UserDetailsDTO(userDetails.getUser_id(), userDetails.getRegistry_date(), userDetails.getBirthday());
+        return new UserDetailsDTO(userDetails.getUser_id(), userDetails.getUser().getUsername(), userDetails.getRegistry_date(), userDetails.getBirthday());
     }
 
 

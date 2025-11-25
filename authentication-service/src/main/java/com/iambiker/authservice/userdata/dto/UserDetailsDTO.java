@@ -11,6 +11,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class UserDetailsDTO {
     private Integer user_id;
+    private String username;
     private LocalDate registry_date;
     private LocalDate birthday;
+
 }

@@ -30,7 +30,10 @@
         </div>
 
         <div id="content" th:object="${user_details}">
-            <h2 th:text="${isBirthday} ? '🎉Happy birthday!': 'Hello'"></h2>
+            <h2 th:text="${isBirthday}
+                    ? |🎉 Happy birthday, ${user_details.username}!|
+                    : |Hello, ${user_details.username}!|">
+            </h2>
             <p>Thank you for being with us since: <span th:text="*{registry_date}" ></span>!</p>
         </div>
 
