@@ -2,6 +2,7 @@ package com.iambiker.webservice.webcontent.profile;
 
 import com.iambiker.webservice.model.dto.authentication.UserDetailsDTO;
 import com.iambiker.webservice.security.AuthConnectionService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +20,7 @@ public class ProfilePageController {
     private AuthConnectionService authConnectionService;
 
     @GetMapping("/my-profile")
+    @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String displayProfilePage(Model model, HttpServletRequest request) {
         try {
             UserDetailsDTO userDetails = authConnectionService.getUserDetails(request);
@@ -37,6 +39,13 @@ public class ProfilePageController {
         return userDetails.getBirthday() != null &&
                 userDetails.getBirthday().getMonth() == today.getMonth() &&
                 userDetails.getBirthday().getDayOfMonth() == today.getDayOfMonth();
+    }
+
+    public String fallback(Model model, HttpServletRequest request, Throwable throwable) {
+        model.addAttribute("user_details", null);
+        model.addAttribute("isBirthday", null);
+        log.error("Failed to display profile page!");
+        return "myProfile";
     }
 
 }

@@ -40,7 +40,13 @@ public class BikesPageMvcController {
     public String fallback(@CookieValue(name = "token") String token, Model model, Throwable throwable) {
         List<BikeDTO> bikes = new ArrayList<>();
         model.addAttribute("bikes", bikes);
-        log.warn("Failed to load bikes list!");
+        log.error("Failed to load bikes list!");
         return "bike/myBikes";
+    }
+
+    public String fallback(@RequestParam int id, Model model, Throwable throwable) {
+        model.addAttribute("bike", null);
+        log.error("Failed to load my bike website!");
+        return "bike/myBike";
     }
 }
