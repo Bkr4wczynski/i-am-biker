@@ -3,25 +3,38 @@ package com.iambiker.webservice.web_service.controller;
 import com.iambiker.webservice.security.AuthMvcController;
 import com.iambiker.webservice.model.dto.authentication.LoginDTO;
 import com.iambiker.webservice.security.AuthConnectionService;
+import com.iambiker.webservice.util.ApiGatewayRedirectManager;
+import com.iambiker.webservice.util.RedirectManager;
+import jakarta.servlet.http.Cookie;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(AuthMvcController.class)
+@Import(ApiGatewayRedirectManager.class)
 public class AuthMvcControllerTests {
     @Autowired
     private MockMvc mockMvc;
 
     @MockitoBean
     private AuthConnectionService authConnectionService;
+
+    @Test
+    void test() {
+
+    }
 
     @Test
     void shouldRenderLoginPage() throws Exception {
@@ -36,13 +49,18 @@ public class AuthMvcControllerTests {
         mockMvc.perform(get("/authentication/register"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("authentication/register"))
-                .andExpect(model().attributeExists("userDTO"));
+                .andExpect(model().attributeExists("registerDTO"))
+                .andExpect(model().attributeExists("userDetailsDTO"));
+
     }
 
     @Test
     void shouldRedirectToProfileWhenSuccess() throws Exception {
         Mockito.when(authConnectionService.getToken(any(LoginDTO.class)))
                 .thenReturn("fake-jwt-token");
+
+        Mockito.when(authConnectionService.createTokenCookie(anyString(), anyInt()))
+                        .thenReturn(new Cookie("token", "fake-jwt-token"));
 
         mockMvc.perform(post("/authentication/sign-in")
                         .param("username", "testuser")
@@ -60,7 +78,7 @@ public class AuthMvcControllerTests {
                 .param("username", "user")
                 .param("password", "wrong-password"))
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("http://localhost:8765/web/auth/login?error=Bad Credentials!"));
+                .andExpect(redirectedUrl("http://localhost:8765/web/authentication/login?error=Bad Credentials!"));
     }
 
     @Test
@@ -69,6 +87,6 @@ public class AuthMvcControllerTests {
                         .param("username", "user")
                         .param("password", "password1234"))
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("http://localhost:8765/web/auth/login"));
+                .andExpect(redirectedUrl("http://localhost:8765/web/authentication/login"));
     }
 }

@@ -40,7 +40,7 @@ public class PathManager {
     private Mono<Void> redirect(ServerWebExchange exchange, String reason, String redirectUrl) {
         exchange.getResponse().setStatusCode(HttpStatus.FOUND);
         exchange.getResponse().getHeaders().set(HttpHeaders.LOCATION, redirectUrl);
-        log.info("Redirected to path: {}", redirectUrl);
+        log.info("Redirected to path: {} because of {}", redirectUrl, reason);
         return exchange.getResponse().setComplete();
     }
 
