@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="added necessary circuit breakers">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/util/PathManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/jwt/JwtServiceTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="unit tests written">
+      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/BikesPageMvcControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/MaintenancePageControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ProfilePageControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/AuthMvcControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/AuthMvcControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,15 +74,20 @@
     "JUnit.AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
     "JUnit.AuthMvcControllerTests.shouldRenderRegisterPage.executor": "Run",
     "JUnit.AuthMvcControllerTests.test.executor": "Run",
+    "JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage.executor": "Run",
+    "JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage.executor": "Run",
     "JUnit.JwtServiceTests.example.executor": "Run",
     "JUnit.JwtServiceTests.executor": "Run",
     "JUnit.JwtServiceTests.shouldGenerateToken.executor": "Run",
     "JUnit.JwtServiceTests.testPasswordEncoder.executor": "Run",
     "JUnit.MaintenancePageControllerTests.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage.executor": "Run",
     "JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered.executor": "Run",
     "JUnit.MaintenanceServiceTests.executor": "Run",
     "JUnit.MaintenanceServiceTests.testCalculateInterval.executor": "Run",
     "JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor": "Run",
+    "JUnit.PathManagerTest.testIsPathPublic.executor": "Run",
+    "JUnit.ProfilePageControllerTests.shouldDisplayProfilePage.executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
     "Maven.auth-service [clean].executor": "Run",
     "Maven.maintenance-service [clean].executor": "Run",
@@ -121,8 +126,8 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PathManagerTest.testIsPathPublic">
-    <configuration name="AuthMvcControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage">
+    <configuration name="AuthMvcControllerTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <extension name="coverage">
         <pattern>
@@ -132,12 +137,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
       <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.AuthMvcControllerTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BikesPageMvcControllerTests.shouldDisplayBikesPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <extension name="coverage">
         <pattern>
@@ -146,14 +152,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.AuthMvcControllerTests" />
-      <option name="METHOD_NAME" value="shouldRedirectToProfileWhenSuccess" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.BikesPageMvcControllerTests" />
+      <option name="METHOD_NAME" value="shouldDisplayBikesPage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthMvcControllerTests.shouldRenderRegisterPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BikesPageMvcControllerTests.shouldDisplaySpecificBikePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <extension name="coverage">
         <pattern>
@@ -162,59 +168,59 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.AuthMvcControllerTests" />
-      <option name="METHOD_NAME" value="shouldRenderRegisterPage" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.BikesPageMvcControllerTests" />
+      <option name="METHOD_NAME" value="shouldDisplaySpecificBikePage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JwtServiceTests.shouldGenerateToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
+    <configuration name="MaintenancePageControllerTests.shouldShowMaintenancePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.authservice.jwt.*" />
+          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.authservice.jwt" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.jwt.JwtServiceTests" />
-      <option name="METHOD_NAME" value="shouldGenerateToken" />
+      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.MaintenancePageControllerTests" />
+      <option name="METHOD_NAME" value="shouldShowMaintenancePage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathManagerTest.testIsPathPublic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-gateway" />
+    <configuration name="ProfilePageControllerTests.shouldDisplayProfilePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.apigateway.util.*" />
+          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.apigateway.util" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.apigateway.util.PathManagerTest" />
-      <option name="METHOD_NAME" value="testIsPathPublic(java.lang.String,boolean)" />
+      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.ProfilePageControllerTests" />
+      <option name="METHOD_NAME" value="shouldDisplayProfilePage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AuthMvcControllerTests" />
-      <item itemvalue="JUnit.AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess" />
-      <item itemvalue="JUnit.AuthMvcControllerTests.shouldRenderRegisterPage" />
-      <item itemvalue="JUnit.JwtServiceTests.shouldGenerateToken" />
-      <item itemvalue="JUnit.PathManagerTest.testIsPathPublic" />
+      <item itemvalue="JUnit.AuthMvcControllerTests.test" />
+      <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage" />
+      <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage" />
+      <item itemvalue="JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage" />
+      <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplayProfilePage" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PathManagerTest.testIsPathPublic" />
-        <item itemvalue="JUnit.JwtServiceTests.shouldGenerateToken" />
-        <item itemvalue="JUnit.AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess" />
-        <item itemvalue="JUnit.AuthMvcControllerTests.shouldRenderRegisterPage" />
-        <item itemvalue="JUnit.AuthMvcControllerTests" />
+        <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage" />
+        <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage" />
+        <item itemvalue="JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage" />
+        <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplayProfilePage" />
+        <item itemvalue="JUnit.AuthMvcControllerTests.test" />
       </list>
     </recent_temporary>
   </component>
@@ -225,14 +231,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00020" summary="add bike styled">
-      <option name="closed" value="true" />
-      <created>1759086331259</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1759086331259</updated>
     </task>
     <task id="LOCAL-00021" summary="Styling complete">
       <option name="closed" value="true" />
@@ -618,7 +616,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764444349930</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="unit tests written">
+      <option name="closed" value="true" />
+      <created>1764510126346</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1764510126347</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -633,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first test written" />
     <MESSAGE value="auth controller test written" />
     <MESSAGE value="controller tests" />
     <MESSAGE value="spring actuator added" />
@@ -658,6 +663,7 @@
     <MESSAGE value="VERSION 1.1.0 BETA UPLOAD" />
     <MESSAGE value="Same site cookies" />
     <MESSAGE value="added necessary circuit breakers" />
-    <option name="LAST_COMMIT_MESSAGE" value="added necessary circuit breakers" />
+    <MESSAGE value="unit tests written" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests written" />
   </component>
 </project>
