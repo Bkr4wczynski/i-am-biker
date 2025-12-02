@@ -1,7 +1,7 @@
-package com.iambiker.webservice.database.repository;
+package com.iambiker.bikesservice.database.repository;
 
 
-import com.iambiker.webservice.database.entity.Bike;
+import com.iambiker.bikesservice.database.entity.Bike;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

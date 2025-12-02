@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/naming-server/pom.xml" />
         <option value="$PROJECT_DIR$/maintenance-service/pom.xml" />
         <option value="$PROJECT_DIR$/authentication-service/pom.xml" />
+        <option value="$PROJECT_DIR$/bikes-service/pom.xml" />
       </list>
     </option>
   </component>

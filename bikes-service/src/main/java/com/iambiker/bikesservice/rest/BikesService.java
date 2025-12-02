@@ -1,9 +1,9 @@
-package com.iambiker.webservice.webcontent.bike;
+package com.iambiker.bikesservice.rest;
 
-import com.iambiker.webservice.database.repository.BikesRepository;
-import com.iambiker.webservice.database.entity.Bike;
-import com.iambiker.webservice.database.entity.Engine;
-import com.iambiker.webservice.model.dto.personal.BikeDTO;
+import com.iambiker.bikesservice.database.entity.Bike;
+import com.iambiker.bikesservice.database.entity.Engine;
+import com.iambiker.bikesservice.database.repository.BikesRepository;
+import com.iambiker.bikesservice.model.dto.BikeDTO;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,32 +20,27 @@ public class BikesService {
     private final BikesRepository bikesRepository;
 
     public List<BikeDTO> getBikes(int userId) {
-        log.info("List of bikes displayed");
         return bikesRepository.findByUserId(userId).stream()
                 .map(BikeDTO::toDTO)
                 .collect(Collectors.toList());
     }
 
-    public void saveBike(BikeDTO dto) {
-        log.info("User saved bike: {}", dto.getModel());
+    public Bike saveBike(BikeDTO dto) {
         Bike bike = BikeDTO.toEntity(dto);
-        bikesRepository.save(bike);
+        return bikesRepository.save(bike);
     }
 
     @Transactional
     public void deleteBike(int id) {
-        log.info("User deleted bike with id: {}", id);
         bikesRepository.deleteById(id);
     }
 
     public Optional<BikeDTO> findBike(int id) {
-        log.info("Searching for bike with id: {}", id);
         return bikesRepository.findById(id).map(BikeDTO::toDTO);
     }
 
     @Transactional
-    public void updateBike(BikeDTO bikeDTO) {
-        log.info("User requests for updating his {}", bikeDTO.getModel());
+    public Bike updateBike(BikeDTO bikeDTO) {
         Bike updated = BikeDTO.toEntity(bikeDTO);
         Bike existingBike = bikesRepository.findById(updated.getId()).get();
         Engine existingEngine = existingBike.getEngine();
@@ -59,7 +54,7 @@ public class BikesService {
         existingBike.setMileage(updated.getMileage());
         existingBike.setRegistry_date(updated.getRegistry_date());
 
-        bikesRepository.save(existingBike);
+        return bikesRepository.save(existingBike);
     }
 
 }

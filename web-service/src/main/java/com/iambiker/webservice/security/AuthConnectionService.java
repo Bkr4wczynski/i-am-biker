@@ -3,6 +3,7 @@ package com.iambiker.webservice.security;
 import com.iambiker.webservice.model.dto.authentication.LoginDTO;
 import com.iambiker.webservice.model.dto.authentication.RegisterDTO;
 import com.iambiker.webservice.model.dto.authentication.UserDetailsDTO;
+import com.iambiker.webservice.webcontent.bike.BikesServiceConnectionService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
@@ -45,6 +46,7 @@ public class AuthConnectionService {
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 if ("token".equals(cookie.getName())) {
+                    BikesServiceConnectionService.setToken(cookie.getValue());
                     return cookie.getValue();
                 }
             }
@@ -57,7 +59,9 @@ public class AuthConnectionService {
         cookie.setHttpOnly(true);
         cookie.setSecure(false);
         cookie.setPath("/");
+        cookie.setDomain("localhost");
         cookie.setMaxAge(age);
+        BikesServiceConnectionService.setToken(token);
         return cookie;
     }
 

@@ -21,12 +21,23 @@
         </processorPath>
         <module name="maintenance-service" />
       </profile>
+      <profile name="Annotation profile for bikes-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="bikes-service" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="authentication-service" options="-parameters" />
+      <module name="bikes-service" options="-parameters" />
       <module name="maintenance-service" options="-parameters" />
       <module name="naming-server" options="-parameters" />
       <module name="web-service" options="-parameters" />

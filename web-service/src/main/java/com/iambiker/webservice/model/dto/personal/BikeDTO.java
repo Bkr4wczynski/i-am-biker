@@ -1,7 +1,5 @@
 package com.iambiker.webservice.model.dto.personal;
 
-import com.iambiker.webservice.database.entity.Bike;
-import com.iambiker.webservice.database.entity.Engine;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.AllArgsConstructor;
@@ -30,32 +28,11 @@ public class BikeDTO {
     @Min(0)
     private int mileage;
 
-    private Engine engine;
+    private EngineDTO engine;
 
     @Override
     public String toString() {
         return "id:" + id + " " + model + " registered at " + registry_date + ", mileage = " + mileage+", engine - " + engine;
     }
 
-    public static BikeDTO toDTO(Bike bike) {
-        BikeDTO dto = new BikeDTO();
-        dto.setUser_id(bike.getUserId());
-        dto.setId(bike.getId());
-        dto.setMileage(bike.getMileage());
-        dto.setEngine(bike.getEngine());
-        dto.setModel(bike.getModel());
-        dto.setRegistry_date(bike.getRegistry_date());
-        return dto;
-    }
-
-    public static Bike toEntity(BikeDTO dto) {
-        Bike bike = new Bike();
-        bike.setUserId(dto.getUser_id());
-        bike.setId(dto.getId());
-        bike.setMileage(dto.getMileage());
-        bike.setEngine(dto.getEngine());
-        bike.setModel(dto.getModel());
-        bike.setRegistry_date(dto.getRegistry_date());
-        return bike;
-    }
 }

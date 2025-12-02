@@ -1,8 +1,11 @@
-package com.iambiker.webservice.database.entity;
+package com.iambiker.bikesservice.database.entity;
 
-import com.iambiker.webservice.model.enums.EngineType;
+import com.iambiker.bikesservice.model.enums.EngineType;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor

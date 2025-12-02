@@ -18,21 +18,21 @@ import java.util.List;
 @AllArgsConstructor
 @Slf4j
 public class BikesPageMvcController {
-    private final BikesService bikesService;
+    private final BikesServiceConnectionService connectionService;
     private final JwtWebUtil jwtWebUtil;
 
     @GetMapping("/my-bikes")
     @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String displayBikes(@CookieValue(name = "token") String token, Model model) {
         int userId = jwtWebUtil.getUserIdFromToken(token);
-        List<BikeDTO> bikes = bikesService.getBikes(userId);
+        List<BikeDTO> bikes = connectionService.getBikes(userId);
         model.addAttribute("bikes", bikes);
         return "bike/myBikes";
     }
 
     @GetMapping("/my-bike")
     public String displayMyBikePage(@RequestParam int id, Model model) {
-        BikeDTO bike = bikesService.findBike(id).get();
+        BikeDTO bike = connectionService.getBikeById(id);
         model.addAttribute("bike", bike);
         return "bike/myBike";
     }

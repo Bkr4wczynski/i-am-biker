@@ -49,8 +49,7 @@ public class JwtAuthenticationFilter implements GlobalFilter {
             log.info("Received expired token!");
             return pathManager.redirectToLoginPage(exchange, "Token has expired!");
         } catch (IllegalArgumentException e) {
-            log.warn("Unexpected error for path: {}", path);
-            throw new RuntimeException(e);
+            log.warn("Wrong JWT for path: {}", path);
         }
         log.info("User asked to login again");
         return pathManager.redirectToLoginPage(exchange, "Please login again");

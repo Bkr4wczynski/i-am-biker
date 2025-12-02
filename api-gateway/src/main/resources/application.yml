@@ -37,3 +37,8 @@ spring:
             uri: lb://MAINTENANCE-SERVICE
             predicates:
               - Path=/maintenance/**
+
+          - id: bikes-service
+            uri: lb://BIKES-SERVICE
+            predicates:
+              - Path=/bikes/**

@@ -1,7 +1,7 @@
 package com.iambiker.webservice.web_service.controller;
 
 import com.iambiker.webservice.model.dto.personal.BikeDTO;
-import com.iambiker.webservice.webcontent.bike.BikesService;
+import com.iambiker.webservice.webcontent.bike.BikesServiceConnectionService;
 import com.iambiker.webservice.webcontent.maintenance.MaintenanceConnectionService;
 import com.iambiker.webservice.webcontent.maintenance.MaintenancePageController;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,6 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.HashMap;
-import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -25,15 +24,15 @@ public class MaintenancePageControllerTests {
     private MockMvc mockMvc;
 
     @MockitoBean
-    private BikesService bikesService;
+    private BikesServiceConnectionService bikesService;
 
     @MockitoBean
     private MaintenanceConnectionService maintenanceConnectionService;
 
     @Test
     void shouldShowMaintenancePage() throws Exception {
-        Mockito.when(bikesService.findBike(anyInt()))
-                .thenReturn(Optional.of(new BikeDTO()));
+        Mockito.when(bikesService.getBikeById(anyInt()))
+                .thenReturn(new BikeDTO());
         HashMap<String, Integer> mockMap = new HashMap<>();
         mockMap.put("example", 1000);
         Mockito.when(maintenanceConnectionService.generateMaintenanceData(anyInt()))

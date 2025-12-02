@@ -1,11 +1,11 @@
 package com.iambiker.webservice.web_service.controller;
 
-import com.iambiker.webservice.database.entity.Engine;
 import com.iambiker.webservice.model.dto.personal.BikeDTO;
+import com.iambiker.webservice.model.dto.personal.EngineDTO;
 import com.iambiker.webservice.model.enums.EngineType;
 import com.iambiker.webservice.security.JwtWebUtil;
 import com.iambiker.webservice.webcontent.bike.BikesPageMvcController;
-import com.iambiker.webservice.webcontent.bike.BikesService;
+import com.iambiker.webservice.webcontent.bike.BikesServiceConnectionService;
 import jakarta.servlet.http.Cookie;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -30,7 +30,7 @@ public class BikesPageMvcControllerTests {
     private JwtWebUtil jwtWebUtil;
 
     @MockitoBean
-    private BikesService bikesService;
+    private BikesServiceConnectionService bikesService;
 
     @Test
     void shouldDisplayBikesPage() throws Exception {
@@ -50,10 +50,10 @@ public class BikesPageMvcControllerTests {
     @Test
     void shouldDisplaySpecificBikePage() throws Exception {
         BikeDTO mockBike = new BikeDTO();
-        mockBike.setEngine(new Engine());
+        mockBike.setEngine(new EngineDTO());
         mockBike.getEngine().setEngineType(EngineType.FOUR_STROKE);
-        Mockito.when(bikesService.findBike(anyInt()))
-                .thenReturn(Optional.of(mockBike));
+        Mockito.when(bikesService.getBikeById(anyInt()))
+                .thenReturn(mockBike);
 
         mockMvc.perform(get("/my-bike")
                 .param("id", "0"))

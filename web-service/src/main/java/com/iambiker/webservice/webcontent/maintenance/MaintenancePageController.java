@@ -1,7 +1,7 @@
 package com.iambiker.webservice.webcontent.maintenance;
 
 import com.iambiker.webservice.model.dto.personal.BikeDTO;
-import com.iambiker.webservice.webcontent.bike.BikesService;
+import com.iambiker.webservice.webcontent.bike.BikesServiceConnectionService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,12 +17,12 @@ import java.util.HashMap;
 @AllArgsConstructor
 public class MaintenancePageController {
     private final MaintenanceConnectionService maintenanceConnectionService;
-    private final BikesService bikesService;
+    private final BikesServiceConnectionService bikesService;
 
     @GetMapping("/maintenance")
     @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String showMaintenancePage(@RequestParam int id, Model model) {
-        BikeDTO bike = bikesService.findBike(id).get();
+        BikeDTO bike = bikesService.getBikeById(id);
         HashMap<String, Integer> maintenanceKm = maintenanceConnectionService.generateMaintenanceData(bike.getMileage());
         model.addAttribute("bike", bike);
         model.addAttribute("maintenance", maintenanceKm);

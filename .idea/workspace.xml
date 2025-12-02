@@ -4,11 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="unit tests written">
-      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/BikesPageMvcControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/MaintenancePageControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ProfilePageControllerTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="controller tests written for web service">
+      <change afterPath="$PROJECT_DIR$/bikes-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/BikesServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/dto/BikeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/dto/EngineDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/enums/EngineType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/BikesServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesServiceConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/i-am-biker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/i-am-biker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/database/entity/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/database/entity/Bike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/database/entity/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/database/entity/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/database/repository/BikesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/database/repository/BikesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/database/repository/EngineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/database/repository/EngineRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/BikeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/BikeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/EngineDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/EngineDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesFormMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesFormMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesPageMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesPageMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/maintenance/MaintenancePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/maintenance/MaintenancePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/BikesPageMvcControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/BikesPageMvcControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/MaintenancePageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/MaintenancePageControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +93,7 @@
     "Application.ApiGatewayApplication.executor": "Run",
     "Application.AuthServiceApplication.executor": "Run",
     "Application.AuthenticationServiceApplication.executor": "Run",
+    "Application.BikesServiceApplication.executor": "Run",
     "Application.MaintenanceServiceApplication.executor": "Run",
     "Application.NamingServerApplication.executor": "Run",
     "Application.WebServiceApplication.executor": "Run",
@@ -90,6 +125,7 @@
     "JUnit.ProfilePageControllerTests.shouldDisplayProfilePage.executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
     "Maven.auth-service [clean].executor": "Run",
+    "Maven.bikes-service [clean].executor": "Run",
     "Maven.maintenance-service [clean].executor": "Run",
     "Maven.naming-server [clean].executor": "Run",
     "Maven.web-service [clean].executor": "Run",
@@ -98,10 +134,12 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker/web-service/src/main/java/com/iambiker/webservice",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
@@ -110,117 +148,122 @@
       <recent name="com.bikerapp.api_gateway.filter" />
       <recent name="com.bikerapp.auth_service.service" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\java\com\iambiker\webservice" />
+      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\bikes-service\src\main\java\com\iambiker\bikesservice" />
+      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker" />
+      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\bikes-service\src\main\java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\resources\templates\maintenance" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\resources\templates\bike" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\auth-service\src\main\resources\templates\authorization" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\auth-service\src\main\resources\templates" />
-      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\resources\templates\authorization" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bikerapp.maintenance_service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.iambiker.bikesservice.rest" />
       <recent name="com.bikerapp.web_service.model.dto.auth" />
       <recent name="com.bikerapp.web_service.model.dto" />
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage">
-    <configuration name="AuthMvcControllerTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+  <component name="RunManager" selected="Application.WebServiceApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.apigateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
+          <option name="PATTERN" value="com.iambiker.apigateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.AuthMvcControllerTests" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BikesPageMvcControllerTests.shouldDisplayBikesPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="AuthenticationServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
+        <env name="DB_PASSWORD" value="61ix4fellkejiApR" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.AuthenticationServiceApplication" />
+      <module name="authentication-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
+          <option name="PATTERN" value="com.iambiker.authservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.BikesPageMvcControllerTests" />
-      <option name="METHOD_NAME" value="shouldDisplayBikesPage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BikesPageMvcControllerTests.shouldDisplaySpecificBikePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="BikesServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PASSWORD" value="61ix4fellkejiApR" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.bikesservice.BikesServiceApplication" />
+      <module name="bikes-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
+          <option name="PATTERN" value="com.iambiker.bikesservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.BikesPageMvcControllerTests" />
-      <option name="METHOD_NAME" value="shouldDisplaySpecificBikePage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaintenancePageControllerTests.shouldShowMaintenancePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="MaintenanceServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.MaintenanceServiceApplication" />
+      <module name="maintenance-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
+          <option name="PATTERN" value="com.iambiker.maintenanceservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.MaintenancePageControllerTests" />
-      <option name="METHOD_NAME" value="shouldShowMaintenancePage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfilePageControllerTests.shouldDisplayProfilePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.WebServiceApplication" />
       <module name="web-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
+          <option name="PATTERN" value="com.iambiker.webservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.ProfilePageControllerTests" />
-      <option name="METHOD_NAME" value="shouldDisplayProfilePage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AuthMvcControllerTests.test" />
-      <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage" />
-      <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage" />
-      <item itemvalue="JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage" />
-      <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplayProfilePage" />
+      <item itemvalue="Application.BikesServiceApplication" />
+      <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Application.AuthenticationServiceApplication" />
+      <item itemvalue="Application.MaintenanceServiceApplication" />
+      <item itemvalue="Application.WebServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage" />
-        <item itemvalue="JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage" />
-        <item itemvalue="JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage" />
-        <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplayProfilePage" />
-        <item itemvalue="JUnit.AuthMvcControllerTests.test" />
+        <item itemvalue="Application.WebServiceApplication" />
+        <item itemvalue="Application.BikesServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.MaintenanceServiceApplication" />
+        <item itemvalue="Application.AuthenticationServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -231,14 +274,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Styling complete">
-      <option name="closed" value="true" />
-      <created>1759086704962</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1759086704962</updated>
     </task>
     <task id="LOCAL-00022" summary="Form validation">
       <option name="closed" value="true" />
@@ -624,7 +659,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764510126347</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="controller tests written for web service">
+      <option name="closed" value="true" />
+      <created>1764513131712</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1764513131712</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -639,7 +682,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="auth controller test written" />
     <MESSAGE value="controller tests" />
     <MESSAGE value="spring actuator added" />
     <MESSAGE value="resilience4j connected" />
@@ -664,6 +706,7 @@
     <MESSAGE value="Same site cookies" />
     <MESSAGE value="added necessary circuit breakers" />
     <MESSAGE value="unit tests written" />
-    <option name="LAST_COMMIT_MESSAGE" value="unit tests written" />
+    <MESSAGE value="controller tests written for web service" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller tests written for web service" />
   </component>
 </project>
