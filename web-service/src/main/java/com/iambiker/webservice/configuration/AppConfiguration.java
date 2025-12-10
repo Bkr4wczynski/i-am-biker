@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 
 @Configuration
@@ -23,6 +24,7 @@ public class AppConfiguration {
     }
 
     @Bean
+    @Primary
     public RedirectManager redirectManager() {
         if (isApiGatewayEnabled)
             return new ApiGatewayRedirectManager();
