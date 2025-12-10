@@ -4,7 +4,6 @@ import com.iambiker.authservice.jwt.JwtService;
 import com.iambiker.authservice.userdata.dto.UserDTO;
 import com.iambiker.authservice.userdata.dto.UserDetailsDTO;
 import com.iambiker.authservice.userdata.entity.User;
-import com.iambiker.authservice.userdata.entity.UserDetails;
 import com.iambiker.authservice.model.AuthRequest;
 import com.iambiker.authservice.userdata.repository.UserRepository;
 import com.iambiker.authservice.userdata.service.UserAuthenticationService;
@@ -13,7 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.Optional;
 
 @Slf4j
