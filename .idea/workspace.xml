@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="controller tests written for web service">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/repository/UserDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/repository/UserDetailsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/AuthMvcControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/AuthMvcControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +102,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
