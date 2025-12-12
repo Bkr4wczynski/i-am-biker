@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="resolved args error">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="basic shared dependencies">
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,14 +268,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00025" summary="successful transfer to dto">
-      <option name="closed" value="true" />
-      <created>1759164998725</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1759164998725</updated>
     </task>
     <task id="LOCAL-00026" summary="login and register page">
       <option name="closed" value="true" />
@@ -666,7 +653,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765544934015</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="basic shared dependencies">
+      <option name="closed" value="true" />
+      <created>1765545548666</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1765545548666</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -681,7 +676,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="resilience4j connected" />
     <MESSAGE value="user can now logout successfully" />
     <MESSAGE value="safety tips content" />
     <MESSAGE value="basic quiz static form" />
@@ -706,6 +700,7 @@
     <MESSAGE value="controller tests written for web service" />
     <MESSAGE value="resolved version error" />
     <MESSAGE value="resolved args error" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolved args error" />
+    <MESSAGE value="basic shared dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic shared dependencies" />
   </component>
 </project>
