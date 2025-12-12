@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="shared testing dependencies">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="shared lombok">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/profile/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/WebServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/WebServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/profile/ProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/profile/ProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/profile/myProfile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +23,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -138,11 +134,11 @@
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\bikes-service\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\resources\templates\profile" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\resources\templates\maintenance" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\resources\templates\bike" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\auth-service\src\main\resources\templates\authorization" />
-      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\auth-service\src\main\resources\templates" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bikerapp.maintenance_service" />
@@ -276,14 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00027" summary="added auth service but not connected to web service">
-      <option name="closed" value="true" />
-      <created>1759428808536</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1759428808536</updated>
     </task>
     <task id="LOCAL-00028" summary="working auth-service rest api">
       <option name="closed" value="true" />
@@ -669,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765545855210</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="shared lombok">
+      <option name="closed" value="true" />
+      <created>1765547153997</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1765547153997</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -684,7 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="safety tips content" />
     <MESSAGE value="basic quiz static form" />
     <MESSAGE value="basic js quiz" />
     <MESSAGE value="js quiz working but need to implement scoring" />
@@ -709,6 +704,7 @@
     <MESSAGE value="resolved args error" />
     <MESSAGE value="basic shared dependencies" />
     <MESSAGE value="shared testing dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="shared testing dependencies" />
+    <MESSAGE value="shared lombok" />
+    <option name="LAST_COMMIT_MESSAGE" value="shared lombok" />
   </component>
 </project>

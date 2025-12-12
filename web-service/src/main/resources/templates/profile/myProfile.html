@@ -35,6 +35,8 @@
                     : |Hello, ${user_details.username}!|">
             </h2>
             <p>Thank you for being with us since: <span th:text="*{registry_date}" ></span>!</p>
+            <br>
+            <a th:href="@{/settings}">Profile settings</a>
         </div>
 
         <div id="footer">

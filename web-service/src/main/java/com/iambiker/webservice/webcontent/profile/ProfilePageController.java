@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.naming.AuthenticationException;
 import java.time.LocalDate;
@@ -31,7 +33,17 @@ public class ProfilePageController {
             log.warn("Could not get user details!");
             throw new RuntimeException(e);
         }
-        return "myProfile";
+        return "profile/myProfile";
+    }
+
+    @GetMapping("/settings")
+    public String showSettingsPage(Model model) {
+        return "profile/settings";
+    }
+
+    @PostMapping("/update-profile")
+    public String updateProfile() {
+        return "profile/myProfile";
     }
 
     private boolean isBirthday(UserDetailsDTO userDetails) {
@@ -42,41 +54,11 @@ public class ProfilePageController {
     }
 
     public String fallback(Model model, HttpServletRequest request, Throwable throwable) {
-        model.addAttribute("user_details", null);
-        model.addAttribute("isBirthday", null);
+        UserDetailsDTO userDetailsDTOStub = new UserDetailsDTO(1, "Not found", LocalDate.now(), LocalDate.of(2000, 1, 1));
+        model.addAttribute("user_details", userDetailsDTOStub);
+        model.addAttribute("isBirthday", false);
         log.error("Failed to display profile page!");
-        return "myProfile";
+        return "profile/myProfile";
     }
 
 }
-
-/*                         _
-                       ,S/  .e.##ee
-                     ,SS/_ /#####""
-                   ,SSSSSS`|##|
-                 ,'|SSSSSS/%##|
-                 | ;SSSSS/%%%/ .-""-._                           __..ooo._.sSSSSSSSSS"7.
-                 |/SSSSS/%%%/.'       `._ __               _.od888888888888"'  '"SSSSS"
-             ___  `"SSS/%%%/"-.,sSSs._   8888o._    __.o888888888""SS""    `-._    `7Sb
-      _.sssSSSSSSSSSSS/`%%/ ,sSSSSSSSSS-.888888888888888888888"'.S"         ,SSS""   `7b
-   ,+""       ```""SS/%%./,sSSSSSSSS".   `"888888888888888"'.sSS"         ,SS"'        `S.
-                    /%%%/sSSSSSSSS"   `s.   `"88888888"'.sSSSS"         ,S"'             7
-                   /%%%/ `SSSSSSS$$,..sSS`-.   `"88'.sSSSSSSSS._     ,-'
-                  /%%%/    `SSSS$$$$SSS",\\\`-.   `"SSSSSS"  8"""7.-'
-                  /`%/      `SS$$$SSS,dP,s.\\//`-.   `SS" ,'`8       ,ee888888ee.
-        ,oo8888oo/ /         `"""",d88Pd8888./,-'/`.  `,-._`d'    ,d88888888888888b.
-     ,d888888888/ /8b.          d8888Pd8888888bd88b`.  :_._`8   ,888888"'    '""88888.
-   ,888P'      / /"888b.       d88888`8888888Pd8888 :  :_`-.( ,d8888.__           7888b.
-  d88P        / /   `788b     (88888:. `8888Pd88888 ;  ; `-._ 8888P_Z_.>-""--.._   `8888
- d88'     ,--/ /      `88b     `88888b`. `8P 78888";  ;      `"*88_,"   s88s.       `888b
-d88'    ,',$/ /$$$$.   `88b      `8888b `. `"'88"_/_,'`-._         `-.d8"88"8P.      `888.
-888    ; ,$$$$$$$$$'    888        `"8'   `---------------`-.._      8888888888       888'
-888    : `$$$$$$$':     888                                 '888b`-._8s888888"P      .888'
-788.   `  `$$$$'  ;     88P                                  8888.   "8878888P'      d888
- 88b    `.  `"' ,'     d88'                                  '888b     '88s8"'     .d888'
- `88b.    `-..-'      d88'                                    '888b.             .dd888'
-   788b.            ,888'                                       7888b._       _.d8888P
-    `7888oo..__..oo888'                                          `"8888888888888888"'
-      `"7888888888P"'                                               `"788 mGk 8P"'
-
-*/
