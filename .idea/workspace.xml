@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="resolved version error">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="resolved args error">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bikes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
@@ -153,7 +151,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebServiceApplication">
+  <component name="RunManager" selected="JUnit.AuthMvcControllerTests">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
@@ -260,11 +258,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuthMvcControllerTests" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.BikesServiceApplication" />
         <item itemvalue="Application.AuthenticationServiceApplication" />
         <item itemvalue="Application.NamingServerApplication" />
-        <item itemvalue="JUnit.AuthMvcControllerTests" />
       </list>
     </recent_temporary>
   </component>
@@ -275,14 +273,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00024" summary="added dto mapping methods">
-      <option name="closed" value="true" />
-      <created>1759164252060</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1759164252060</updated>
     </task>
     <task id="LOCAL-00025" summary="successful transfer to dto">
       <option name="closed" value="true" />
@@ -668,7 +658,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765395732794</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="resolved args error">
+      <option name="closed" value="true" />
+      <created>1765544934015</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1765544934015</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -683,7 +681,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="spring actuator added" />
     <MESSAGE value="resilience4j connected" />
     <MESSAGE value="user can now logout successfully" />
     <MESSAGE value="safety tips content" />
@@ -708,6 +705,7 @@
     <MESSAGE value="unit tests written" />
     <MESSAGE value="controller tests written for web service" />
     <MESSAGE value="resolved version error" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolved version error" />
+    <MESSAGE value="resolved args error" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolved args error" />
   </component>
 </project>
