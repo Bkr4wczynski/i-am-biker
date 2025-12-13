@@ -37,6 +37,7 @@ public class ProfilePageController {
     }
 
     @GetMapping("/settings")
+    @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String showSettingsPage(Model model, HttpServletRequest request) {
         try {
             UserDetailsDTO userDetailsDTO = authConnectionService.getUserDetails(request);
@@ -48,8 +49,12 @@ public class ProfilePageController {
     }
 
     @PostMapping("/update-profile")
-    public String updateProfile(@ModelAttribute("user_details") UserDetailsDTO userDetailsDTO) {
-        authConnectionService.updateUserDetails(userDetailsDTO);
+    public String updateProfile(@ModelAttribute("user_details") UserDetailsDTO userDetailsDTO, HttpServletRequest request) {
+        try {
+            authConnectionService.updateUserDetails(userDetailsDTO, request);
+        } catch (AuthenticationException e) {
+            throw new RuntimeException(e);
+        }
         return "profile/myProfile";
     }
 

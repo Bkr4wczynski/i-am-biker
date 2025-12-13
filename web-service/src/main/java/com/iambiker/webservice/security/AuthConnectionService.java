@@ -6,6 +6,7 @@ import com.iambiker.webservice.model.dto.authentication.UserDetailsDTO;
 import com.iambiker.webservice.webcontent.bike.BikesServiceConnectionService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -13,8 +14,10 @@ import org.springframework.web.reactive.function.client.WebClient;
 import javax.naming.AuthenticationException;
 
 @Service
+@AllArgsConstructor
 public class AuthConnectionService {
     private final WebClient webClient = WebClient.create("http://localhost:8765/authentication/api/public");
+    private final JwtWebUtil jwtWebUtil;
 
     public String getToken(LoginDTO loginDTO) {
         return webClient.post()
@@ -27,7 +30,7 @@ public class AuthConnectionService {
 
     public UserDetailsDTO getUserDetails(HttpServletRequest request) throws AuthenticationException {
         String token = getToken(request);
-        if (token == null || token.isBlank()) {
+        if (token == null || token.isBlank() || !jwtWebUtil.validateToken(token)) {
             throw new AuthenticationException("Unauthenticated request!");
         }
         ResponseEntity<UserDetailsDTO> response = webClient.get()
@@ -41,7 +44,11 @@ public class AuthConnectionService {
             throw new AuthenticationException("Unauthenticated request!");
     }
 
-    public void updateUserDetails(UserDetailsDTO userDetailsDTO) {
+    public void updateUserDetails(UserDetailsDTO userDetailsDTO, HttpServletRequest request) throws AuthenticationException {
+        String token = getToken(request);
+        if (token == null || token.isBlank() || !jwtWebUtil.validateToken(token)) {
+            throw new AuthenticationException("Unauthenticated request!");
+        }
         webClient.put()
                 .uri("/user-details")
                 .bodyValue(userDetailsDTO)
