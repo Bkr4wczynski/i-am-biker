@@ -40,7 +40,9 @@ public class AuthenticationRestController {
 
     @PutMapping("/user-details")
     @Transactional
-    public ResponseEntity<Void> updateUserDetails(@RequestBody UserDetailsDTO userDetailsDTO) {
+    public ResponseEntity<Void> updateUserDetails(@RequestBody UserDetailsDTO userDetailsDTO, @RequestParam String token) {
+        if (!jwtService.validateToken(token))
+            return ResponseEntity.notFound().build();
         if (userAuthenticationService.updateUserDetails(userDetailsDTO) != null) {
             return ResponseEntity.ok().build();
         }

@@ -17,7 +17,6 @@ import javax.naming.AuthenticationException;
 @AllArgsConstructor
 public class AuthConnectionService {
     private final WebClient webClient = WebClient.create("http://localhost:8765/authentication/api/public");
-    private final JwtWebUtil jwtWebUtil;
 
     public String getToken(LoginDTO loginDTO) {
         return webClient.post()
@@ -30,7 +29,7 @@ public class AuthConnectionService {
 
     public UserDetailsDTO getUserDetails(HttpServletRequest request) throws AuthenticationException {
         String token = getToken(request);
-        if (token == null || token.isBlank() || !jwtWebUtil.validateToken(token)) {
+        if (token == null || token.isBlank()) {
             throw new AuthenticationException("Unauthenticated request!");
         }
         ResponseEntity<UserDetailsDTO> response = webClient.get()
@@ -46,11 +45,11 @@ public class AuthConnectionService {
 
     public void updateUserDetails(UserDetailsDTO userDetailsDTO, HttpServletRequest request) throws AuthenticationException {
         String token = getToken(request);
-        if (token == null || token.isBlank() || !jwtWebUtil.validateToken(token)) {
+        if (token == null || token.isBlank()) {
             throw new AuthenticationException("Unauthenticated request!");
         }
         webClient.put()
-                .uri("/user-details")
+                .uri("/user-details?token="+token)
                 .bodyValue(userDetailsDTO)
                 .retrieve()
                 .bodyToMono(Void.class)
