@@ -41,6 +41,15 @@ public class AuthConnectionService {
             throw new AuthenticationException("Unauthenticated request!");
     }
 
+    public void updateUserDetails(UserDetailsDTO userDetailsDTO) {
+        webClient.put()
+                .uri("/user-details")
+                .bodyValue(userDetailsDTO)
+                .retrieve()
+                .bodyToMono(Void.class)
+                .block();
+    }
+
     private String getToken(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {

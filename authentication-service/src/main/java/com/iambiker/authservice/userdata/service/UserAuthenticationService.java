@@ -9,6 +9,7 @@ import jakarta.ws.rs.NotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -32,6 +33,22 @@ public class UserAuthenticationService {
             throw new NotFoundException("Could not find user details for user");
         UserDetails userDetails =user.get().getUser_details();
         return new UserDetailsDTO(userDetails.getUser_id(), userDetails.getUser().getUsername(), userDetails.getRegistry_date(), userDetails.getBirthday());
+    }
+
+    @Transactional
+    public User updateUserDetails(UserDetailsDTO userDetailsDTO) {
+        UserDetails userDetails = new UserDetails();
+        userDetails.setUser_id(userDetailsDTO.getUser_id());
+        userDetails.setBirthday(userDetailsDTO.getBirthday());
+        userDetails.setRegistry_date(userDetailsDTO.getRegistry_date());
+
+        User user = userRepository.findById(userDetails.getUser_id()).get();
+
+        user.setUsername(userDetailsDTO.getUsername());
+
+        user.setUser_details(userDetails);
+
+        return userRepository.save(user);
     }
 
 

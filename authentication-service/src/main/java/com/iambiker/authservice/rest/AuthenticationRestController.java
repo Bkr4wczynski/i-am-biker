@@ -10,6 +10,7 @@ import com.iambiker.authservice.userdata.service.UserAuthenticationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -35,6 +36,15 @@ public class AuthenticationRestController {
         if (!jwtService.validateToken(token))
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(userAuthenticationService.getUserDetailsFromToken(token));
+    }
+
+    @PutMapping("/user-details")
+    @Transactional
+    public ResponseEntity<Void> updateUserDetails(@RequestBody UserDetailsDTO userDetailsDTO) {
+        if (userAuthenticationService.updateUserDetails(userDetailsDTO) != null) {
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
     }
 
     @PostMapping("/generate-token")

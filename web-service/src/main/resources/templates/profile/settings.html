@@ -17,7 +17,21 @@
         </div>
 
         <div id="content">
+            <form id="form" method="post" th:action="@{/update-profile}" th:object="${user_details}">
+                <input type="hidden" th:field="*{user_id}" />
+                <input type="hidden" th:field="*{registry_date}" />
+                <label for="username">Username</label>
+                <br>
+                <input type="text" id="username" th:field="*{username}"/>
+                <br>
 
+                <label for="birthday">Birthday</label>
+                <br>
+                <input type="date" id="birthday" th:field="*{birthday}"/>
+                <br>
+
+                <button type="submit">Update</button>
+            </form>
         </div>
     </div>
 </body>

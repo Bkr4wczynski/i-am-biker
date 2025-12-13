@@ -9,8 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.naming.AuthenticationException;
 import java.time.LocalDate;
@@ -37,12 +37,19 @@ public class ProfilePageController {
     }
 
     @GetMapping("/settings")
-    public String showSettingsPage(Model model) {
+    public String showSettingsPage(Model model, HttpServletRequest request) {
+        try {
+            UserDetailsDTO userDetailsDTO = authConnectionService.getUserDetails(request);
+            model.addAttribute("user_details", userDetailsDTO);
+        } catch (AuthenticationException e) {
+            throw new RuntimeException(e);
+        }
         return "profile/settings";
     }
 
     @PostMapping("/update-profile")
-    public String updateProfile() {
+    public String updateProfile(@ModelAttribute("user_details") UserDetailsDTO userDetailsDTO) {
+        authConnectionService.updateUserDetails(userDetailsDTO);
         return "profile/myProfile";
     }
 
