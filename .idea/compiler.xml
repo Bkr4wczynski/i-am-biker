@@ -20,8 +20,8 @@
         <module name="authentication-service" />
         <module name="maintenance-service" />
         <module name="bikes-service" />
-        <module name="web-service" />
         <module name="naming-server" />
+        <module name="web-service" />
       </profile>
     </annotationProcessing>
   </component>

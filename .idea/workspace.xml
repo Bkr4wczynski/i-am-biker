@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="more unit tests">
-      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bikes-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maintenance-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naming-server/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/Dockerfile" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="STARTER WORKING ON VERSION 1.3.0 DEPLOYMENT&#10;added some dockerfiles now it is possible to run naming server service and docker container">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bikes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +81,8 @@
     "Application.com.iambiker.apigateway.ApiGatewayApplication.executor": "Run",
     "Application.com.iambiker.namingserver.NamingServerApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "Docker.naming-server/Dockerfile.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor": "Run",
@@ -180,7 +173,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NamingServerApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -275,39 +268,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfilePageControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.ProfilePageControllerTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfilePageControllerTests.shouldDisplaySettingsPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.ProfilePageControllerTests" />
-      <option name="METHOD_NAME" value="shouldDisplaySettingsPage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="naming-server/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
@@ -326,19 +308,19 @@
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.WebServiceApplication" />
       <item itemvalue="Application.MaintenanceServiceApplication" />
+      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.naming-server/Dockerfile" />
       <item itemvalue="JUnit.AuthServiceApplicationTests" />
       <item itemvalue="JUnit.PathManagerTests" />
-      <item itemvalue="JUnit.ProfilePageControllerTests" />
-      <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.naming-server/Dockerfile" />
         <item itemvalue="JUnit.AuthServiceApplicationTests" />
         <item itemvalue="JUnit.PathManagerTests" />
-        <item itemvalue="JUnit.ProfilePageControllerTests" />
-        <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage" />
       </list>
     </recent_temporary>
   </component>
@@ -349,14 +331,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00032" summary="token can be parsed correctly">
-      <option name="closed" value="true" />
-      <created>1760266695829</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1760266695829</updated>
     </task>
     <task id="LOCAL-00033" summary="public paths are accessible without token">
       <option name="closed" value="true" />
@@ -742,7 +716,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765697693070</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="STARTER WORKING ON VERSION 1.3.0 DEPLOYMENT&#10;added some dockerfiles now it is possible to run naming server service and docker container">
+      <option name="closed" value="true" />
+      <created>1765708160590</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1765708160590</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -757,7 +739,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="user details entity" />
     <MESSAGE value="controllers updated for user details" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="user details is accessible in web" />
@@ -782,6 +763,7 @@
     <MESSAGE value="resolved security issue with connecting to auth rest api via web service" />
     <MESSAGE value="solved previous issue right way by validating token in auth service instead of web service" />
     <MESSAGE value="more unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="more unit tests" />
+    <MESSAGE value="STARTER WORKING ON VERSION 1.3.0 DEPLOYMENT&#10;added some dockerfiles now it is possible to run naming server service and docker container" />
+    <option name="LAST_COMMIT_MESSAGE" value="STARTER WORKING ON VERSION 1.3.0 DEPLOYMENT&#10;added some dockerfiles now it is possible to run naming server service and docker container" />
   </component>
 </project>

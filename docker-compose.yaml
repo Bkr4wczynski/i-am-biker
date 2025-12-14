@@ -1,0 +1,17 @@
+services:
+  eureka-server:
+    image:  naming-server
+    ports:
+      - "8761:8761"
+
+  api-gateway:
+    image: api-gateway
+    ports:
+      - "8765:8080"
+    depends_on:
+      - eureka-server
+    env_file:
+      - .env
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka/"
+
