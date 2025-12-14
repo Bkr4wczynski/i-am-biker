@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="solved previous issue right way by validating token in auth service instead of web service">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/util/PathManagerTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="more unit tests">
+      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bikes-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maintenance-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/naming-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ProfilePageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ProfilePageControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/naming-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/naming-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +38,7 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -76,6 +90,7 @@
     "Application.com.iambiker.apigateway.ApiGatewayApplication.executor": "Run",
     "Application.com.iambiker.namingserver.NamingServerApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.naming-server/Dockerfile.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
@@ -85,6 +100,7 @@
     "JUnit.AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
     "JUnit.AuthMvcControllerTests.shouldRenderRegisterPage.executor": "Run",
     "JUnit.AuthMvcControllerTests.test.executor": "Run",
+    "JUnit.AuthServiceApplicationTests.executor": "Run",
     "JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage.executor": "Run",
     "JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage.executor": "Run",
     "JUnit.JwtServiceTests.example.executor": "Run",
@@ -98,17 +114,27 @@
     "JUnit.MaintenanceServiceTests.testCalculateInterval.executor": "Run",
     "JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor": "Run",
     "JUnit.PathManagerTest.testIsPathPublic.executor": "Run",
+    "JUnit.PathManagerTests.executor": "Run",
     "JUnit.ProfilePageControllerTests.executor": "Run",
     "JUnit.ProfilePageControllerTests.shouldDisplayProfilePage.executor": "Run",
     "JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage.executor": "Run",
     "Maven.api-gateway [clean].executor": "Run",
+    "Maven.api-gateway [install].executor": "Run",
     "Maven.auth-service [clean].executor": "Run",
     "Maven.authentication-service [clean].executor": "Run",
+    "Maven.authentication-service [install].executor": "Run",
+    "Maven.authentication-service [verify].executor": "Run",
     "Maven.bikes-service [clean].executor": "Run",
+    "Maven.bikes-service [install].executor": "Run",
+    "Maven.bikes-service [test].executor": "Run",
     "Maven.i-am-biker [clean].executor": "Run",
     "Maven.i-am-biker [compile].executor": "Run",
+    "Maven.i-am-biker [package].executor": "Run",
     "Maven.maintenance-service [clean].executor": "Run",
+    "Maven.maintenance-service [install].executor": "Run",
+    "Maven.maintenance-service [package].executor": "Run",
     "Maven.naming-server [clean].executor": "Run",
+    "Maven.naming-server [install].executor": "Run",
     "Maven.web-service [clean].executor": "Run",
     "Maven.web-service [compile].executor": "Run",
     "Maven.web-service [install].executor": "Run",
@@ -120,7 +146,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
@@ -154,19 +180,40 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PathManagerTests">
-    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.NamingServerApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <envs>
         <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.iambiker.apigateway.ApiGatewayApplication" />
       <module name="api-gateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iambiker.apigateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationServiceApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
+        <env name="DB_PASSWORD" value="61ix4fellkejiApR" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.AuthenticationServiceApplication" />
+      <module name="authentication-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BikesServiceApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="DB_PASSWORD" value="61ix4fellkejiApR" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.bikesservice.BikesServiceApplication" />
+      <module name="bikes-service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,12 +225,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NamingServerApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.namingserver.NamingServerApplication" />
+      <module name="naming-server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WebServiceApplication" type="Application" factoryName="Application">
       <envs>
         <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.WebServiceApplication" />
       <module name="web-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iambiker.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iambiker.authservice" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.AuthServiceApplicationTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -218,22 +290,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfilePageControllerTests.shouldDisplayProfilePage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.ProfilePageControllerTests" />
-      <option name="METHOD_NAME" value="shouldDisplayProfilePage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProfilePageControllerTests.shouldDisplaySettingsPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <extension name="coverage">
@@ -250,22 +306,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="naming-server/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="naming-server/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Application.NamingServerApplication" />
+      <item itemvalue="Application.AuthenticationServiceApplication" />
+      <item itemvalue="Application.BikesServiceApplication" />
+      <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.WebServiceApplication" />
       <item itemvalue="Application.MaintenanceServiceApplication" />
-      <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Docker.naming-server/Dockerfile" />
+      <item itemvalue="JUnit.AuthServiceApplicationTests" />
       <item itemvalue="JUnit.PathManagerTests" />
       <item itemvalue="JUnit.ProfilePageControllerTests" />
-      <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplayProfilePage" />
       <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.naming-server/Dockerfile" />
+        <item itemvalue="JUnit.AuthServiceApplicationTests" />
         <item itemvalue="JUnit.PathManagerTests" />
         <item itemvalue="JUnit.ProfilePageControllerTests" />
         <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage" />
-        <item itemvalue="JUnit.ProfilePageControllerTests.shouldDisplayProfilePage" />
-        <item itemvalue="Application.ApiGatewayApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -276,14 +349,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00031" summary="gateway receives token">
-      <option name="closed" value="true" />
-      <created>1760263729560</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1760263729560</updated>
     </task>
     <task id="LOCAL-00032" summary="token can be parsed correctly">
       <option name="closed" value="true" />
@@ -669,7 +734,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765641942763</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="more unit tests">
+      <option name="closed" value="true" />
+      <created>1765697693070</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1765697693070</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -684,7 +757,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="simple quiz version working" />
     <MESSAGE value="user details entity" />
     <MESSAGE value="controllers updated for user details" />
     <MESSAGE value="bug fix" />
@@ -709,6 +781,7 @@
     <MESSAGE value="started working on profile settings" />
     <MESSAGE value="resolved security issue with connecting to auth rest api via web service" />
     <MESSAGE value="solved previous issue right way by validating token in auth service instead of web service" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved previous issue right way by validating token in auth service instead of web service" />
+    <MESSAGE value="more unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="more unit tests" />
   </component>
 </project>

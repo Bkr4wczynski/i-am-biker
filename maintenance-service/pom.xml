@@ -10,6 +10,7 @@
 	<artifactId>maintenance-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>maintenance-service</name>
+	<packaging>jar</packaging>
 	<description>Maintenance service for i-am-biker app</description>
 	<url/>
 	<licenses>

@@ -10,6 +10,7 @@
 	<artifactId>web-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>web-service</name>
+	<packaging>jar</packaging>
 	<description>Web service for i-am-biker app</description>
 	<url/>
 	<licenses>

@@ -10,6 +10,7 @@
 	<artifactId>bikes-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bikes-service</name>
+	<packaging>jar</packaging>
 	<description>bikes-services for i am biker web application</description>
 	<url/>
 	<licenses>

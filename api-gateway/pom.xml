@@ -10,6 +10,7 @@
 	<artifactId>api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api-gateway</name>
+	<packaging>jar</packaging>
 	<description>Api gateway for i-am-biker app</description>
 	<url/>
 	<licenses>
