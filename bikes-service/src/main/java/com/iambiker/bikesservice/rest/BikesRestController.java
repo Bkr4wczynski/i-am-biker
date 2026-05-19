@@ -1,7 +1,7 @@
 package com.iambiker.bikesservice.rest;
 
 import com.iambiker.bikesservice.model.dto.BikeDTO;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @Slf4j
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BikesRestController {
     private final BikesService bikesService;
 

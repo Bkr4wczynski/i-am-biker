@@ -4,8 +4,7 @@ import com.iambiker.bikesservice.database.entity.Bike;
 import com.iambiker.bikesservice.database.entity.Engine;
 import com.iambiker.bikesservice.database.repository.BikesRepository;
 import com.iambiker.bikesservice.model.dto.BikeDTO;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,10 +15,9 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Service
-@AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class BikesService {
-    private BikesRepository bikesRepository;
+    private final BikesRepository bikesRepository;
 
     public List<BikeDTO> getBikes(int userId) {
         return bikesRepository.findByUserId(userId).stream()
