@@ -24,12 +24,16 @@
         <module name="web-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blogging-api" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="authentication-service" options="-parameters" />
       <module name="bikes-service" options="-parameters" />
+      <module name="blogging-api" options="-parameters" />
       <module name="maintenance-service" options="-parameters" />
       <module name="naming-server" options="-parameters" />
       <module name="web-service" options="-parameters" />

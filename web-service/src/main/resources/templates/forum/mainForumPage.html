@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Forum</title>
     <link rel="stylesheet" th:href="@{/style/content.css}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,11 @@
     </div>
     <div id="content">
         <h2>Forum will be here</h2>
+        <ul class="threads">
+            <li th:each="post: ${posts}">
+                <a th:text="${post.title}" th:href="@{/forum/post(id=${post.id})}"></a>
+            </li>
+        </ul>
 
     </div>
     <div id="footer">

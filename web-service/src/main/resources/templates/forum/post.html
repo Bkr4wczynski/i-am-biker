@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum</title>
+    <link rel="stylesheet" th:href="@{/style/side.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div id="menu">
+        <div class="title"><span>I am biker motorcycle forum</span></div>
+        <div class="option"><a th:href="@{/my-profile}">Your Profile</a></div>
+        <div class="option"><a th:href="@{/forum}">Motorcycle forum</a></div>
+
+        <div style="clear:both;"></div>
+    </div>
+    <div id="content">
+
+        <div id="titleDiv">
+            <h2 th:text="${post.title}"></h2> <span class="badge" th:text="${post.category}">Java</span>
+        </div>
+
+        <div class="post-meta">
+            <span th:text="${#temporals.format(post.createdAt, 'dd.MM.yyyy HH:mm')}"></span>
+            <span th:text="${#temporals.format(post.updatedAt, 'dd.MM.yyyy HH:mm')}"></span>
+        </div>
+
+        <div id="postContent">
+            <p th:text="${post.content}"></p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
