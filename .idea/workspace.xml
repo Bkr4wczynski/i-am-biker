@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="small fix in BikesService">
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Serious problem with docker-compose.yaml">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/mainForumPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/bike/myBikes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/quiz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/safetyTips.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/content/safetyTips.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/profile/myProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/profile/myProfile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +26,9 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="HTML File" />
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -173,7 +175,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebServiceApplication">
+  <component name="RunManager" selected="Application.NamingServerApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -325,14 +327,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00035" summary="authentication fully working but without some features like alerting user">
-      <option name="closed" value="true" />
-      <created>1760269834634</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1760269834634</updated>
     </task>
     <task id="LOCAL-00036" summary="working authentication FINALLY!">
       <option name="closed" value="true" />
@@ -718,7 +712,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779188804438</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Serious problem with docker-compose.yaml">
+      <option name="closed" value="true" />
+      <created>1779274494049</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1779274494050</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -733,7 +735,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="user details is accessible in web" />
     <MESSAGE value="passwords secured" />
     <MESSAGE value="user details errors resolved" />
     <MESSAGE value="STARTED WORKING ON BETA 1.1&#10;REFACTORING PROJECT COMPLETED" />
@@ -758,6 +759,7 @@
     <MESSAGE value="STARTER WORKING ON VERSION 1.3.0 DEPLOYMENT&#10;added some dockerfiles now it is possible to run naming server service and docker container" />
     <MESSAGE value="docker compose for just naming server and api gateway" />
     <MESSAGE value="small fix in BikesService" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fix in BikesService" />
+    <MESSAGE value="Serious problem with docker-compose.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Serious problem with docker-compose.yaml" />
   </component>
 </project>
