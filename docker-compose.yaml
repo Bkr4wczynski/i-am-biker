@@ -1,17 +1,77 @@
 services:
   eureka-server:
-    image:  naming-server
+    build: ./naming-server
     ports:
       - "8761:8761"
 
-  api-gateway:
-    image: api-gateway
+  db:
+    image: mysql:latest
     ports:
-      - "8765:8080"
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: i_am_biker_db
+      MYSQL_USER: biker
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8765:8765"
     depends_on:
       - eureka-server
     env_file:
       - .env
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka/"
+
+  web-service:
+    build: ./web-service
+    depends_on:
+      - eureka-server
+    env_file:
+      - .env
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka/"
+
+  maintenance-service:
+    build: ./maintenance-service
+    depends_on:
+      - eureka-server
+    env_file:
+      - .env
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka/"
+
+  bikes-service:
+    build: ./bikes-service
+    depends_on:
+      - eureka-server
+      - db
+    env_file:
+      - .env
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka/"
+      DATASOURCE_URL: jdbc:mysql://db:3306/i_am_biker_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      DATASOURCE_USERNAME: biker
+
+  authentication-service:
+    build: ./authentication-service
+    ports:
+      - "8900:8900"
+    depends_on:
+      - eureka-server
+      - db
+    env_file:
+      - .env
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka/"
+      DATASOURCE_URL: jdbc:mysql://db:3306/i_am_biker_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      DATASOURCE_USERNAME: biker
+
+volumes:
+  mysql-data:
 
