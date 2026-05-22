@@ -19,6 +19,15 @@ import javax.naming.AuthenticationException;
 public class AuthConnectionService {
     private final WebClient webClient = WebClient.create("http://localhost:8765/authentication/api/public");
 
+    public String getUsernameById(int id, HttpServletRequest request) {
+        String token = getToken(request);
+        return webClient.get()
+                .uri("/get-username/"+id+"?token="+token)
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
+    }
+
     public String getToken(LoginDTO loginDTO) {
         return webClient.post()
                 .uri("/generate-token")

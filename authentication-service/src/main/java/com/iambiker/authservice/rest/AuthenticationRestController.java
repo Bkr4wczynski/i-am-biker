@@ -24,6 +24,18 @@ public class AuthenticationRestController {
     private final JwtService jwtService;
     private final UserRepository userRepository;
 
+    @GetMapping("/get-username/{id}")
+    public ResponseEntity<String> getUsernameById(@PathVariable("id") int id, @RequestParam String token) {
+        if (jwtService.validateToken(token)) {
+            Optional<User> user = userRepository.findById(id);
+            if (user.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(user.get().getUsername());
+        }
+        return ResponseEntity.notFound().build();
+    }
+
     @GetMapping("/validate-token")
     public ResponseEntity<Boolean> validateToken(@RequestParam String token) {
         if (jwtService.validateToken(token))

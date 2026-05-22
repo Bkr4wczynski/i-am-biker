@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="forum service correctly registered with gateway and eureka">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="connected forum api with web service">
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumServiceConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumServiceConnectionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,14 +330,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00041" summary="first test written">
-      <option name="closed" value="true" />
-      <created>1760362250675</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1760362250675</updated>
     </task>
     <task id="LOCAL-00042" summary="auth controller test written">
       <option name="closed" value="true" />
@@ -723,7 +715,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779441515545</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="connected forum api with web service">
+      <option name="closed" value="true" />
+      <created>1779443188695</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1779443188695</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -738,7 +738,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="web service refactored" />
     <MESSAGE value="username displayed on profile page" />
     <MESSAGE value="VERSION 1.1.0 BETA UPLOAD" />
     <MESSAGE value="Same site cookies" />
@@ -763,6 +762,7 @@
     <MESSAGE value="working on posts started" />
     <MESSAGE value="added forum api as new microservice" />
     <MESSAGE value="forum service correctly registered with gateway and eureka" />
-    <option name="LAST_COMMIT_MESSAGE" value="forum service correctly registered with gateway and eureka" />
+    <MESSAGE value="connected forum api with web service" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected forum api with web service" />
   </component>
 </project>

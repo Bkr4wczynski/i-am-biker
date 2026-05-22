@@ -1,8 +1,10 @@
 package com.iambiker.webservice.webcontent.forum;
 
 import com.iambiker.webservice.model.dto.personal.PostDTO;
+import com.iambiker.webservice.security.AuthConnectionService;
 import com.iambiker.webservice.security.JwtWebUtil;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ForumController {
     private final ForumServiceConnectionService connectionService;
+    private final AuthConnectionService authConnectionService;
 
     @GetMapping
     @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
@@ -34,10 +37,12 @@ public class ForumController {
     }
 
     @GetMapping("/post")
-    public String displayPost(@RequestParam int id, Model model) {
-        PostDTO post = new PostDTO(1,1, "test", "lorem ipsum gsrhiuajgszkiaugheasikugh euihg uiwerhgruieahg kiusehgj reikuahygki", "category", Arrays.asList("tag1", "tag2"), LocalDateTime.now(), LocalDateTime.now());
+    public String displayPost(@RequestParam int id, Model model, HttpServletRequest request) {
+        PostDTO post = connectionService.getPostById(id);
+        int authorId = post.getAuthorId();
+        String authorName = authConnectionService.getUsernameById(authorId, request);
         model.addAttribute("post", post);
-        model.addAttribute("author", "someAuthor");
+        model.addAttribute("author", authorName);
         return "forum/post";
     }
 
