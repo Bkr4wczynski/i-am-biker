@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="working on posts started">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="added forum api as new microservice">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumServiceConnectionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/BloggingApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/ForumServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/controller/RestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/entity/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/test/java/com/blog/blogging_api/BloggingApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/test/java/com/blog/forum_service/ForumServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/mainForumPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/mainForumPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +24,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Dockerfile" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,7 +33,7 @@
     <option name="NEW_BASE" value="origin/master" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/forum-service" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -83,6 +72,7 @@
     "Application.AuthenticationServiceApplication.executor": "Run",
     "Application.BikesServiceApplication.executor": "Run",
     "Application.BloggingApiApplication.executor": "Run",
+    "Application.ForumServiceApplication.executor": "Run",
     "Application.MaintenanceServiceApplication.executor": "Run",
     "Application.NamingServerApplication.executor": "Run",
     "Application.WebServiceApplication.executor": "Run",
@@ -149,7 +139,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker",
+    "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker/forum-service/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -162,6 +152,7 @@
       <recent name="com.bikerapp.auth_service.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\forum-service\src\main\resources" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\web-service\src\main\java\com\iambiker\webservice" />
       <recent name="C:\Users\Barte\IdeaProjects\i-am-biker\bikes-service\src\main\java\com\iambiker\bikesservice" />
@@ -340,14 +331,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00039" summary="api gateway logging">
-      <option name="closed" value="true" />
-      <created>1760356606165</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1760356606165</updated>
     </task>
     <task id="LOCAL-00040" summary="complete logging added">
       <option name="closed" value="true" />
@@ -733,7 +716,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779437186033</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="added forum api as new microservice">
+      <option name="closed" value="true" />
+      <created>1779439665806</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1779439665806</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -748,7 +739,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactoring api gateway and maintenance service" />
     <MESSAGE value="authentication service refactored" />
     <MESSAGE value="web service refactored" />
     <MESSAGE value="username displayed on profile page" />
@@ -773,6 +763,7 @@
     <MESSAGE value="started working on motorcycle forum" />
     <MESSAGE value="working on posts frontend" />
     <MESSAGE value="working on posts started" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on posts started" />
+    <MESSAGE value="added forum api as new microservice" />
+    <option name="LAST_COMMIT_MESSAGE" value="added forum api as new microservice" />
   </component>
 </project>
