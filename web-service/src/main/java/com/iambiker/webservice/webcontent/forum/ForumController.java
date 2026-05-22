@@ -1,12 +1,14 @@
 package com.iambiker.webservice.webcontent.forum;
 
 import com.iambiker.webservice.model.dto.personal.PostDTO;
+import com.iambiker.webservice.security.JwtWebUtil;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -18,14 +20,16 @@ import java.util.List;
 @Controller
 @RequestMapping("/forum")
 @Slf4j
+@RequiredArgsConstructor
 public class ForumController {
+    private final ForumServiceConnectionService connectionService;
 
     @GetMapping
     @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
-    public String displayMainForumPage(Model model) {
-        List<PostDTO> postDTOS = new ArrayList<>();
-        postDTOS.add(new PostDTO(1, 1, "test", "lorem ipsum", "category", Arrays.asList("tag1", "tag2"), LocalDateTime.now(), LocalDateTime.now()));
-        model.addAttribute("posts", postDTOS);
+    public String displayMainForumPage(@CookieValue(name = "token") String token, Model model) {
+        List<PostDTO> posts = connectionService.getAllPosts();
+        log.info("Posts fetched from api: {}", posts);
+        model.addAttribute("posts", posts);
         return "forum/mainForumPage";
     }
 
@@ -37,7 +41,7 @@ public class ForumController {
         return "forum/post";
     }
 
-    public String fallback(Model model, Throwable throwable) {
+    public String fallback(@CookieValue(name = "token") String token, Model model, Throwable throwable) {
         List<PostDTO> postDTOS = new ArrayList<>();
         model.addAttribute("posts", postDTOS);
         log.error("Failed to load forum!");

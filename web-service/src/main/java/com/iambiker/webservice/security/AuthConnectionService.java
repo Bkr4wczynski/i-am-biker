@@ -4,6 +4,7 @@ import com.iambiker.webservice.model.dto.authentication.LoginDTO;
 import com.iambiker.webservice.model.dto.authentication.RegisterDTO;
 import com.iambiker.webservice.model.dto.authentication.UserDetailsDTO;
 import com.iambiker.webservice.webcontent.bike.BikesServiceConnectionService;
+import com.iambiker.webservice.webcontent.forum.ForumServiceConnectionService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
@@ -77,6 +78,7 @@ public class AuthConnectionService {
         cookie.setDomain("localhost");
         cookie.setMaxAge(age);
         BikesServiceConnectionService.setToken(token);
+        ForumServiceConnectionService.setToken(token);
         return cookie;
     }
 
