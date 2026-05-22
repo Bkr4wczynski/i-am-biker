@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.naming.AuthenticationException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,6 +35,24 @@ public class ForumController {
         log.info("Posts fetched from api: {}", posts);
         model.addAttribute("posts", posts);
         return "forum/mainForumPage";
+    }
+
+    @GetMapping("/new")
+    public String displayPostCreatingPage(HttpServletRequest request, Model model) {
+        int id;
+        try {
+            id = authConnectionService.getUserDetails(request).getUser_id();
+            log.info("Successfully fetched user id!");
+        } catch (AuthenticationException e) {
+            throw new RuntimeException(e);
+        }
+        PostDTO postDTO = new PostDTO();
+        postDTO.setCreatedAt(LocalDateTime.now());
+        postDTO.setUpdatedAt(LocalDateTime.now());
+        postDTO.setAuthorId(id);
+        model.addAttribute("post", postDTO);
+        model.addAttribute("allTags", Tags.values());
+        return "forum/newPost";
     }
 
     @GetMapping("/post")
