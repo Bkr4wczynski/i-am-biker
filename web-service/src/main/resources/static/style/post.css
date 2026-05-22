@@ -3,7 +3,7 @@
 }
 
 .badge {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 500;
     padding: 3px 10px;
     border-radius: 20px;
@@ -12,9 +12,40 @@
 }
 
 #header {
-
+    display: flex;
+    gap: 50px;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #post-meta {
+    font-size: 12px;
+    display: flex;
+    gap: 50px;
+    padding: 0px 175px;
+    align-items: center;
+    border-bottom: 2px solid #e8e6df;
+}
 
+#tags-div {
+    padding: 10px 10px;
+    display: flex;
+    gap: 25px;
+}
+
+.tag {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 2px solid #263142;
+    background-color: #FEFEFE;
+    color: #263142;
+}
+
+#content {
+    padding: 0px 10px;
+    font-size: 22px;
+    height: 650px;
 }

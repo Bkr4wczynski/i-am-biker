@@ -25,13 +25,19 @@
         </div>
 
         <div id="post-meta">
-            <span th:text="${author}"></span>
-            <span th:text="${#temporals.format(post.createdAt, 'dd.MM.yyyy HH:mm')}"></span>
-            <span th:text="${#temporals.format(post.updatedAt, 'dd.MM.yyyy HH:mm')}"></span>
+            <p>author:</p> <span th:text="${author}"></span>
+            <p>created at:</p> <span th:text="${#temporals.format(post.createdAt, 'dd.MM.yyyy HH:mm')}"></span>
+            <p>updated at:</p> <span th:text="${#temporals.format(post.updatedAt, 'dd.MM.yyyy HH:mm')}"></span>
         </div>
 
         <div id="content">
             <p th:text="${post.content}"></p>
+        </div>
+
+        <div id="tags-div">
+            <div th:each="tag : ${post.tags}">
+                <span class="tag" th:text="${tag}">tag</span>
+            </div>
         </div>
     </div>
 </div>
