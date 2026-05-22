@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="working on posts frontend">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/post.css" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="working on posts started">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/PostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/PostDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/BloggingApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/ForumServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/controller/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/blogging_api/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/src/test/java/com/blog/blogging_api/BloggingApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/test/java/com/blog/forum_service/ForumServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/mainForumPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/mainForumPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,85 +76,86 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AuthenticationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BikesServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MaintenanceServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.NamingServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WebServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.iambiker.apigateway.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.iambiker.namingserver.NamingServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Docker.authentication-service/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.mysql: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.naming-server/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRenderLoginPage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerTests.shouldRenderRegisterPage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthMvcControllerTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthMvcControllerTests.shouldRenderRegisterPage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthMvcControllerTests.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthServiceApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JwtServiceTests.example.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JwtServiceTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JwtServiceTests.shouldGenerateToken.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.JwtServiceTests.testPasswordEncoder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenancePageControllerTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenanceServiceTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenanceServiceTests.testCalculateInterval.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PathManagerTest.testIsPathPublic.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PathManagerTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProfilePageControllerTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProfilePageControllerTests.shouldDisplayProfilePage.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.api-gateway [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.authentication-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.authentication-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.authentication-service [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bikes-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bikes-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.bikes-service [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.i-am-biker [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.i-am-biker [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.i-am-biker [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.i-am-biker [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.maintenance-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.maintenance-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.maintenance-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.naming-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.naming-server [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.web-service [validate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Barte/IdeaProjects/i-am-biker&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.AuthServiceApplication.executor": "Run",
+    "Application.AuthenticationServiceApplication.executor": "Run",
+    "Application.BikesServiceApplication.executor": "Run",
+    "Application.BloggingApiApplication.executor": "Run",
+    "Application.MaintenanceServiceApplication.executor": "Run",
+    "Application.NamingServerApplication.executor": "Run",
+    "Application.WebServiceApplication.executor": "Run",
+    "Application.com.iambiker.apigateway.ApiGatewayApplication.executor": "Run",
+    "Application.com.iambiker.namingserver.NamingServerApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.authentication-service/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml.mysql: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.naming-server/Dockerfile.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRenderLoginPage.executor": "Run",
+    "JUnit.AuthControllerTests.shouldRenderRegisterPage.executor": "Run",
+    "JUnit.AuthMvcControllerTests.executor": "Run",
+    "JUnit.AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
+    "JUnit.AuthMvcControllerTests.shouldRenderRegisterPage.executor": "Run",
+    "JUnit.AuthMvcControllerTests.test.executor": "Run",
+    "JUnit.AuthServiceApplicationTests.executor": "Run",
+    "JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage.executor": "Run",
+    "JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage.executor": "Run",
+    "JUnit.JwtServiceTests.example.executor": "Run",
+    "JUnit.JwtServiceTests.executor": "Run",
+    "JUnit.JwtServiceTests.shouldGenerateToken.executor": "Run",
+    "JUnit.JwtServiceTests.testPasswordEncoder.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage.executor": "Run",
+    "JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered.executor": "Run",
+    "JUnit.MaintenanceServiceTests.executor": "Run",
+    "JUnit.MaintenanceServiceTests.testCalculateInterval.executor": "Run",
+    "JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor": "Run",
+    "JUnit.PathManagerTest.testIsPathPublic.executor": "Run",
+    "JUnit.PathManagerTests.executor": "Run",
+    "JUnit.ProfilePageControllerTests.executor": "Run",
+    "JUnit.ProfilePageControllerTests.shouldDisplayProfilePage.executor": "Run",
+    "JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage.executor": "Run",
+    "Maven.api-gateway [clean].executor": "Run",
+    "Maven.api-gateway [install].executor": "Run",
+    "Maven.auth-service [clean].executor": "Run",
+    "Maven.authentication-service [clean].executor": "Run",
+    "Maven.authentication-service [install].executor": "Run",
+    "Maven.authentication-service [verify].executor": "Run",
+    "Maven.bikes-service [clean].executor": "Run",
+    "Maven.bikes-service [install].executor": "Run",
+    "Maven.bikes-service [test].executor": "Run",
+    "Maven.i-am-biker [clean].executor": "Run",
+    "Maven.i-am-biker [compile].executor": "Run",
+    "Maven.i-am-biker [install].executor": "Run",
+    "Maven.i-am-biker [package].executor": "Run",
+    "Maven.maintenance-service [clean].executor": "Run",
+    "Maven.maintenance-service [install].executor": "Run",
+    "Maven.maintenance-service [package].executor": "Run",
+    "Maven.naming-server [clean].executor": "Run",
+    "Maven.naming-server [install].executor": "Run",
+    "Maven.web-service [clean].executor": "Run",
+    "Maven.web-service [compile].executor": "Run",
+    "Maven.web-service [install].executor": "Run",
+    "Maven.web-service [package].executor": "Run",
+    "Maven.web-service [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.bikerapp.api_gateway.filter" />
@@ -173,7 +184,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebServiceApplication">
+  <component name="RunManager" selected="Application.ForumServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -207,6 +218,19 @@
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.iambiker.bikesservice.BikesServiceApplication" />
       <module name="bikes-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForumServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blog.forum_service.ForumServiceApplication" />
+      <module name="forum-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blog.forum_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -286,15 +310,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="naming-server/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="" />
-          <option name="sourceFilePath" value="naming-server/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.AuthenticationServiceApplication" />
@@ -302,19 +317,19 @@
       <item itemvalue="Application.MaintenanceServiceApplication" />
       <item itemvalue="Application.NamingServerApplication" />
       <item itemvalue="Application.WebServiceApplication" />
+      <item itemvalue="Application.ForumServiceApplication" />
       <item itemvalue="Docker.authentication-service/Dockerfile" />
       <item itemvalue="Docker.docker-compose.yaml.mysql: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="Docker.naming-server/Dockerfile" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ForumServiceApplication" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.authentication-service/Dockerfile" />
         <item itemvalue="Docker.docker-compose.yaml.mysql: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.naming-server/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -325,14 +340,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00038" summary="auth service logging">
-      <option name="closed" value="true" />
-      <created>1760356254297</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1760356254297</updated>
     </task>
     <task id="LOCAL-00039" summary="api gateway logging">
       <option name="closed" value="true" />
@@ -718,7 +725,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779281763407</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="working on posts started">
+      <option name="closed" value="true" />
+      <created>1779437186030</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1779437186033</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -733,7 +748,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="STARTED WORKING ON BETA 1.1&#10;REFACTORING PROJECT COMPLETED" />
     <MESSAGE value="refactoring api gateway and maintenance service" />
     <MESSAGE value="authentication service refactored" />
     <MESSAGE value="web service refactored" />
@@ -758,6 +772,7 @@
     <MESSAGE value="Serious problem with docker-compose.yaml" />
     <MESSAGE value="started working on motorcycle forum" />
     <MESSAGE value="working on posts frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on posts frontend" />
+    <MESSAGE value="working on posts started" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on posts started" />
   </component>
 </project>

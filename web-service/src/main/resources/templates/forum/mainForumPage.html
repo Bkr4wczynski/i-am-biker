@@ -30,7 +30,8 @@
         <div style="clear:both;"></div>
     </div>
     <div id="content">
-        <h2>Forum will be here</h2>
+        <h2>I am biker forum</h2>
+        <a>Add new post</a>
         <ul class="threads">
             <li th:each="post: ${posts}">
                 <a th:text="${post.title}" th:href="@{/forum/post(id=${post.id})}"></a>

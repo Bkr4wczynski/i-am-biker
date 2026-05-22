@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="forum-service" />
       </profile>
       <profile name="Annotation profile for i-am-biker" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -25,7 +26,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="blogging-api" target="21" />
+      <module name="blogging-api (1)" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -33,7 +34,8 @@
       <module name="api-gateway" options="-parameters" />
       <module name="authentication-service" options="-parameters" />
       <module name="bikes-service" options="-parameters" />
-      <module name="blogging-api" options="-parameters" />
+      <module name="blogging-api (1)" options="-parameters" />
+      <module name="forum-service" options="" />
       <module name="maintenance-service" options="-parameters" />
       <module name="naming-server" options="-parameters" />
       <module name="web-service" options="-parameters" />

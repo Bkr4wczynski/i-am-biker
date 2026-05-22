@@ -20,6 +20,7 @@
         <module>maintenance-service</module>
         <module>naming-server</module>
         <module>web-service</module>
+        <module>forum-service</module>
     </modules>
 
     <dependencies>
