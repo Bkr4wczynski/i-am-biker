@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -23,15 +24,16 @@ public class ForumController {
     @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String displayMainForumPage(Model model) {
         List<PostDTO> postDTOS = new ArrayList<>();
-        postDTOS.add(new PostDTO(1, "author1", "test", "lorem ipsum", "none", null, LocalDateTime.now(), LocalDateTime.now()));
+        postDTOS.add(new PostDTO(1, 1, "test", "lorem ipsum", "category", Arrays.asList("tag1", "tag2"), LocalDateTime.now(), LocalDateTime.now()));
         model.addAttribute("posts", postDTOS);
         return "forum/mainForumPage";
     }
 
     @GetMapping("/post")
     public String displayPost(@RequestParam int id, Model model) {
-        PostDTO post = new PostDTO(1,"author1", "test", "lorem ipsum gsrhiuajgszkiaugheasikugh euihg uiwerhgruieahg kiusehgj reikuahygki", "none", null, LocalDateTime.now(), LocalDateTime.now());
+        PostDTO post = new PostDTO(1,1, "test", "lorem ipsum gsrhiuajgszkiaugheasikugh euihg uiwerhgruieahg kiusehgj reikuahygki", "category", Arrays.asList("tag1", "tag2"), LocalDateTime.now(), LocalDateTime.now());
         model.addAttribute("post", post);
+        model.addAttribute("author", "someAuthor");
         return "forum/post";
     }
 

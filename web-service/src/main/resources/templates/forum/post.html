@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Forum</title>
     <link rel="stylesheet" th:href="@{/style/side.css}"/>
+    <link rel="stylesheet" th:href="@{/style/post.css}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -17,21 +18,21 @@
 
         <div style="clear:both;"></div>
     </div>
-    <div id="content">
-
-        <div id="titleDiv">
-            <h2 th:text="${post.title}"></h2> <span class="badge" th:text="${post.category}">Java</span>
+    <div id="postDiv">
+        <div id="header">
+            <h1 th:text="${post.title}"></h1>
+            <span class="badge" th:text="${post.category}">Java</span>
         </div>
 
-        <div class="post-meta">
+        <div id="post-meta">
+            <span th:text="${author}"></span>
             <span th:text="${#temporals.format(post.createdAt, 'dd.MM.yyyy HH:mm')}"></span>
             <span th:text="${#temporals.format(post.updatedAt, 'dd.MM.yyyy HH:mm')}"></span>
         </div>
 
-        <div id="postContent">
+        <div id="content">
             <p th:text="${post.content}"></p>
         </div>
-
     </div>
 </div>
 </body>

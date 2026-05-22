@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="started working on motorcycle forum">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/PostDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="working on posts frontend">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/post.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/PostDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/dto/personal/PostDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/mainForumPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/mainForumPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +173,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NamingServerApplication">
+  <component name="RunManager" selected="Application.WebServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -328,14 +325,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00037" summary="password matching bug patched">
-      <option name="closed" value="true" />
-      <created>1760355143483</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1760355143483</updated>
     </task>
     <task id="LOCAL-00038" summary="auth service logging">
       <option name="closed" value="true" />
@@ -721,7 +710,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779277646672</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="working on posts frontend">
+      <option name="closed" value="true" />
+      <created>1779281763407</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1779281763407</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -736,7 +733,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="user details errors resolved" />
     <MESSAGE value="STARTED WORKING ON BETA 1.1&#10;REFACTORING PROJECT COMPLETED" />
     <MESSAGE value="refactoring api gateway and maintenance service" />
     <MESSAGE value="authentication service refactored" />
@@ -761,6 +757,7 @@
     <MESSAGE value="small fix in BikesService" />
     <MESSAGE value="Serious problem with docker-compose.yaml" />
     <MESSAGE value="started working on motorcycle forum" />
-    <option name="LAST_COMMIT_MESSAGE" value="started working on motorcycle forum" />
+    <MESSAGE value="working on posts frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on posts frontend" />
   </component>
 </project>

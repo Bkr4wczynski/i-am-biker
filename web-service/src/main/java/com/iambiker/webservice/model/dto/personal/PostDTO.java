@@ -14,7 +14,7 @@ import java.util.List;
 public class PostDTO {
     private long id;
 
-    private String authorId;
+    private int authorId;
 
     private String title;
 
