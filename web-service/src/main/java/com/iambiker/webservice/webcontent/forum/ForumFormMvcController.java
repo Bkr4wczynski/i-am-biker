@@ -29,6 +29,7 @@ public class ForumFormMvcController {
 
     @DeleteMapping("/delete-post")
     public String deletePost(@RequestParam int id) {
+        log.info("User requested to delete post with id: {}", id);
         connectionService.deletePost(id);
         return redirectManager.redirect("/web/forum");
     }
@@ -44,7 +45,6 @@ public class ForumFormMvcController {
     @PutMapping("/update-post")
     public String updatePost(@ModelAttribute("post") PostDTO postDTO) {
         postDTO.setUpdatedAt(LocalDateTime.now());
-        log.info("In update request: {}", postDTO);
         connectionService.updateBike(postDTO.getId(), postDTO);
         return redirectManager.redirect("/web/display-post?id="+postDTO.getId());
     }
@@ -69,7 +69,7 @@ public class ForumFormMvcController {
         postDTO.setAuthorId(id);
         postDTO.setCreatedAt(LocalDateTime.now());
         postDTO.setUpdatedAt(LocalDateTime.now());
-        log.info("User requested to create post: {}", postDTO);
+        log.info("User requested to create post titled: {}", postDTO.getTitle());
         connectionService.createPost(postDTO);
         return redirectManager.redirect("/web/forum");
     }

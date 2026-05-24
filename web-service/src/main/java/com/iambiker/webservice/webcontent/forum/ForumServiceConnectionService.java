@@ -1,6 +1,5 @@
 package com.iambiker.webservice.webcontent.forum;
 
-import com.iambiker.webservice.model.dto.personal.BikeDTO;
 import com.iambiker.webservice.model.dto.personal.PostDTO;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;

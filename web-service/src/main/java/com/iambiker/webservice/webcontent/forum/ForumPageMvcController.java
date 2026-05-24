@@ -27,12 +27,13 @@ public class ForumPageMvcController {
     @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String displayMainForumPage(@CookieValue(name = "token") String token, Model model) {
         List<PostDTO> posts = connectionService.getAllPosts();
-        log.info("Posts fetched from api: {}", posts);
+        log.info("Fetching posts from api...");
         model.addAttribute("posts", posts);
         return "forum/mainForumPage";
     }
 
     @GetMapping("/display-post")
+    @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String displayPost(@RequestParam int id, Model model, HttpServletRequest request) {
         PostDTO post = connectionService.getPostById(id);
         int authorId = post.getAuthorId();
@@ -41,8 +42,10 @@ public class ForumPageMvcController {
         try {
             currentId = authConnectionService.getUserDetails(request).getUser_id();
         } catch (AuthenticationException e) {
+            log.error("Failed to get current user's id!");
             throw new RuntimeException(e);
         }
+        log.info("User opened the post titled: {}", post.getTitle());
         model.addAttribute("isUserAnAuthor", currentId==authorId);
         model.addAttribute("post", post);
         model.addAttribute("author", authorName);
@@ -54,5 +57,14 @@ public class ForumPageMvcController {
         model.addAttribute("posts", postDTOS);
         log.error("Failed to load forum!");
         return "forum/mainForumPage";
+    }
+
+    public String fallback(@RequestParam int id, Model model, HttpServletRequest request, Throwable throwable) {
+        PostDTO postDTO = new PostDTO(-1, -1, "Not found", "", "", null, null, null);
+        model.addAttribute("post", postDTO);
+        model.addAttribute("author", null);
+        model.addAttribute("isUserAnAuthor", false);
+        log.error("Failed to load post with id: {}", id);
+        return "forum/post";
     }
 }
