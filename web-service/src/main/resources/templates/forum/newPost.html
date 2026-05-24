@@ -21,7 +21,8 @@
 
     <div id="content">
         <form method="post" th:object="${post}" id="form">
-            <input type="text" id="category" th:field="*{category}" placeholder="Category"/>
+                <input type="text" id="title" th:field="*{title}" placeholder="Title"/>
+                <input type="text" id="category" th:field="*{category}" placeholder="Category"/>
             <br>
             <select name="tags" multiple size="${allTags.length}">
                 <option th:each="tag : ${allTags}"
@@ -29,6 +30,12 @@
                         th:text="${tag}">
                 </option>
             </select>
+
+            <textarea id="postContent" name="postContent" rows="42" cols="134" th:field="*{content}"></textarea>
+
+            <br><br>
+            <button type="submit">Add your post</button>
+
         </form>
 
     </div>

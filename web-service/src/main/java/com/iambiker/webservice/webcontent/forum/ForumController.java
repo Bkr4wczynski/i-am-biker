@@ -2,7 +2,6 @@ package com.iambiker.webservice.webcontent.forum;
 
 import com.iambiker.webservice.model.dto.personal.PostDTO;
 import com.iambiker.webservice.security.AuthConnectionService;
-import com.iambiker.webservice.security.JwtWebUtil;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -17,18 +16,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.naming.AuthenticationException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Controller
-@RequestMapping("/forum")
 @Slf4j
 @RequiredArgsConstructor
 public class ForumController {
     private final ForumServiceConnectionService connectionService;
     private final AuthConnectionService authConnectionService;
 
-    @GetMapping
+    @GetMapping("/forum")
     @CircuitBreaker(name = "defaultCircuitBreaker", fallbackMethod = "fallback")
     public String displayMainForumPage(@CookieValue(name = "token") String token, Model model) {
         List<PostDTO> posts = connectionService.getAllPosts();
@@ -37,7 +34,7 @@ public class ForumController {
         return "forum/mainForumPage";
     }
 
-    @GetMapping("/new")
+    @GetMapping("/create-post")
     public String displayPostCreatingPage(HttpServletRequest request, Model model) {
         int id;
         try {
@@ -55,7 +52,7 @@ public class ForumController {
         return "forum/newPost";
     }
 
-    @GetMapping("/post")
+    @GetMapping("/display-post")
     public String displayPost(@RequestParam int id, Model model, HttpServletRequest request) {
         PostDTO post = connectionService.getPostById(id);
         int authorId = post.getAuthorId();

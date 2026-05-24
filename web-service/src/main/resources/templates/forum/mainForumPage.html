@@ -31,10 +31,10 @@
     </div>
     <div id="content">
         <h2>I am biker forum</h2>
-        <a th:href="@{/forum/new}">Add new post</a>
+        <a th:href="@{/create-post}">Add new post</a>
         <ul class="threads">
             <li th:each="post: ${posts}">
-                <a th:text="${post.title}" th:href="@{/forum/post(id=${post.id})}"></a>
+                <a th:text="${post.title}" th:href="@{/display-post(id=${post.id})}"></a>
             </li>
         </ul>
 
