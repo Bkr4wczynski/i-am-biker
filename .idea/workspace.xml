@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="You can now update your post">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/deleteConfirm.html" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Basic Forum service completed!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumFormMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumFormMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/static/style/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/static/style/post.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -331,14 +330,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00048" summary="safety tips content">
-      <option name="closed" value="true" />
-      <created>1760980916016</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1760980916016</updated>
     </task>
     <task id="LOCAL-00049" summary="basic quiz static form">
       <option name="closed" value="true" />
@@ -724,7 +715,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779621190609</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Basic Forum service completed!">
+      <option name="closed" value="true" />
+      <created>1779623520502</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1779623520502</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -739,7 +738,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="resolved version error" />
     <MESSAGE value="resolved args error" />
     <MESSAGE value="basic shared dependencies" />
     <MESSAGE value="shared testing dependencies" />
@@ -764,6 +762,7 @@
     <MESSAGE value="new post html page done" />
     <MESSAGE value="you can now add your post!" />
     <MESSAGE value="You can now update your post" />
-    <option name="LAST_COMMIT_MESSAGE" value="You can now update your post" />
+    <MESSAGE value="Basic Forum service completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic Forum service completed!" />
   </component>
 </project>

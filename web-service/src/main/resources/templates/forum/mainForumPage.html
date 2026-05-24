@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Forum</title>
+    <link rel="stylesheet" th:href="@{/style/forum.css}"/>
     <link rel="stylesheet" th:href="@{/style/content.css}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@
     <div id="content">
         <h2>I am biker forum</h2>
         <a th:href="@{/create-post}">Add new post</a>
+        <br><br>
         <ul class="threads">
             <li th:each="post: ${posts}">
                 <a th:text="${post.title}" th:href="@{/display-post(id=${post.id})}"></a>

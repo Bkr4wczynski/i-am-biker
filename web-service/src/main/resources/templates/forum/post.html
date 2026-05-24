@@ -28,9 +28,9 @@
         </div>
 
         <div id="post-meta">
-            <p>author:</p> <span th:text="${author}"></span>
-            <p>created at:</p> <span th:text="${#temporals.format(post.createdAt, 'dd.MM.yyyy HH:mm')}"></span>
-            <p>updated at:</p> <span th:text="${#temporals.format(post.updatedAt, 'dd.MM.yyyy HH:mm')}"></span>
+            <div class="meta-element"><p>author:</p> <span th:text="${author}"></span></div>
+            <div class="meta-element"><p>created at:</p> <span th:text="${#temporals.format(post.createdAt, 'dd.MM.yyyy HH:mm')}"></span></div>
+            <div class="meta-element"><p>updated at:</p> <span th:text="${#temporals.format(post.updatedAt, 'dd.MM.yyyy HH:mm')}"></span></div>
         </div>
 
         <div id="content">

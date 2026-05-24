@@ -1,0 +1,13 @@
+.threads {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.threads li {
+  border: 2px solid #263142;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
