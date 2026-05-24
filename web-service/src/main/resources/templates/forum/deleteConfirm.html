@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum</title>
+    <link rel="stylesheet" th:href="@{/style/side.css}"/>
+    <link rel="stylesheet" th:href="@{/style/post.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</head>
+<body>
+<div id="container">
+    <div id="menu">
+        <div class="title">Delete</div>
+        <div class="option"><a th:href="@{/display-post(id=${id})}">Cancel</a></div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div id="content">
+        <form method="post" id="form" th:action="@{/delete-post(id=${id})}">
+            <input type="hidden" name="_method" value="delete" />
+            <h2>Are you sure you want to delete your post?</h2>
+            <button type="submit">Yes</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

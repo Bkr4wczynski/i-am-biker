@@ -21,6 +21,18 @@ public class ForumFormMvcController {
     private final ForumServiceConnectionService connectionService;
     private final RedirectManager redirectManager;
 
+    @GetMapping("/delete-post")
+    public String displayPostDeletePage(Model model, @RequestParam int id) {
+        model.addAttribute("id", id);
+        return "forum/deleteConfirm";
+    }
+
+    @DeleteMapping("/delete-post")
+    public String deletePost(@RequestParam int id) {
+        connectionService.deletePost(id);
+        return redirectManager.redirect("/web/forum");
+    }
+
     @GetMapping("/update-post")
     public String displayPostUpdatePage(Model model, @RequestParam int id) {
         PostDTO postDTO = connectionService.getPostById(id);

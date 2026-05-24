@@ -15,7 +15,7 @@
         <div class="title"><span>I am biker motorcycle forum</span></div>
         <div class="option"><a th:href="@{/my-profile}">Your Profile</a></div>
         <div class="option"><a th:href="@{/forum}">Motorcycle forum</a></div>
-        <div class="option" th:if="${isUserAnAuthor}"><a th:href="@{/forum}">Delete post</a></div>
+        <div class="option" th:if="${isUserAnAuthor}"><a th:href="@{/delete-post(id=${post.id})}">Delete post</a></div>
         <div class="option" th:if="${isUserAnAuthor}"><a th:href="@{/update-post(id=${post.id})}">Update post</a></div>
 
 
