@@ -7,8 +7,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import javax.naming.AuthenticationException;
 import java.time.LocalDateTime;
@@ -20,6 +20,30 @@ public class ForumFormMvcController {
     private final AuthConnectionService authConnectionService;
     private final ForumServiceConnectionService connectionService;
     private final RedirectManager redirectManager;
+
+    @GetMapping("/update-post")
+    public String displayPostUpdatePage(Model model, @RequestParam int id) {
+        PostDTO postDTO = connectionService.getPostById(id);
+        model.addAttribute("post", postDTO);
+        model.addAttribute("allTags", Tags.values());
+        return "forum/update";
+    }
+
+    @PutMapping("/update-post")
+    public String updatePost(@ModelAttribute("post") PostDTO postDTO) {
+        postDTO.setUpdatedAt(LocalDateTime.now());
+        log.info("In update request: {}", postDTO);
+        connectionService.updateBike(postDTO.getId(), postDTO);
+        return redirectManager.redirect("/web/display-post?id="+postDTO.getId());
+    }
+
+    @GetMapping("/create-post")
+    public String displayPostCreatingPage(HttpServletRequest request, Model model) {
+        PostDTO postDTO = new PostDTO();
+        model.addAttribute("post", postDTO);
+        model.addAttribute("allTags", Tags.values());
+        return "forum/newPost";
+    }
 
     @PostMapping("/create-post")
     public String createPost(HttpServletRequest request, @ModelAttribute("post") PostDTO postDTO) {

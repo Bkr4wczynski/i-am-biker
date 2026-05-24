@@ -11,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,19 +32,18 @@ public class ForumPageMvcController {
         return "forum/mainForumPage";
     }
 
-    @GetMapping("/create-post")
-    public String displayPostCreatingPage(HttpServletRequest request, Model model) {
-        PostDTO postDTO = new PostDTO();
-        model.addAttribute("post", postDTO);
-        model.addAttribute("allTags", Tags.values());
-        return "forum/newPost";
-    }
-
     @GetMapping("/display-post")
     public String displayPost(@RequestParam int id, Model model, HttpServletRequest request) {
         PostDTO post = connectionService.getPostById(id);
         int authorId = post.getAuthorId();
         String authorName = authConnectionService.getUsernameById(authorId, request);
+        int currentId = -1;
+        try {
+            currentId = authConnectionService.getUserDetails(request).getUser_id();
+        } catch (AuthenticationException e) {
+            throw new RuntimeException(e);
+        }
+        model.addAttribute("isUserAnAuthor", currentId==authorId);
         model.addAttribute("post", post);
         model.addAttribute("author", authorName);
         return "forum/post";

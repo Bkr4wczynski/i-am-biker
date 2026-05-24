@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum</title>
+    <link rel="stylesheet" th:href="@{/style/side.css}"/>
+    <link rel="stylesheet" th:href="@{/style/post.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</head>
+<body>
+<div id="container">
+    <div id="menu">
+        <div class="title">Update your post</div>
+        <div class="option"><a th:href="@{/display-post(id=${post.id})}">Cancel</a></div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div id="content">
+        <form method="post" th:object="${post}" th:action="@{/update-post}" id="form">
+            <input type="hidden" name="_method" value="put" />
+            <input type="hidden" th:field="*{id}" />
+            <input type="hidden" th:field="*{authorId}" />
+            <input type="hidden" th:field="*{createdAt}" />
+
+            <input type="text" id="title" th:field="*{title}" placeholder="Title"/>
+            <input type="text" id="category" th:field="*{category}" placeholder="Category"/>
+            <br>
+            <select th:field="*{tags}" multiple th:size="${allTags.length}">
+                <option th:each="tag : ${allTags}"
+                        th:value="${tag}"
+                        th:text="${tag}"
+                        th:selected="${post.tags != null and post.tags.contains(tag)}">
+                </option>
+            </select>
+
+            <textarea id="postContent" name="postContent" rows="42" cols="134" th:field="*{content}"></textarea>
+
+            <br><br>
+            <button type="submit">Update your post</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    new Choices('select[name="tags"]', {
+        maxItemCount: 3,
+        removeItemButton: true,
+        placeholderValue: 'Select tags (max 3)'
+    });
+</script>
+
+</body>
+</html>

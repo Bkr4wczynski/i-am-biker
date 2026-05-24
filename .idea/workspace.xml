@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="new post html page done">
-      <change afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumFormMvcController.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="you can now add your post!">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumPageMvcController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/newPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/newPost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumFormMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumFormMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumPageMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumPageMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/templates/forum/post.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +24,9 @@
       <list>
         <option value="Interface" />
         <option value="Dockerfile" />
-        <option value="HTML File" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -331,14 +332,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00046" summary="resilience4j connected">
-      <option name="closed" value="true" />
-      <created>1760453611856</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1760453611856</updated>
     </task>
     <task id="LOCAL-00047" summary="user can now logout successfully">
       <option name="closed" value="true" />
@@ -724,7 +717,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779610843323</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="you can now add your post!">
+      <option name="closed" value="true" />
+      <created>1779614064047</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1779614064047</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -739,7 +740,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="unit tests written" />
     <MESSAGE value="controller tests written for web service" />
     <MESSAGE value="resolved version error" />
     <MESSAGE value="resolved args error" />
@@ -764,6 +764,7 @@
     <MESSAGE value="post is styled nicely in css" />
     <MESSAGE value="working on adding new posts" />
     <MESSAGE value="new post html page done" />
-    <option name="LAST_COMMIT_MESSAGE" value="new post html page done" />
+    <MESSAGE value="you can now add your post!" />
+    <option name="LAST_COMMIT_MESSAGE" value="you can now add your post!" />
   </component>
 </project>
