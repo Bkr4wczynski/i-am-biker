@@ -20,7 +20,7 @@
     </div>
 
     <div id="content">
-        <form method="post" th:object="${post}" id="form">
+        <form method="post" th:object="${post}" th:action="@{/create-post}" id="form">
                 <input type="text" id="title" th:field="*{title}" placeholder="Title"/>
                 <input type="text" id="category" th:field="*{category}" placeholder="Category"/>
             <br>
