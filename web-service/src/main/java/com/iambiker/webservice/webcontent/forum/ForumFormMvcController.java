@@ -1,6 +1,7 @@
 package com.iambiker.webservice.webcontent.forum;
 
 import com.iambiker.webservice.model.dto.personal.PostDTO;
+import com.iambiker.webservice.model.enums.Tags;
 import com.iambiker.webservice.security.AuthConnectionService;
 import com.iambiker.webservice.util.RedirectManager;
 import jakarta.servlet.http.HttpServletRequest;

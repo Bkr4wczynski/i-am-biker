@@ -1,4 +1,4 @@
-package com.iambiker.webservice.webcontent.forum;
+package com.iambiker.webservice.model.enums;
 
 public enum Tags {
     MAINTENANCE,
