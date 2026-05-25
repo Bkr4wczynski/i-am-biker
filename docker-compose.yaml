@@ -4,8 +4,9 @@ services:
     ports:
       - "8761:8761"
 
-  db:
+  mysql:
     image: mysql:latest
+    container_name: mysql
     ports:
       - "3307:3306"
     environment:
@@ -50,7 +51,7 @@ services:
     build: ./bikes-service
     depends_on:
       - eureka-server
-      - db
+      - mysql
     env_file:
       - .env
     environment:
@@ -58,13 +59,20 @@ services:
       DATASOURCE_URL: jdbc:mysql://db:3306/i_am_biker_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
       DATASOURCE_USERNAME: biker
 
+  forum-service:
+    build: ./forum-service
+    depends_on:
+      - eureka-server
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka/"
+
   authentication-service:
     build: ./authentication-service
     ports:
       - "8900:8900"
     depends_on:
       - eureka-server
-      - db
+      - mysql
     env_file:
       - .env
     environment:

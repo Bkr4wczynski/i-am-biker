@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="better logging">
-      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ForumPageControllerTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="started testing">
+      <change afterPath="$PROJECT_DIR$/forum-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumFormMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumFormMvcController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/Tags.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/model/enums/Tags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forum-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -122,6 +123,7 @@
     "Maven.bikes-service [clean].executor": "Run",
     "Maven.bikes-service [install].executor": "Run",
     "Maven.bikes-service [test].executor": "Run",
+    "Maven.forum-service [install].executor": "Run",
     "Maven.i-am-biker [clean].executor": "Run",
     "Maven.i-am-biker [compile].executor": "Run",
     "Maven.i-am-biker [install].executor": "Run",
@@ -177,7 +179,7 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ForumPageControllerTests">
+  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -328,10 +330,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="JUnit.ForumPageControllerTests" />
         <item itemvalue="JUnit.ForumPageControllerTests.shouldDisplayMainForumPage" />
         <item itemvalue="Application.ForumServiceApplication" />
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.authentication-service/Dockerfile" />
       </list>
     </recent_temporary>
@@ -343,14 +345,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00051" summary="js quiz working but need to implement scoring">
-      <option name="closed" value="true" />
-      <created>1761389629841</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1761389629841</updated>
     </task>
     <task id="LOCAL-00052" summary="simple quiz version working">
       <option name="closed" value="true" />
@@ -736,7 +730,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779626358432</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="started testing">
+      <option name="closed" value="true" />
+      <created>1779700130612</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1779700130612</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -751,7 +753,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="shared testing dependencies" />
     <MESSAGE value="shared lombok" />
     <MESSAGE value="started working on profile settings" />
     <MESSAGE value="resolved security issue with connecting to auth rest api via web service" />
@@ -776,6 +777,7 @@
     <MESSAGE value="Basic Forum service completed!" />
     <MESSAGE value="quick css fix" />
     <MESSAGE value="better logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="better logging" />
+    <MESSAGE value="started testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="started testing" />
   </component>
 </project>
