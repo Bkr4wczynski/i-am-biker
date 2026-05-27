@@ -1,7 +1,6 @@
 package com.iambiker.bikesservice.integration;
 
 import com.iambiker.bikesservice.model.dto.BikeDTO;
-import com.iambiker.bikesservice.model.dto.EngineDTO;
 import com.iambiker.bikesservice.rest.BikesRestController;
 import com.iambiker.bikesservice.rest.BikesService;
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Optional;
 
