@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="maven fix">
-      <change afterPath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/integration/MaintenanceRestControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/rest/MaintenanceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/rest/MaintenanceRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/service/MaintenanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/service/MaintenanceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/MaintenanceServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/MaintenanceServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/unit/MaintenanceServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ForumPageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ForumPageControllerTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Quality assurance for maintenance service">
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration/BikesRestControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/BikesServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +100,7 @@
     "JUnit.AuthServiceApplicationTests.executor": "Run",
     "JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage.executor": "Run",
     "JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage.executor": "Run",
+    "JUnit.BikesRestControllerTests.executor": "Run",
     "JUnit.ForumPageControllerTests.executor": "Run",
     "JUnit.ForumPageControllerTests.shouldDisplayMainForumPage.executor": "Run",
     "JUnit.JwtServiceTests.example.executor": "Run",
@@ -200,7 +193,7 @@
       <command value="mvn clean package -f forum-service/pom.xml" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MaintenanceRestControllerTests">
+  <component name="RunManager" selected="JUnit.BikesRestControllerTests">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -281,6 +274,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BikesRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bikes-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iambiker.bikesservice.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iambiker.bikesservice.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.bikesservice.integration.BikesRestControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MaintenanceRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maintenance-service" />
       <extension name="coverage">
@@ -339,14 +347,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.AuthenticationServiceApplication" />
@@ -355,18 +355,18 @@
       <item itemvalue="Application.NamingServerApplication" />
       <item itemvalue="Application.WebServiceApplication" />
       <item itemvalue="Application.ForumServiceApplication" />
-      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="JUnit.BikesRestControllerTests" />
       <item itemvalue="JUnit.MaintenanceRestControllerTests" />
       <item itemvalue="JUnit.MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" />
       <item itemvalue="JUnit.MaintenanceServiceTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BikesRestControllerTests" />
         <item itemvalue="JUnit.MaintenanceRestControllerTests" />
         <item itemvalue="JUnit.MaintenanceServiceTests" />
         <item itemvalue="JUnit.MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" />
         <item itemvalue="Application.ForumServiceApplication" />
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -377,14 +377,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00053" summary="user details entity">
-      <option name="closed" value="true" />
-      <created>1761491808720</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1761491808721</updated>
     </task>
     <task id="LOCAL-00054" summary="controllers updated for user details">
       <option name="closed" value="true" />
@@ -770,7 +762,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779702165412</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Quality assurance for maintenance service">
+      <option name="closed" value="true" />
+      <created>1779879710619</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1779879710620</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -785,7 +785,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="started working on profile settings" />
     <MESSAGE value="resolved security issue with connecting to auth rest api via web service" />
     <MESSAGE value="solved previous issue right way by validating token in auth service instead of web service" />
     <MESSAGE value="more unit tests" />
@@ -810,6 +809,7 @@
     <MESSAGE value="better logging" />
     <MESSAGE value="started testing" />
     <MESSAGE value="maven fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven fix" />
+    <MESSAGE value="Quality assurance for maintenance service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quality assurance for maintenance service" />
   </component>
 </project>
