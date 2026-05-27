@@ -16,25 +16,29 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
-        <module name="authentication-service" />
-        <module name="maintenance-service" />
-        <module name="bikes-service" />
-        <module name="forum-service" />
         <module name="api-gateway" />
+        <module name="authentication-service" />
+        <module name="forum-service" />
+        <module name="bikes-service" />
         <module name="naming-server" />
         <module name="web-service" />
       </profile>
+      <profile name="Annotation profile for maintenance-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="maintenance-service" />
+      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="blogging-api (1)" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="authentication-service" options="-parameters" />
       <module name="bikes-service" options="-parameters" />
-      <module name="blogging-api (1)" options="-parameters" />
       <module name="forum-service" options="-parameters" />
       <module name="maintenance-service" options="-parameters" />
       <module name="naming-server" options="-parameters" />

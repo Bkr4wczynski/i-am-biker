@@ -1,7 +1,8 @@
-package com.iambiker.maintenanceservice;
+package com.iambiker.maintenanceservice.unit.unit;
 
 import com.iambiker.maintenanceservice.service.MaintenanceService;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 
 @SpringBootTest
@@ -35,5 +37,11 @@ public class MaintenanceServiceTests {
     void testGenerateMaintenanceByMileageBelow1000(int mileage, int expected) {
         HashMap<String, Integer> result = maintenanceService.generateMaintenanceByMileage(mileage);
         assertEquals(expected, result.get("Oil change"));
+    }
+
+    @Test
+    void shouldReturnNullForBadInput() {
+        assertNull(maintenanceService.generateMaintenanceByMileage(-1000));
+        assertNull(maintenanceService.generateMaintenanceByMileage(1000000));
     }
 }

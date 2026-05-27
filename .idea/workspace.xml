@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="started testing">
-      <change afterPath="$PROJECT_DIR$/forum-service/Dockerfile" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="maven fix">
+      <change afterPath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/integration/MaintenanceRestControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/rest/MaintenanceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/rest/MaintenanceRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/service/MaintenanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/main/java/com/iambiker/maintenanceservice/service/MaintenanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/MaintenanceServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/MaintenanceServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/unit/MaintenanceServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ForumPageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ForumPageControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +61,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="21 (3)" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -81,9 +90,11 @@
     "Application.com.iambiker.namingserver.NamingServerApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
     "Docker.authentication-service/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml.forum-service: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yaml.mysql: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.forum-service/Dockerfile.executor": "Run",
     "Docker.naming-server/Dockerfile.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToLoginAfterRegistration.executor": "Run",
     "JUnit.AuthControllerTests.shouldRedirectToLoginWhenFailed.executor": "Run",
@@ -106,6 +117,8 @@
     "JUnit.MaintenancePageControllerTests.executor": "Run",
     "JUnit.MaintenancePageControllerTests.shouldShowMaintenancePage.executor": "Run",
     "JUnit.MaintenancePageControllerTests.testIfMaintenancePageIsRendered.executor": "Run",
+    "JUnit.MaintenanceRestControllerTests.executor": "Run",
+    "JUnit.MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData.executor": "Run",
     "JUnit.MaintenanceServiceTests.executor": "Run",
     "JUnit.MaintenanceServiceTests.testCalculateInterval.executor": "Run",
     "JUnit.MaintenanceServiceTests.testGenerateMaintenanceByMileageBelow1000.executor": "Run",
@@ -123,7 +136,10 @@
     "Maven.bikes-service [clean].executor": "Run",
     "Maven.bikes-service [install].executor": "Run",
     "Maven.bikes-service [test].executor": "Run",
+    "Maven.blogging-api [clean,package,-f...].executor": "Run",
+    "Maven.forum-service [clean].executor": "Run",
     "Maven.forum-service [install].executor": "Run",
+    "Maven.forum-service [package].executor": "Run",
     "Maven.i-am-biker [clean].executor": "Run",
     "Maven.i-am-biker [compile].executor": "Run",
     "Maven.i-am-biker [install].executor": "Run",
@@ -143,11 +159,11 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker/forum-service/src/main/resources",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -179,9 +195,14 @@
       <recent name="com.bikerapp.api_gateway.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package -f forum-service/pom.xml" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.MaintenanceRestControllerTests">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <envs>
         <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
@@ -193,7 +214,7 @@
       </method>
     </configuration>
     <configuration name="AuthenticationServiceApplication" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <envs>
         <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
@@ -206,7 +227,7 @@
       </method>
     </configuration>
     <configuration name="BikesServiceApplication" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <envs>
         <env name="DB_PASSWORD" value="61ix4fellkejiApR" />
@@ -231,6 +252,8 @@
       </method>
     </configuration>
     <configuration name="MaintenanceServiceApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.MaintenanceServiceApplication" />
       <module name="maintenance-service" />
       <method v="2">
@@ -238,7 +261,7 @@
       </method>
     </configuration>
     <configuration name="NamingServerApplication" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.iambiker.namingserver.NamingServerApplication" />
       <module name="naming-server" />
@@ -247,6 +270,8 @@
       </method>
     </configuration>
     <configuration name="WebServiceApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <envs>
         <env name="JWT_SECRET" value="1b72728a871cfa33c3f578f40dc7cf63af1e361d66f5e553d4582749479dece6" />
       </envs>
@@ -256,33 +281,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ForumPageControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="MaintenanceRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
+          <option name="PATTERN" value="com.iambiker.maintenanceservice.unit.unit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.ForumPageControllerTests" />
+      <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.integration.MaintenanceRestControllerTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ForumPageControllerTests.shouldDisplayMainForumPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="web-service" />
+    <configuration name="MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.*" />
+          <option name="PATTERN" value="com.iambiker.maintenanceservice.unit.integration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.ForumPageControllerTests" />
-      <option name="METHOD_NAME" value="shouldDisplayMainForumPage" />
+      <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.integration.MaintenanceRestControllerTests" />
+      <option name="METHOD_NAME" value="shouldReturnOkForValidMaintenanceData" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaintenanceServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iambiker.maintenanceservice.unit.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.unit.MaintenanceServiceTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -296,14 +336,6 @@
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="authentication-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="authentication-service/Dockerfile" />
-        </settings>
       </deployment>
       <method v="2" />
     </configuration>
@@ -323,18 +355,18 @@
       <item itemvalue="Application.NamingServerApplication" />
       <item itemvalue="Application.WebServiceApplication" />
       <item itemvalue="Application.ForumServiceApplication" />
-      <item itemvalue="Docker.authentication-service/Dockerfile" />
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-      <item itemvalue="JUnit.ForumPageControllerTests" />
-      <item itemvalue="JUnit.ForumPageControllerTests.shouldDisplayMainForumPage" />
+      <item itemvalue="JUnit.MaintenanceRestControllerTests" />
+      <item itemvalue="JUnit.MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" />
+      <item itemvalue="JUnit.MaintenanceServiceTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-        <item itemvalue="JUnit.ForumPageControllerTests" />
-        <item itemvalue="JUnit.ForumPageControllerTests.shouldDisplayMainForumPage" />
+        <item itemvalue="JUnit.MaintenanceRestControllerTests" />
+        <item itemvalue="JUnit.MaintenanceServiceTests" />
+        <item itemvalue="JUnit.MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" />
         <item itemvalue="Application.ForumServiceApplication" />
-        <item itemvalue="Docker.authentication-service/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -345,14 +377,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00052" summary="simple quiz version working">
-      <option name="closed" value="true" />
-      <created>1761392476156</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1761392476156</updated>
     </task>
     <task id="LOCAL-00053" summary="user details entity">
       <option name="closed" value="true" />
@@ -738,7 +762,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779700130612</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="maven fix">
+      <option name="closed" value="true" />
+      <created>1779702165412</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1779702165412</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -753,7 +785,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="shared lombok" />
     <MESSAGE value="started working on profile settings" />
     <MESSAGE value="resolved security issue with connecting to auth rest api via web service" />
     <MESSAGE value="solved previous issue right way by validating token in auth service instead of web service" />
@@ -778,6 +809,7 @@
     <MESSAGE value="quick css fix" />
     <MESSAGE value="better logging" />
     <MESSAGE value="started testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="started testing" />
+    <MESSAGE value="maven fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven fix" />
   </component>
 </project>

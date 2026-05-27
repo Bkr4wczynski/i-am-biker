@@ -15,6 +15,9 @@ public class MaintenanceService {
     );
 
     public HashMap<String, Integer> generateMaintenanceByMileage(int mileage) {
+        if (mileage < 0 || mileage > 999999) {
+            return null;
+        }
         HashMap<String, Integer> maintenanceMileage = new HashMap<>();
         if (mileage <= 1000) {
             for (MaintenanceElements element: MaintenanceElements.values()) {

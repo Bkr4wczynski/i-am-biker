@@ -15,7 +15,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static com.iambiker.webservice.model.enums.Tags.NEWS;
 import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.mock;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
