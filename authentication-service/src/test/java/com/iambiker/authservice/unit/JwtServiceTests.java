@@ -1,5 +1,7 @@
-package com.iambiker.authservice.jwt;
+package com.iambiker.authservice.unit;
 
+import com.iambiker.authservice.jwt.AuthJwtUtil;
+import com.iambiker.authservice.jwt.JwtService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -31,6 +33,4 @@ public class JwtServiceTests {
     void testPasswordEncoder(String given, String actual, boolean result) {
         assertEquals(result, jwtService.matchPasswords(given, actual));
     }
-
-
 }

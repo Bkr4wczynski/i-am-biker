@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Quality assurance for bikes service">
-      <change afterPath="$PROJECT_DIR$/forum-service/src/test/java/com/blog/forum_service/integration/RestControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration/BikesRestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration/BikesRestControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/controller/RestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/test/java/com/blog/forum_service/ForumServiceApplicationTests.java" beforeDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Quality assurance for forum service">
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/integration/AuthenticationRestControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/unit/AuthJwtUtilTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/jwt/JwtServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/unit/JwtServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
     <option name="NEW_BASE" value="origin/master" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/forum-service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -95,11 +97,13 @@
     "JUnit.AuthControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
     "JUnit.AuthControllerTests.shouldRenderLoginPage.executor": "Run",
     "JUnit.AuthControllerTests.shouldRenderRegisterPage.executor": "Run",
+    "JUnit.AuthJwtUtilTests.executor": "Run",
     "JUnit.AuthMvcControllerTests.executor": "Run",
     "JUnit.AuthMvcControllerTests.shouldRedirectToProfileWhenSuccess.executor": "Run",
     "JUnit.AuthMvcControllerTests.shouldRenderRegisterPage.executor": "Run",
     "JUnit.AuthMvcControllerTests.test.executor": "Run",
     "JUnit.AuthServiceApplicationTests.executor": "Run",
+    "JUnit.AuthenticationRestControllerTests.executor": "Run",
     "JUnit.BikesPageMvcControllerTests.shouldDisplayBikesPage.executor": "Run",
     "JUnit.BikesPageMvcControllerTests.shouldDisplaySpecificBikePage.executor": "Run",
     "JUnit.BikesRestControllerTests.executor": "Run",
@@ -196,7 +200,7 @@
       <command value="mvn clean package -f forum-service/pom.xml" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RestControllerTests">
+  <component name="RunManager" selected="JUnit.AuthenticationRestControllerTests">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -264,6 +268,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthJwtUtilTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iambiker.authservice.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iambiker.authservice.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.unit.AuthJwtUtilTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iambiker.authservice.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iambiker.authservice.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.integration.AuthenticationRestControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BikesRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bikes-service" />
       <extension name="coverage">
@@ -289,37 +323,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.integration" />
       <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.integration.MaintenanceRestControllerTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maintenance-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iambiker.maintenanceservice.unit.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.integration.MaintenanceRestControllerTests" />
-      <option name="METHOD_NAME" value="shouldReturnOkForValidMaintenanceData" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaintenanceServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maintenance-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iambiker.maintenanceservice.unit.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.unit" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.unit.MaintenanceServiceTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -359,19 +362,19 @@
       <item itemvalue="Application.MaintenanceServiceApplication" />
       <item itemvalue="Application.NamingServerApplication" />
       <item itemvalue="Application.WebServiceApplication" />
+      <item itemvalue="JUnit.AuthJwtUtilTests" />
+      <item itemvalue="JUnit.AuthenticationRestControllerTests" />
       <item itemvalue="JUnit.BikesRestControllerTests" />
       <item itemvalue="JUnit.MaintenanceRestControllerTests" />
-      <item itemvalue="JUnit.MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" />
-      <item itemvalue="JUnit.MaintenanceServiceTests" />
       <item itemvalue="JUnit.RestControllerTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuthenticationRestControllerTests" />
+        <item itemvalue="JUnit.AuthJwtUtilTests" />
         <item itemvalue="JUnit.RestControllerTests" />
         <item itemvalue="JUnit.BikesRestControllerTests" />
         <item itemvalue="JUnit.MaintenanceRestControllerTests" />
-        <item itemvalue="JUnit.MaintenanceServiceTests" />
-        <item itemvalue="JUnit.MaintenanceRestControllerTests.shouldReturnOkForValidMaintenanceData" />
       </list>
     </recent_temporary>
   </component>
@@ -382,14 +385,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00055" summary="bug fix">
-      <option name="closed" value="true" />
-      <created>1761494786947</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1761494786947</updated>
     </task>
     <task id="LOCAL-00056" summary="user details is accessible in web">
       <option name="closed" value="true" />
@@ -775,7 +770,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779880213126</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Quality assurance for forum service">
+      <option name="closed" value="true" />
+      <created>1779882350174</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1779882350174</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -790,7 +793,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="solved previous issue right way by validating token in auth service instead of web service" />
     <MESSAGE value="more unit tests" />
     <MESSAGE value="STARTER WORKING ON VERSION 1.3.0 DEPLOYMENT&#10;added some dockerfiles now it is possible to run naming server service and docker container" />
     <MESSAGE value="docker compose for just naming server and api gateway" />
@@ -815,6 +817,7 @@
     <MESSAGE value="maven fix" />
     <MESSAGE value="Quality assurance for maintenance service" />
     <MESSAGE value="Quality assurance for bikes service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quality assurance for bikes service" />
+    <MESSAGE value="Quality assurance for forum service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quality assurance for forum service" />
   </component>
 </project>

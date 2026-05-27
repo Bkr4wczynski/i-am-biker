@@ -68,7 +68,7 @@ public class AuthenticationRestController {
         Optional<User> user = userRepository.findByUsername(username);
         if (user.isEmpty() || !jwtService.matchPasswords(password, user.get().getPassword())) {
             log.info("Failed to login reason: Bad Credentials!");
-            throw new RuntimeException("Bad credentials!");
+            return ResponseEntity.notFound().build();
         }
 
         log.info("Token successfully generated!");
