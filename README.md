@@ -1,4 +1,4 @@
-# I am biker Beta 1.1.0
+# I am biker 2.0.0
 
 ## About project
 The goal of project was to write java microservice application. Because riding a motorcycle is my passion I decided to write full-stack web app,
