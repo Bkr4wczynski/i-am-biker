@@ -13,10 +13,9 @@ create users for them but you can access it via root. Then move to point 3 and p
 ## 3. Setup environmental variables
 In order for application to work, you need to create file .env and setup variables.
 - *DB_NAME* - name of your database
-- *DB_NAME2 - name of your second database
+- *DB_NAME2* - name of your second database
 - *DB_USERNAME* - username for your MySQL user
 - *DB_PASSWORD* - password for that user
-- *DB_ROOT_PASSWORD* - root password for database
 - *DB_USERNAME2* - username for second MySQL user
 - *DB_PASSWORD2* - password for second user
 - *JWT_SECRET* - jwt secret for security recommended at least 256 bits
