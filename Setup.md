@@ -1,19 +1,33 @@
 # Project setup
 
+### * For anyone struggling with setup there is a video about setting up project.
+
 ## 1. Download code
 Download code from github and open it in your IDE. Application is build using many other apps that are microservices so everything that is downloaded
 should be opened in your IDE.
 
 ## 2. Setup database
-You should setup database using the queries that you can find in queries.txt file. Note that queries are written using Mysql. Very important is to set 
-your username as biker. Otherwise you can change the code properties to use any username.
+Create two databases in MySQL: one is for forum and other one is for authentication and bikes info. You can also
+create users for them but you can access it via root. Then move to point 3 and provide essential data.
 
 ## 3. Setup environmental variables
-In your IDE you should specify two variables.
-First is called **DB_PASSWORD** that should contain your password to database.
-Second one is **JWT_SECRET** which is 64 characters long secret. It is recommended to use online jwt secrets generators for this step.
+In order for application to work, you need to create file .env and setup variables.
+- *DB_NAME* - name of your database
+- *DB_NAME2 - name of your second database
+- *DB_USERNAME* - username for your MySQL user
+- *DB_PASSWORD* - password for that user
+- *DB_ROOT_PASSWORD* - root password for database
+- *DB_USERNAME2* - username for second MySQL user
+- *DB_PASSWORD2* - password for second user
+- *JWT_SECRET* - jwt secret for security recommended at least 256 bits
+
+Then you should specify in your ide for each microservice(naming server and maintenance service not required)
+to use those environmental variables
+
 
 ## 4. Run code in proper order
-Note that naming server and api gateway are server apps and rest is client side. Simply you should run naming server, then api gateway and where those are build
-run the rest of services. To access app type in your browser : http://localhost:8765/web/my-profile and if you are not logged in, the app will redirect you to login page.
-If you come to encounter 503 error you should wait around 10 seconds and refresh the page.
+First run naming server and wait until it starts. Then run rest of services and wait until everyone of them boot properly.
+Then access application by browser http://localhost:8765/web/my-profile you should be redirected to logging page.
+Register yourself and you can access app with your account.
+
+

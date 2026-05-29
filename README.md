@@ -2,30 +2,30 @@
 
 ## About project
 The goal of project was to write java microservice application. Because riding a motorcycle is my passion I decided to write full-stack web app,
-that could help motorcyclist organizing their stuff.
+that could help motorcyclist organizing their stuff. Project has forum and allows to perform CRUD operations with bikes.
 
-## Technicals
-Project has been writen using java 24 and spring boot 3 framework. It uses thymeleaf javascript and css for frontend that is connected with java backend.
-Java backend code is responsible for connecting to database and for providing JWT security. Application has microservices structure which allows to
-easily scale it and develop. The database used by me is MySql 8 however the project structure allows to connect another database by shifting configuration files.
-The build tool is maven 3.
+## Feedback
+Any constructive critic about what can I improve is much appreciated. You can write to me on github or contact me at
+bkrawczynski@protonmail.com
 
-## Current features
-Project is in it's first beta version. So far it's mainly assets is well organized backend structure. The database used is relational SQL DB.
-Projects allows users to login and register and to perform CRUD operations with their bikes, each assigned to it's user. The app is secured
-using JWT with cookie storage. I am looking forward to implement https connection to make app much more secured.
-The website allows users also to manage the maintenance and calculates intervals for maintenance tasks based on current mileage.
+## Current structure
+Currently in version 2.0.0 there are seven services
 
-## Contributing
-Anyone who is interested in my project is welcomed to contribute. I am open for any suggestions how can I improve my code.
+- naming server - eureka server for load balancing and registering services
+- api gateway - routes all request to 8765 port and perform authentication if necessary
+- authentication-service - service used by api-gateway to authenticate requests
+- bikes-service - service for performing CRUD operations on users' motorcycles
+- maintenance-service - generates maintenance for bikes nu their mileage
+- forum-service - connected to separate database. Responsible for CRUD operations on forum threads
+- web-service - thymeleaf based frontend for displaying app functionality on website
 
-## Project architecture
-Project architecture is based on microservices
-- Naming server is microservice responsible for load balancing and connecting microservices together
-- Api gateway is microservice that all http requests including both mvc and rest calls go through. It ensures that requests are properly authenticated.
-- Authentication service is service responsible for generating JWT. If the users credential matches database data JWT is generated. It also provides
-connection to other microservices.
-- Web service is main microservice that is responsible to displaying both static and that included in database web content for
-authenticated users. It also has login and registration forms that are connected to authentication service.
-- Maintenance service is small microservice connected to web service that is responsible for calculating maintenance tasks interval.
+All these microservices work together and use REST API to communicate.
+
+## Further plans
+I was planning to make app easier to setup by using docker-compose.yaml but this turned out to be quite challenging
+for me and I was unfortunately not capable for using this technology. I still have dockerfiles which allow
+creating containers but there is no orchestration and dockerization has to be done manually.
+
+## Videos
+Feel free to watch video about setting up project and another one about how it works from user perspective.
 
