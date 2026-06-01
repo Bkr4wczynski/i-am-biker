@@ -1,0 +1,129 @@
+services:
+  naming-server:
+    build: ./naming-server
+    ports:
+      - "8761:8761"
+    networks:
+      - i-am-biker-network
+  mysql:
+    image: mysql
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - i-am-biker-network
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8765:8765"
+    env_file:
+      - .env
+    networks:
+      - i-am-biker-network
+    depends_on:
+      - naming-server
+    hostname: api-gateway
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://naming-server:8761/eureka/"
+
+  authentication-service:
+    build: ./authentication-service
+    ports:
+      - "8900:8900"
+    env_file:
+      - .env
+    networks:
+      - i-am-biker-network
+    depends_on:
+      mysql:
+        condition: service_healthy
+      naming-server:
+        condition: service_started
+    hostname: authentication-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://naming-server:8761/eureka/"
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+
+  bikes-service:
+    build: ./bikes-service
+    ports:
+      - "8200:8200"
+    env_file:
+      - .env
+    networks:
+      - i-am-biker-network
+    depends_on:
+      mysql:
+        condition: service_healthy
+      naming-server:
+        condition: service_started
+    hostname: bikes-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://naming-server:8761/eureka/"
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+
+  forum-service:
+    build: ./forum-service
+    ports:
+      - "8300:8300"
+    env_file:
+      - .env
+    networks:
+      - i-am-biker-network
+    depends_on:
+      mysql:
+        condition: service_healthy
+      naming-server:
+        condition: service_started
+    hostname: forum-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://naming-server:8761/eureka/"
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+
+  maintenance-service:
+    build: ./maintenance-service
+    ports:
+      - "8100:8100"
+    env_file:
+      - .env
+    networks:
+      - i-am-biker-network
+    depends_on:
+      - naming-server
+    hostname: maintenance-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://naming-server:8761/eureka/"
+
+  web-service:
+    build: ./web-service
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    networks:
+      - i-am-biker-network
+    depends_on:
+      - naming-server
+    hostname: web-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://naming-server:8761/eureka/"
+
+networks:
+  i-am-biker-network:
+    driver: bridge
