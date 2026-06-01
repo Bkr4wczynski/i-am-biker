@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="VERSION 2.0.0 RELEASE">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/ForumServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/iambiker/forum_service/ForumServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/iambiker/forum_service/controller/RestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/iambiker/forum_service/entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/java/com/blog/forum_service/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/java/com/iambiker/forum_service/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forum-service/src/test/java/com/blog/forum_service/integration/RestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/forum-service/src/test/java/com/iambiker/forum_service/integration/RestControllerTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="semi working docker compose">
+      <change afterPath="$PROJECT_DIR$/web-service/src/main/resources/application-docker.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/security/AuthConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesServiceConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/bike/BikesServiceConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumServiceConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/forum/ForumServiceConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/maintenance/MaintenanceConnectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/java/com/iambiker/webservice/webcontent/maintenance/MaintenanceConnectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/WebServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/WebServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +208,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.com.iambiker.forum_service.ForumServiceApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -354,6 +354,14 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.AuthenticationServiceApplication" />
@@ -362,17 +370,18 @@
       <item itemvalue="Application.NamingServerApplication" />
       <item itemvalue="Application.WebServiceApplication" />
       <item itemvalue="Application.com.iambiker.forum_service.ForumServiceApplication" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="JUnit.AuthJwtUtilTests" />
       <item itemvalue="JUnit.AuthenticationRestControllerTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Application.com.iambiker.forum_service.ForumServiceApplication" />
         <item itemvalue="Application.com.iambiker.forum_service.ForumServiceApplication" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="JUnit.AuthenticationRestControllerTests" />
-        <item itemvalue="JUnit.AuthJwtUtilTests" />
       </list>
     </recent_temporary>
   </component>
@@ -383,14 +392,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00059" summary="user details errors resolved">
-      <option name="closed" value="true" />
-      <created>1763220489950</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1763220489951</updated>
     </task>
     <task id="LOCAL-00060" summary="STARTED WORKING ON BETA 1.1&#10;REFACTORING PROJECT COMPLETED">
       <option name="closed" value="true" />
@@ -776,7 +777,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780062229873</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="semi working docker compose">
+      <option name="closed" value="true" />
+      <created>1780313556572</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1780313556572</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -791,7 +800,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docker compose for just naming server and api gateway" />
     <MESSAGE value="small fix in BikesService" />
     <MESSAGE value="Serious problem with docker-compose.yaml" />
     <MESSAGE value="started working on motorcycle forum" />
@@ -816,6 +824,7 @@
     <MESSAGE value="Quality assurance for forum service" />
     <MESSAGE value="Quality assurance for authentication service" />
     <MESSAGE value="VERSION 2.0.0 RELEASE" />
-    <option name="LAST_COMMIT_MESSAGE" value="VERSION 2.0.0 RELEASE" />
+    <MESSAGE value="semi working docker compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="semi working docker compose" />
   </component>
 </project>

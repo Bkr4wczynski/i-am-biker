@@ -1,6 +1,7 @@
 package com.iambiker.webservice.webcontent.forum;
 
 import com.iambiker.webservice.model.dto.personal.PostDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.ClientRequest;
@@ -10,15 +11,19 @@ import java.util.List;
 
 @Service
 public class ForumServiceConnectionService {
-    private final WebClient webClient = WebClient.builder()
-            .baseUrl("http://localhost:8765/forum")
-            .filter((request, next) -> {
-                ClientRequest newReq = ClientRequest.from(request)
-                        .cookie("token", TOKEN)
-                        .build();
-                return next.exchange(newReq);
-            })
-            .build();
+    private final WebClient webClient;
+
+    public ForumServiceConnectionService(@Value("${services.api-gateway-url}") String url) {
+        this.webClient = WebClient.builder()
+                .baseUrl(url+"/forum")
+                .filter((request, next) -> {
+                    ClientRequest newReq = ClientRequest.from(request)
+                            .cookie("token", TOKEN)
+                            .build();
+                    return next.exchange(newReq);
+                })
+                .build();
+    }
 
     private static String TOKEN;
 

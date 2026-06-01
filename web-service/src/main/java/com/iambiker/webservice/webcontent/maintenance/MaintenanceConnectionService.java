@@ -1,5 +1,6 @@
 package com.iambiker.webservice.webcontent.maintenance;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -8,7 +9,11 @@ import java.util.HashMap;
 
 @Service
 public class MaintenanceConnectionService {
-    private final WebClient webClient = WebClient.create("http://localhost:8765");
+    private final WebClient webClient;
+
+    public MaintenanceConnectionService(@Value("${services.api-gateway-url}") String url) {
+        this.webClient = WebClient.create(url);
+    }
 
     public HashMap<String, Integer> generateMaintenanceData(int mileage) {
         return webClient.get()

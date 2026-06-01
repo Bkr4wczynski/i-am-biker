@@ -7,17 +7,22 @@ import com.iambiker.webservice.webcontent.bike.BikesServiceConnectionService;
 import com.iambiker.webservice.webcontent.forum.ForumServiceConnectionService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import javax.naming.AuthenticationException;
 
+@Slf4j
 @Service
-@AllArgsConstructor
 public class AuthConnectionService {
-    private final WebClient webClient = WebClient.create("http://localhost:8765/authentication/api/public");
+    private final WebClient webClient;
+
+    public AuthConnectionService(@Value("${services.api-gateway-url}") String url) {
+        this.webClient = WebClient.create(url+"/authentication/api/public");
+    }
 
     public String getUsernameById(int id, HttpServletRequest request) {
         String token = getToken(request);

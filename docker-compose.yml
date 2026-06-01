@@ -123,6 +123,7 @@ services:
     hostname: web-service
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://naming-server:8761/eureka/"
+      SPRING_PROFILES_ACTIVE: docker
 
 networks:
   i-am-biker-network:
