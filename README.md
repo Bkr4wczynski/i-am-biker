@@ -1,28 +1,65 @@
-# I am biker 2.0.0
+# I am biker — v2.0.0
 
-## About project
-The goal of project was to write java microservice application. Because riding a motorcycle is my passion I decided to write full-stack web app,
-that could help motorcyclist organizing their stuff. Project has forum and allows to perform CRUD operations with bikes.
+> A full-stack Java microservice web application for motorcyclists.  
+> Organize your bikes, track maintenance, and connect with fellow riders on the forum.
 
-## Feedback
-Any constructive critic about what can I improve is much appreciated. You can write to me on github or contact me at
-bkrawczynski@protonmail.com
+---
 
-## Current structure
-Currently in version 2.0.0 there are seven services
+## 📖 About
 
-- naming server - eureka server for load balancing and registering services
-- api gateway - routes all request to 8765 port and perform authentication if necessary
-- authentication-service - service used by api-gateway to authenticate requests
-- bikes-service - service for performing CRUD operations on users' motorcycles
-- maintenance-service - generates maintenance for bikes nu their mileage
-- forum-service - connected to separate database. Responsible for CRUD operations on forum threads
-- web-service - thymeleaf based frontend for displaying app functionality on website
+Riding a motorcycle is more than just a hobby — it's a passion. **I Am Biker** was built to help motorcyclists keep their world organized in one place. The app supports a community forum and full CRUD management of your motorcycles.
 
-All these microservices work together and use REST API to communicate.
+---
 
-## Setup
-The project is provided with docker-compose.yaml file for easy setup.
-In order to set up project first run
-mvn clean install on parent pom. Then run docker compose up --build command to run the project.
-You can also setup project using localhost. Instructions for setting up project with localhost are provided in setup.md
+## 🏗️ Architecture
+
+The application is composed of **seven independent microservices**, all communicating via REST API:
+
+| Service | Description |
+|---|---|
+| 🔭 **Naming Server** | Eureka server — responsible for registrating services and load balancing |
+| 🚦 **API Gateway** | Routes all requests through port `8765` and perform authentication if it is required |
+| 🔐 **Authentication Service** | Used by the API Gateway to authenticate incoming requests |
+| 🏍️ **Bikes Service** | Full CRUD operations on users' motorcycles |
+| 🔧 **Maintenance Service** | Generates maintenance schedules based on bike mileage |
+| 💬 **Forum Service** | Handles CRUD operation for i-am-biker forum |
+| 🌐 **Web Service** | Service based on thymeleaf for displaying content to user on web |
+
+---
+
+## ⚙️ Setup
+
+### 1. Configure environment variables
+
+Before running the project, create a `.env` file in the root directory. All values are required:
+
+```env
+DB_NAME=database
+DB_USERNAME=username
+DB_PASSWORD=password
+DB_ROOT_PASSWORD=root
+JWT_SECRET=secure-jwt-secret
+```
+
+### 2. Run with Docker (recommended)
+
+```bash
+# Build all modules
+mvn clean install
+
+# Start all services
+docker compose up --build
+```
+
+### Localhost
+
+Detailed localhost setup instructions are available in [`setup.md`](setup.md).
+
+---
+
+## 💬 Feedback
+
+Constructive criticism is always welcome!
+
+- 🐙 **GitHub** — open an issue or pull request
+- 📧 **Email** — [bkrawczynski@protonmail.com](mailto:bkrawczynski@protonmail.com)
