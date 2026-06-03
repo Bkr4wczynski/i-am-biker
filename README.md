@@ -21,11 +21,8 @@ Currently in version 2.0.0 there are seven services
 
 All these microservices work together and use REST API to communicate.
 
-## Further plans
-I was planning to make app easier to setup by using docker-compose.yaml but this turned out to be quite challenging
-for me and I was unfortunately not capable for using this technology. I still have dockerfiles which allow
-creating containers but there is no orchestration and dockerization has to be done manually.
-
-## Videos
-Feel free to watch video about setting up project and another one about how it works from user perspective.
-
+## Setup
+The project is provided with docker-compose.yaml file for easy setup.
+In order to set up project first run
+mvn clean install on parent pom. Then run docker compose up --build command to run the project.
+You can also setup project using localhost. Instructions for setting up project with localhost are provided in setup.md
