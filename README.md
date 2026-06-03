@@ -5,6 +5,9 @@
 
 ---
 
+[![I Am Biker – demo](https://img.youtube.com/vi/8lUscGS6LKE/maxresdefault.jpg)](https://www.youtube.com/watch?v=8lUscGS6LKE)
+*▶ Short demo of project*
+
 ## 📖 About
 
 Riding a motorcycle is more than just a hobby — it's a passion. **I Am Biker** was built to help motorcyclists keep their world organized in one place. The app supports a community forum and full CRUD management of your motorcycles.
