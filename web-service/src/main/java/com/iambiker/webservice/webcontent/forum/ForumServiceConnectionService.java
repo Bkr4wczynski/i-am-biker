@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.ClientRequest;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -53,6 +54,8 @@ public class ForumServiceConnectionService {
     }
 
     public void createPost(PostDTO postDTO) {
+        postDTO.setCreatedAt(LocalDateTime.now());
+        postDTO.setUpdatedAt(LocalDateTime.now());
         log.info("User requested to create post titled: {}", postDTO.getTitle());
         webClient.post()
                 .uri("/create")

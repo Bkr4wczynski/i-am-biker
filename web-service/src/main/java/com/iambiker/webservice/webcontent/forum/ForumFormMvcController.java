@@ -64,8 +64,6 @@ public class ForumFormMvcController {
             throw new RuntimeException(e);
         }
         postDTO.setAuthorId(id);
-        postDTO.setCreatedAt(LocalDateTime.now());
-        postDTO.setUpdatedAt(LocalDateTime.now());
         connectionService.createPost(postDTO);
         return redirectManager.redirect("/web/forum");
     }
