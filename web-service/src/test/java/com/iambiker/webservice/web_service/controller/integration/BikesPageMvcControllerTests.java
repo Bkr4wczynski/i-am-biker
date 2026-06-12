@@ -1,4 +1,4 @@
-package com.iambiker.webservice.web_service.controller;
+package com.iambiker.webservice.web_service.controller.integration;
 
 import com.iambiker.webservice.model.dto.personal.BikeDTO;
 import com.iambiker.webservice.model.dto.personal.EngineDTO;

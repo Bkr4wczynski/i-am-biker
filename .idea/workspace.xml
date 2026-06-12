@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="controller structure fixed">
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/service/UserDetailsNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/unit/UserAuthenticationServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Complete testing for authentication service">
+      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/QuizPageControllerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/TipsPageControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/rest/AuthenticationRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/service/UserAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/java/com/iambiker/authservice/userdata/service/UserAuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/util/GatewayJwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/unit/GatewayJwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/util/PathManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/unit/PathManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/jwtauthentication/util/PathManagerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/unit/PathManagerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/integration/AuthenticationRestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/integration/AuthenticationRestControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration/BikesRestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration/BikesRestControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/AuthMvcControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/AuthMvcControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/BikesPageMvcControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/BikesPageMvcControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ForumPageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/ForumPageControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/MaintenancePageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/MaintenancePageControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ProfilePageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/ProfilePageControllerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,9 +138,14 @@
     "JUnit.ProfilePageControllerTests.executor": "Run",
     "JUnit.ProfilePageControllerTests.shouldDisplayProfilePage.executor": "Run",
     "JUnit.ProfilePageControllerTests.shouldDisplaySettingsPage.executor": "Run",
+    "JUnit.QuizPageControllerTests.executor": "Run",
     "JUnit.RestControllerTests.executor": "Run",
+    "JUnit.TipsPageControllerTests.executor": "Run",
     "JUnit.UserAuthenticationServiceTests.executor": "Run",
+    "JUnit.apigateway in api-gateway.executor": "Coverage",
+    "JUnit.integration in bikes-service.executor": "Coverage",
     "JUnit.java in authentication-service.executor": "Coverage",
+    "JUnit.java in web-service.executor": "Coverage",
     "Maven.api-gateway [clean].executor": "Run",
     "Maven.api-gateway [install].executor": "Run",
     "Maven.auth-service [clean].executor": "Run",
@@ -213,7 +225,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.java in authentication-service">
+  <component name="RunManager" selected="JUnit.java in web-service">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -296,55 +308,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
+    <configuration name="BikesRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bikes-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.authservice.integration.*" />
+          <option name="PATTERN" value="com.iambiker.bikesservice.integration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.authservice.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.integration.AuthenticationRestControllerTests" />
+      <option name="PACKAGE_NAME" value="com.iambiker.bikesservice.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.bikesservice.integration.BikesRestControllerTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaintenanceRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="maintenance-service" />
+    <configuration name="QuizPageControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.maintenanceservice.unit.integration.*" />
+          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.integration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.integration" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.integration.MaintenanceRestControllerTests" />
+      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.integration.QuizPageControllerTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserAuthenticationServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
+    <configuration name="TipsPageControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iambiker.authservice.unit.*" />
+          <option name="PATTERN" value="com.iambiker.webservice.web_service.controller.integration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.authservice.unit" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.unit.UserAuthenticationServiceTests" />
+      <option name="PACKAGE_NAME" value="com.iambiker.webservice.web_service.controller.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.webservice.web_service.controller.integration.TipsPageControllerTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in authentication-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
+    <configuration name="integration in bikes-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bikes-service" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/authentication-service/src/test/java" />
+      <dir value="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in web-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web-service" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/web-service/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -361,14 +381,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Application.AuthenticationServiceApplication" />
@@ -376,19 +388,19 @@
       <item itemvalue="Application.MaintenanceServiceApplication" />
       <item itemvalue="Application.NamingServerApplication" />
       <item itemvalue="Application.WebServiceApplication" />
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="JUnit.MaintenanceRestControllerTests" />
-      <item itemvalue="JUnit.UserAuthenticationServiceTests" />
-      <item itemvalue="JUnit.java in authentication-service" />
-      <item itemvalue="JUnit.AuthenticationRestControllerTests" />
+      <item itemvalue="JUnit.BikesRestControllerTests" />
+      <item itemvalue="JUnit.QuizPageControllerTests" />
+      <item itemvalue="JUnit.TipsPageControllerTests" />
+      <item itemvalue="JUnit.integration in bikes-service" />
+      <item itemvalue="JUnit.java in web-service" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in authentication-service" />
-        <item itemvalue="JUnit.UserAuthenticationServiceTests" />
-        <item itemvalue="JUnit.AuthenticationRestControllerTests" />
-        <item itemvalue="JUnit.MaintenanceRestControllerTests" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="JUnit.java in web-service" />
+        <item itemvalue="JUnit.TipsPageControllerTests" />
+        <item itemvalue="JUnit.QuizPageControllerTests" />
+        <item itemvalue="JUnit.BikesRestControllerTests" />
+        <item itemvalue="JUnit.integration in bikes-service" />
       </list>
     </recent_temporary>
   </component>
@@ -399,14 +411,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Same site cookies">
-      <option name="closed" value="true" />
-      <created>1764443760205</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1764443760206</updated>
     </task>
     <task id="LOCAL-00068" summary="added necessary circuit breakers">
       <option name="closed" value="true" />
@@ -792,7 +796,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781268026652</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Complete testing for authentication service">
+      <option name="closed" value="true" />
+      <created>1781272350852</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1781272350852</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -807,7 +819,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="connected forum api with web service" />
     <MESSAGE value="you can see now posts listed in db" />
     <MESSAGE value="post is styled nicely in css" />
     <MESSAGE value="working on adding new posts" />
@@ -832,9 +843,13 @@
     <MESSAGE value="MaintenanceService.java fixed" />
     <MESSAGE value="MaintenanceService.java more fixes" />
     <MESSAGE value="controller structure fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="controller structure fixed" />
+    <MESSAGE value="Complete testing for authentication service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete testing for authentication service" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/i_am_biker$java_in_authentication_service.ic" NAME="java in authentication-service Coverage Results" MODIFIED="1781272204427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/i_am_biker$apigateway_in_api_gateway.ic" NAME="apigateway in api-gateway Coverage Results" MODIFIED="1781272367261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/i_am_biker$integration_in_bikes_service.ic" NAME="integration in bikes-service Coverage Results" MODIFIED="1781272483802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/i_am_biker$java_in_web_service.ic" NAME="java in web-service Coverage Results" MODIFIED="1781275722610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/i_am_biker$java_in_authentication_service.ic" NAME="java in authentication-service Coverage Results" MODIFIED="1781272313517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

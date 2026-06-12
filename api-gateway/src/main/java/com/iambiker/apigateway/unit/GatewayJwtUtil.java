@@ -1,4 +1,4 @@
-package com.iambiker.apigateway.jwtauthentication.util;
+package com.iambiker.apigateway.unit;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

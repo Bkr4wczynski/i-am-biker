@@ -1,7 +1,7 @@
 package com.iambiker.apigateway.jwtauthentication.filter;
 
-import com.iambiker.apigateway.jwtauthentication.util.GatewayJwtUtil;
-import com.iambiker.apigateway.jwtauthentication.util.PathManager;
+import com.iambiker.apigateway.unit.GatewayJwtUtil;
+import com.iambiker.apigateway.unit.PathManager;
 import io.jsonwebtoken.ExpiredJwtException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

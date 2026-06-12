@@ -1,4 +1,4 @@
-package com.iambiker.webservice.web_service.controller;
+package com.iambiker.webservice.web_service.controller.integration;
 
 import com.iambiker.webservice.security.AuthMvcController;
 import com.iambiker.webservice.model.dto.authentication.LoginDTO;
