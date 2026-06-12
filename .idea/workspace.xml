@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Complete testing for authentication service">
-      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/QuizPageControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/TipsPageControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/util/GatewayJwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/unit/GatewayJwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/jwtauthentication/util/PathManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/iambiker/apigateway/unit/PathManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/jwtauthentication/util/PathManagerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/iambiker/apigateway/unit/PathManagerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/integration/AuthenticationRestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/test/java/com/iambiker/authservice/integration/AuthenticationRestControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration/BikesRestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration/BikesRestControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/AuthMvcControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/AuthMvcControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/BikesPageMvcControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/BikesPageMvcControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ForumPageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/ForumPageControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/MaintenancePageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/MaintenancePageControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/ProfilePageControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-service/src/test/java/com/iambiker/webservice/web_service/controller/integration/ProfilePageControllerTests.java" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="more tests for web-service">
+      <change afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/dto/DtoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/dto/BikeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/dto/BikeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/dto/EngineDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/model/dto/EngineDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bikes-service/src/main/java/com/iambiker/bikesservice/rest/BikesService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +172,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Barte/IdeaProjects/i-am-biker",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
@@ -225,7 +215,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.java in web-service">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -258,6 +248,22 @@
       </option>
       <option name="MAIN_CLASS_NAME" value="com.iambiker.bikesservice.BikesServiceApplication" />
       <module name="bikes-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForumServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="envFilePaths">
+        <option value="$PROJECT_DIR$/.env" />
+      </option>
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.forum_service.ForumServiceApplication" />
+      <module name="forum-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iambiker.forum_service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -353,14 +359,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="integration in bikes-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bikes-service" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/bikes-service/src/test/java/com/iambiker/bikesservice/integration" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="java in web-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web-service" />
       <option name="TEST_OBJECT" value="directory" />
@@ -388,19 +386,19 @@
       <item itemvalue="Application.MaintenanceServiceApplication" />
       <item itemvalue="Application.NamingServerApplication" />
       <item itemvalue="Application.WebServiceApplication" />
+      <item itemvalue="Application.ForumServiceApplication" />
       <item itemvalue="JUnit.BikesRestControllerTests" />
       <item itemvalue="JUnit.QuizPageControllerTests" />
       <item itemvalue="JUnit.TipsPageControllerTests" />
-      <item itemvalue="JUnit.integration in bikes-service" />
       <item itemvalue="JUnit.java in web-service" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ForumServiceApplication" />
         <item itemvalue="JUnit.java in web-service" />
         <item itemvalue="JUnit.TipsPageControllerTests" />
         <item itemvalue="JUnit.QuizPageControllerTests" />
         <item itemvalue="JUnit.BikesRestControllerTests" />
-        <item itemvalue="JUnit.integration in bikes-service" />
       </list>
     </recent_temporary>
   </component>
@@ -411,14 +409,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00068" summary="added necessary circuit breakers">
-      <option name="closed" value="true" />
-      <created>1764444349930</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1764444349930</updated>
     </task>
     <task id="LOCAL-00069" summary="unit tests written">
       <option name="closed" value="true" />
@@ -804,7 +794,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781272350852</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="more tests for web-service">
+      <option name="closed" value="true" />
+      <created>1781275839558</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1781275839559</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -819,7 +817,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="you can see now posts listed in db" />
     <MESSAGE value="post is styled nicely in css" />
     <MESSAGE value="working on adding new posts" />
     <MESSAGE value="new post html page done" />
@@ -844,12 +841,13 @@
     <MESSAGE value="MaintenanceService.java more fixes" />
     <MESSAGE value="controller structure fixed" />
     <MESSAGE value="Complete testing for authentication service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete testing for authentication service" />
+    <MESSAGE value="more tests for web-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="more tests for web-service" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/i_am_biker$apigateway_in_api_gateway.ic" NAME="apigateway in api-gateway Coverage Results" MODIFIED="1781272367261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/i_am_biker$integration_in_bikes_service.ic" NAME="integration in bikes-service Coverage Results" MODIFIED="1781272483802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/i_am_biker$java_in_web_service.ic" NAME="java in web-service Coverage Results" MODIFIED="1781275722610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/i_am_biker$java_in_web_service.ic" NAME="java in web-service Coverage Results" MODIFIED="1781275775082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/i_am_biker$java_in_authentication_service.ic" NAME="java in authentication-service Coverage Results" MODIFIED="1781272313517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
