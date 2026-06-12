@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@Slf4j
 @RestController
 @RequestMapping("/api/public")
 @AllArgsConstructor
@@ -67,18 +66,14 @@ public class AuthenticationRestController {
         String password = authRequest.getPassword();
         Optional<User> user = userRepository.findByUsername(username);
         if (user.isEmpty() || !jwtService.matchPasswords(password, user.get().getPassword())) {
-            log.info("Failed to login reason: Bad Credentials!");
             return ResponseEntity.notFound().build();
         }
-
-        log.info("Token successfully generated!");
         return ResponseEntity.ok(jwtService.generateToken(username, user.get().getId()));
     }
 
     @PostMapping("/register-user")
     public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) {
         User user = userDTO.convertToUser();
-        log.info("User successfully registered!");
         return ResponseEntity.ok(userAuthenticationService.saveUser(user));
     }
 }

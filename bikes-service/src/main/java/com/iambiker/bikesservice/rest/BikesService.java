@@ -20,27 +20,33 @@ public class BikesService {
     private final BikesRepository bikesRepository;
 
     public List<BikeDTO> getBikes(int userId) {
+        log.info("User fetches list of bikes");
         return bikesRepository.findByUserId(userId).stream()
                 .map(BikeDTO::toDTO)
                 .collect(Collectors.toList());
     }
 
     public Bike saveBike(BikeDTO dto) {
+        log.info("User saved bike: {}", dto.getModel());
         Bike bike = BikeDTO.toEntity(dto);
         return bikesRepository.save(bike);
     }
 
     @Transactional
     public void deleteBike(int id) {
+        log.info("User deleted bike with id: {}", id);
         bikesRepository.deleteById(id);
     }
 
     public Optional<BikeDTO> findBike(int id) {
+        log.info("Searching for bike with id: {}", id);
         return bikesRepository.findById(id).map(BikeDTO::toDTO);
     }
 
     @Transactional
     public Bike updateBike(BikeDTO bikeDTO) {
+        log.info("User requests for updating his {}", bikeDTO.getModel());
+
         Bike updated = BikeDTO.toEntity(bikeDTO);
         Bike existingBike = bikesRepository.findById(updated.getId()).get();
         Engine existingEngine = existingBike.getEngine();
