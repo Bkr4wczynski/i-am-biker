@@ -1,6 +1,7 @@
 package com.iambiker.maintenanceservice.service;
 
 import com.iambiker.maintenanceservice.enums.MaintenanceElements;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -9,13 +10,17 @@ import java.util.List;
 import static com.iambiker.maintenanceservice.enums.MaintenanceElements.OIL_CHANGE;
 
 @Service
+@Slf4j
 public class MaintenanceService {
     private static final List<MaintenanceElements> FIRST_INSPECTION_ELEMENTS = List.of(
             OIL_CHANGE
     );
 
     public HashMap<String, Integer> generateMaintenanceByMileage(int mileage) {
+        log.info("User asked for generating data with {} mileage", mileage);
+
         if (mileage < 0 || mileage > 999999) {
+            log.warn("Mileage: {} is not valid!", mileage);
             return null;
         }
         HashMap<String, Integer> maintenanceMileage = new HashMap<>();

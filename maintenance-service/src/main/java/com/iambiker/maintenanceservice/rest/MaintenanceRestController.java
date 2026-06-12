@@ -11,18 +11,15 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("/maintenance")
 @RequiredArgsConstructor
-@Slf4j
 public class MaintenanceRestController {
     private final MaintenanceService maintenanceService;
 
     @GetMapping("/get-maintenance")
     public ResponseEntity<HashMap<String, Integer>> generateMaintenanceByMileage(@RequestParam int mileage) {
-        log.info("User asked for generating data with {} mileage", mileage);
         HashMap<String, Integer> result = maintenanceService.generateMaintenanceByMileage(mileage);
         if (result == null) {
-            log.warn("Mileage: {} is not valid!", mileage);
             return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.ok(maintenanceService.generateMaintenanceByMileage(mileage));
+        return ResponseEntity.ok(result);
     }
 }
