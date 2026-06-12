@@ -1,5 +1,6 @@
 package com.iambiker.maintenanceservice.unit.unit;
 
+import com.iambiker.maintenanceservice.exception.InvalidMileageException;
 import com.iambiker.maintenanceservice.service.MaintenanceService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -35,13 +36,22 @@ public class MaintenanceServiceTests {
             "1000, 0"
     })
     void testGenerateMaintenanceByMileageBelow1000(int mileage, int expected) {
-        HashMap<String, Integer> result = maintenanceService.generateMaintenanceByMileage(mileage);
+        HashMap<String, Integer> result = null;
+        try {
+            result = maintenanceService.generateMaintenanceByMileage(mileage);
+        } catch (InvalidMileageException e) {
+            throw new RuntimeException(e);
+        }
         assertEquals(expected, result.get("Oil change"));
     }
 
     @Test
     void shouldReturnNullForBadInput() {
-        assertNull(maintenanceService.generateMaintenanceByMileage(-1000));
-        assertNull(maintenanceService.generateMaintenanceByMileage(1000000));
+        try {
+            assertNull(maintenanceService.generateMaintenanceByMileage(-1000));
+            assertNull(maintenanceService.generateMaintenanceByMileage(1000000));
+        } catch (InvalidMileageException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

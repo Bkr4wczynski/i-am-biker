@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="Version 2.0.0 with docker-compose.yml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d4117e3d-e05f-43a1-bc22-43b3b992c751" name="Changes" comment="MaintenanceService.java fixed">
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/integration/MaintenanceRestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/integration/MaintenanceRestControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/unit/MaintenanceServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/maintenance-service/src/test/java/com/iambiker/maintenanceservice/unit/unit/MaintenanceServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,7 @@
         <option value="Dockerfile" />
         <option value="Enum" />
         <option value="HTML File" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -167,6 +169,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.iambiker.maintenanceservice.service" />
       <recent name="com.bikerapp.api_gateway.filter" />
       <recent name="com.bikerapp.auth_service.service" />
     </key>
@@ -200,7 +203,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="JUnit.MaintenanceRestControllerTests">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="21 (3)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -296,21 +299,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthJwtUtilTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="authentication-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.iambiker.authservice.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.iambiker.authservice.unit" />
-      <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.unit.AuthJwtUtilTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AuthenticationRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="authentication-service" />
       <extension name="coverage">
@@ -321,6 +309,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.iambiker.authservice.integration" />
       <option name="MAIN_CLASS_NAME" value="com.iambiker.authservice.integration.AuthenticationRestControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaintenanceRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maintenance-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iambiker.maintenanceservice.unit.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iambiker.maintenanceservice.unit.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.iambiker.maintenanceservice.unit.integration.MaintenanceRestControllerTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -364,16 +367,16 @@
       <item itemvalue="Application.com.iambiker.forum_service.ForumServiceApplication" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-      <item itemvalue="JUnit.AuthJwtUtilTests" />
+      <item itemvalue="JUnit.MaintenanceRestControllerTests" />
       <item itemvalue="JUnit.AuthenticationRestControllerTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MaintenanceRestControllerTests" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Application.com.iambiker.forum_service.ForumServiceApplication" />
         <item itemvalue="Application.com.iambiker.forum_service.ForumServiceApplication" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
-        <item itemvalue="JUnit.AuthenticationRestControllerTests" />
       </list>
     </recent_temporary>
   </component>
@@ -384,38 +387,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757166613403</updated>
-    </task>
-    <task id="LOCAL-00061" summary="STARTED WORKING ON BETA 1.1&#10;REFACTORING PROJECT COMPLETED">
-      <option name="closed" value="true" />
-      <created>1763481675556</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1763481675556</updated>
-    </task>
-    <task id="LOCAL-00062" summary="refactoring api gateway and maintenance service">
-      <option name="closed" value="true" />
-      <created>1763568688469</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1763568688469</updated>
-    </task>
-    <task id="LOCAL-00063" summary="authentication service refactored">
-      <option name="closed" value="true" />
-      <created>1763569061646</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1763569061646</updated>
-    </task>
-    <task id="LOCAL-00064" summary="web service refactored">
-      <option name="closed" value="true" />
-      <created>1763570575546</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1763570575547</updated>
     </task>
     <task id="LOCAL-00065" summary="username displayed on profile page">
       <option name="closed" value="true" />
@@ -777,7 +748,39 @@
       <option name="project" value="LOCAL" />
       <updated>1780320442425</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Version 2.1.0 started -----&#10;working on removing unnecessary logs from controllers">
+      <option name="closed" value="true" />
+      <created>1781266189044</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1781266189045</updated>
+    </task>
+    <task id="LOCAL-00111" summary="removed logs from controllers">
+      <option name="closed" value="true" />
+      <created>1781266479730</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1781266479730</updated>
+    </task>
+    <task id="LOCAL-00112" summary="MaintenanceRestController.java fixed">
+      <option name="closed" value="true" />
+      <created>1781266607857</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1781266607857</updated>
+    </task>
+    <task id="LOCAL-00113" summary="MaintenanceService.java fixed">
+      <option name="closed" value="true" />
+      <created>1781266873951</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1781266873952</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -792,10 +795,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Serious problem with docker-compose.yaml" />
-    <MESSAGE value="started working on motorcycle forum" />
-    <MESSAGE value="working on posts frontend" />
-    <MESSAGE value="working on posts started" />
     <MESSAGE value="added forum api as new microservice" />
     <MESSAGE value="forum service correctly registered with gateway and eureka" />
     <MESSAGE value="connected forum api with web service" />
@@ -817,6 +816,10 @@
     <MESSAGE value="VERSION 2.0.0 RELEASE" />
     <MESSAGE value="semi working docker compose" />
     <MESSAGE value="Version 2.0.0 with docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 2.0.0 with docker-compose.yml" />
+    <MESSAGE value="Version 2.1.0 started -----&#10;working on removing unnecessary logs from controllers" />
+    <MESSAGE value="removed logs from controllers" />
+    <MESSAGE value="MaintenanceRestController.java fixed" />
+    <MESSAGE value="MaintenanceService.java fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="MaintenanceService.java fixed" />
   </component>
 </project>

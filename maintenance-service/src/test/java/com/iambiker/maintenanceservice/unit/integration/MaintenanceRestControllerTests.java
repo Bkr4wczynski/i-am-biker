@@ -1,5 +1,6 @@
 package com.iambiker.maintenanceservice.unit.integration;
 
+import com.iambiker.maintenanceservice.exception.InvalidMileageException;
 import com.iambiker.maintenanceservice.rest.MaintenanceRestController;
 import com.iambiker.maintenanceservice.service.MaintenanceService;
 import org.junit.jupiter.api.Test;
@@ -34,8 +35,8 @@ public class MaintenanceRestControllerTests {
     }
 
     @Test
-    void shouldReturn400ForUnValidMaintenanceData() throws Exception {
-        Mockito.when(maintenanceService.generateMaintenanceByMileage(anyInt())).thenReturn(null);
+    void shouldReturn400ForUnValidMaintenanceData() throws Exception, InvalidMileageException {
+        Mockito.when(maintenanceService.generateMaintenanceByMileage(anyInt())).thenThrow(new InvalidMileageException("invalid mileage"));
         mockMvc.perform(get("/maintenance/get-maintenance")
                         .param("mileage", "-15000"))
                 .andExpect(status().isBadRequest());
