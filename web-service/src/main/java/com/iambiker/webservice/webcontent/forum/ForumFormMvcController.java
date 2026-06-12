@@ -6,7 +6,6 @@ import com.iambiker.webservice.security.AuthConnectionService;
 import com.iambiker.webservice.util.RedirectManager;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +14,6 @@ import javax.naming.AuthenticationException;
 import java.time.LocalDateTime;
 
 @Controller
-@Slf4j
 @RequiredArgsConstructor
 public class ForumFormMvcController {
     private final AuthConnectionService authConnectionService;
@@ -30,7 +28,6 @@ public class ForumFormMvcController {
 
     @DeleteMapping("/delete-post")
     public String deletePost(@RequestParam int id) {
-        log.info("User requested to delete post with id: {}", id);
         connectionService.deletePost(id);
         return redirectManager.redirect("/web/forum");
     }
@@ -63,14 +60,12 @@ public class ForumFormMvcController {
         int id;
         try {
             id = authConnectionService.getUserDetails(request).getUser_id();
-            log.info("Successfully fetched user id!");
         } catch (AuthenticationException e) {
             throw new RuntimeException(e);
         }
         postDTO.setAuthorId(id);
         postDTO.setCreatedAt(LocalDateTime.now());
         postDTO.setUpdatedAt(LocalDateTime.now());
-        log.info("User requested to create post titled: {}", postDTO.getTitle());
         connectionService.createPost(postDTO);
         return redirectManager.redirect("/web/forum");
     }

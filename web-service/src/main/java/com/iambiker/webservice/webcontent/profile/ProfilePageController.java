@@ -30,7 +30,6 @@ public class ProfilePageController {
             boolean isBirthday = isBirthday(userDetails);
             model.addAttribute("isBirthday", isBirthday);
         } catch (AuthenticationException e) {
-            log.warn("Could not get user details!");
             throw new RuntimeException(e);
         }
         return "profile/myProfile";

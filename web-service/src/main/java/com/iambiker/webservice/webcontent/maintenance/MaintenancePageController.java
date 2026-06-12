@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
 
-@Slf4j
 @Controller
 @AllArgsConstructor
+@Slf4j
 public class MaintenancePageController {
     private final MaintenanceConnectionService maintenanceConnectionService;
     private final BikesServiceConnectionService bikesService;
@@ -26,7 +26,6 @@ public class MaintenancePageController {
         HashMap<String, Integer> maintenanceKm = maintenanceConnectionService.generateMaintenanceData(bike.getMileage());
         model.addAttribute("bike", bike);
         model.addAttribute("maintenance", maintenanceKm);
-        log.info("Generated maintenance data for bike: {} ", bike.getModel());
         return "maintenance/maintenance";
     }
 

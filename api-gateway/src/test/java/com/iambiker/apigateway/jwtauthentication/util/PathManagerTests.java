@@ -1,4 +1,4 @@
-package com.iambiker.apigateway.util;
+package com.iambiker.apigateway.jwtauthentication.util;
 
 import com.iambiker.apigateway.jwtauthentication.util.PathManager;
 import org.junit.jupiter.params.ParameterizedTest;

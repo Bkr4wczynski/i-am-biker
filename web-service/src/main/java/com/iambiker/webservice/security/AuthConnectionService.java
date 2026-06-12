@@ -45,6 +45,7 @@ public class AuthConnectionService {
     public UserDetailsDTO getUserDetails(HttpServletRequest request) throws AuthenticationException {
         String token = getToken(request);
         if (token == null || token.isBlank()) {
+            log.info("Unable to fetch user details!");
             throw new AuthenticationException("Unauthenticated request!");
         }
         ResponseEntity<UserDetailsDTO> response = webClient.get()
@@ -52,15 +53,20 @@ public class AuthConnectionService {
                 .retrieve()
                 .toEntity(UserDetailsDTO.class)
                 .block();
-        if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null)
+        if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
+            log.info("Successfully fetched user details!");
             return response.getBody();
-        else
+        }
+        else {
+            log.info("Unable to fetch user details!");
             throw new AuthenticationException("Unauthenticated request!");
+        }
     }
 
     public void updateUserDetails(UserDetailsDTO userDetailsDTO, HttpServletRequest request) throws AuthenticationException {
         String token = getToken(request);
         if (token == null || token.isBlank()) {
+            log.info("Unable to update user details!");
             throw new AuthenticationException("Unauthenticated request!");
         }
         webClient.put()
@@ -97,6 +103,7 @@ public class AuthConnectionService {
     }
 
     public void registerUser(RegisterDTO registerDTO) {
+        log.info("Registering user with username: {}", registerDTO.getUsername());
         webClient.post()
                 .uri("/register-user")
                 .bodyValue(registerDTO)

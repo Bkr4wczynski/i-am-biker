@@ -1,6 +1,7 @@
 package com.iambiker.webservice.webcontent.forum;
 
 import com.iambiker.webservice.model.dto.personal.PostDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import java.util.List;
 
 @Service
+@Slf4j
 public class ForumServiceConnectionService {
     private final WebClient webClient;
 
@@ -32,6 +34,7 @@ public class ForumServiceConnectionService {
     }
 
     public PostDTO getPostById(long id) {
+        log.info("User requested to get post with id: {}", id);
         return webClient.get()
                 .uri("/read/"+id)
                 .retrieve()
@@ -41,6 +44,7 @@ public class ForumServiceConnectionService {
     }
 
     public List<PostDTO> getAllPosts() {
+        log.info("User requested to get all posts");
         return webClient.get()
                 .uri("/read")
                 .retrieve()
@@ -48,8 +52,9 @@ public class ForumServiceConnectionService {
                 .block();
     }
 
-    public PostDTO createPost(PostDTO postDTO) {
-        return webClient.post()
+    public void createPost(PostDTO postDTO) {
+        log.info("User requested to create post titled: {}", postDTO.getTitle());
+        webClient.post()
                 .uri("/create")
                 .bodyValue(postDTO)
                 .retrieve()
@@ -57,17 +62,19 @@ public class ForumServiceConnectionService {
                 .block();
     }
 
-    public Void deletePost(long id) {
-        return webClient.delete()
-                .uri("/delete/"+id)
+    public void deletePost(long id) {
+        log.info("User requested to delete post with id: {}", id);
+        webClient.delete()
+                .uri("/delete/" + id)
                 .retrieve()
                 .bodyToMono(Void.class)
                 .block();
     }
 
-    public PostDTO updateBike(long id, PostDTO postDTO) {
-        return webClient.put()
-                .uri("/update/"+id)
+    public void updateBike(long id, PostDTO postDTO) {
+        log.info("User requested to update post with id: {}", id);
+        webClient.put()
+                .uri("/update/" + id)
                 .bodyValue(postDTO)
                 .retrieve()
                 .bodyToMono(PostDTO.class)
