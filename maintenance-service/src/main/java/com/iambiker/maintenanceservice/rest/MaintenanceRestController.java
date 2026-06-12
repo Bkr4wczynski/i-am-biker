@@ -1,5 +1,6 @@
 package com.iambiker.maintenanceservice.rest;
 
+import com.iambiker.maintenanceservice.exception.InvalidMileageException;
 import com.iambiker.maintenanceservice.service.MaintenanceService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,11 +16,13 @@ public class MaintenanceRestController {
     private final MaintenanceService maintenanceService;
 
     @GetMapping("/get-maintenance")
-    public ResponseEntity<HashMap<String, Integer>> generateMaintenanceByMileage(@RequestParam int mileage) {
+    public ResponseEntity<HashMap<String, Integer>> generateMaintenanceByMileage(@RequestParam int mileage) throws InvalidMileageException {
         HashMap<String, Integer> result = maintenanceService.generateMaintenanceByMileage(mileage);
-        if (result == null) {
-            return ResponseEntity.badRequest().build();
-        }
         return ResponseEntity.ok(result);
+    }
+
+    @ExceptionHandler(InvalidMileageException.class)
+    public ResponseEntity<String> handleInvalidMileage(InvalidMileageException e) {
+        return ResponseEntity.badRequest().body(e.getMessage());
     }
 }

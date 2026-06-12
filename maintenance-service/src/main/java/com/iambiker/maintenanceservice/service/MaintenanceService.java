@@ -1,6 +1,7 @@
 package com.iambiker.maintenanceservice.service;
 
 import com.iambiker.maintenanceservice.enums.MaintenanceElements;
+import com.iambiker.maintenanceservice.exception.InvalidMileageException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +17,12 @@ public class MaintenanceService {
             OIL_CHANGE
     );
 
-    public HashMap<String, Integer> generateMaintenanceByMileage(int mileage) {
+    public HashMap<String, Integer> generateMaintenanceByMileage(int mileage) throws InvalidMileageException {
         log.info("User asked for generating data with {} mileage", mileage);
 
         if (mileage < 0 || mileage > 999999) {
             log.warn("Mileage: {} is not valid!", mileage);
-            return null;
+            throw new InvalidMileageException("Mileage must be between 0 and 999 999!");
         }
         HashMap<String, Integer> maintenanceMileage = new HashMap<>();
         if (mileage <= 1000) {
