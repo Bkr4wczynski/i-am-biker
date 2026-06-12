@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.iambiker.authservice.jwt.JwtService;
 import com.iambiker.authservice.model.AuthRequest;
 import com.iambiker.authservice.rest.AuthenticationRestController;
+import com.iambiker.authservice.userdata.dto.UserDTO;
 import com.iambiker.authservice.userdata.dto.UserDetailsDTO;
 import com.iambiker.authservice.userdata.entity.User;
 import com.iambiker.authservice.userdata.repository.UserRepository;
@@ -19,9 +20,11 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import java.time.LocalDate;
 import java.util.Optional;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
-import static org.springframework.http.RequestEntity.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(AuthenticationRestController.class)
@@ -149,6 +152,56 @@ public class AuthenticationRestControllerTests {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void shouldReturn200ForValidUserDetails() throws Exception {
+        when(jwtService.validateToken(anyString())).thenReturn(true);
+        UserDetailsDTO userDetailsDTO = new UserDetailsDTO();
+        when(userAuthenticationService.updateUserDetails(any())).thenReturn(new User());
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/api/public/user-details")
+                .param("token", "valid.token")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(userDetailsDTO)))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void shouldReturn404ForInvalidToken() throws Exception {
+        when(jwtService.validateToken(anyString())).thenReturn(false);
+        UserDetailsDTO userDetailsDTO = new UserDetailsDTO();
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/api/public/user-details")
+                        .param("token", "invalid.token")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(userDetailsDTO)))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void shouldReturn404ForInvalidUserDetails() throws Exception {
+        when(jwtService.validateToken(anyString())).thenReturn(true);
+        UserDetailsDTO userDetailsDTO = new UserDetailsDTO();
+        when(userRepository.findById(any())).thenReturn(null);
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/api/public/user-details")
+                        .param("token", "valid.token")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(userDetailsDTO)))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void shouldReturn200ForRegisteringUser() throws Exception {
+        UserDetailsDTO userDetailsDTO = new UserDetailsDTO(1, "username", LocalDate.now(), LocalDate.now());
+        UserDTO userDTO = new UserDTO(1, "username", "email@domain.com", "SecurePassword", userDetailsDTO);
+        when(userAuthenticationService.saveUser(any())).thenReturn("User registered");
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/public/register-user")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(userDTO)))
+                .andExpect(status().isOk());
     }
 
 }

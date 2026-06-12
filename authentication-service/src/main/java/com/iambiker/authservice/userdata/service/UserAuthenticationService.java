@@ -48,7 +48,8 @@ public class UserAuthenticationService {
         userDetails.setBirthday(userDetailsDTO.getBirthday());
         userDetails.setRegistry_date(userDetailsDTO.getRegistry_date());
 
-        User user = userRepository.findById(userDetails.getUser_id()).get();
+        User user = userRepository.findById(userDetails.getUser_id())
+                .orElseThrow(() -> new NotFoundException("User not found"));
 
         user.setUsername(userDetailsDTO.getUsername());
 
